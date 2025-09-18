@@ -1,0 +1,66 @@
+---
+// 言語切り替えコンポーネント
+const languages = [
+  { code: 'ja', name: '日本語', flag: '🇯🇵' },
+  { code: 'en', name: 'English', flag: '🇺🇸' },
+  { code: 'zh', name: '中文', flag: '🇨🇳' },
+  { code: 'es', name: 'Español', flag: '🇪🇸' }
+];
+
+const currentLang = 'ja'; // デフォルトは日本語
+---
+
+<div class="relative inline-block text-left">
+  <div>
+    <button type="button" 
+            class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            onclick="toggleLanguageMenu()">
+      <span class="mr-2">{languages.find(lang => lang.code === currentLang)?.flag}</span>
+      {languages.find(lang => lang.code === currentLang)?.name}
+      <svg class="-mr-1 ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <div class="hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" 
+       id="language-menu">
+    <div class="py-1" role="menu">
+      {languages.map(lang => (
+        <a href={`/${lang.code}`} 
+           class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
+           role="menuitem">
+          <span class="mr-3">{lang.flag}</span>
+          {lang.name}
+        </a>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleLanguageMenu() {
+  const menu = document.getElementById('language-menu');
+  if (menu) {
+    if (menu.classList.contains('hidden')) {
+      menu.classList.remove('hidden');
+    } else {
+      menu.classList.add('hidden');
+    }
+  }
+}
+
+// メニュー外をクリックしたら閉じる
+document.addEventListener('click', function(event) {
+  const menu = document.getElementById('language-menu');
+  if (event.target && menu) {
+    const button = (event.target as Element).closest('button');
+    
+    if (!button || !button.onclick || button.onclick.toString().indexOf('toggleLanguageMenu') === -1) {
+      if (!menu.contains(event.target as Node)) {
+        menu.classList.add('hidden');
+      }
+    }
+  }
+});
+</script>

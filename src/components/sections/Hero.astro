@@ -5,19 +5,28 @@ import HeroIlust from "../../assets/pics/hero.svg";
 ---
 
 <Section id="home">
-<div class="relative flex flex-col-reverse items-center md:flex-row" id="hero">
-    <div class="row items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
-        <div class="text-left space-y-3">
-            <h1 class="text-4xl font-medium leading-none md:text-6xl text-center md:text-left">Navigating the <br> digital landscape <br> for success</h1>
-            <p class="mt-6 mb-8 text-lg font-normal leading-7 sm:mb-12 text-center md:text-left md:pr-12">Our digital marketing agency helps businesses grow and succeed online through a range of services including SEO, PPC, social media marketing, and content creation.</p>
-            <div class="w-full justify-center md:justify-start items-center inline-flex">
-                <a href="https://github.com/manulthanura/Positivus" target="_blank" class="px-8 py-5 bg-zinc-900 hover:bg-white rounded-2xl text-center text-white hover:text-black border text-xl font-normal leading-7">Book a consultation
-                </a>
-            </div>
+<div class="relative flex flex-col items-center justify-center min-h-screen text-center" id="hero">
+    <div class="max-w-4xl mx-auto px-4 space-y-8">
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight text-gray-900">
+            <span class="block">アイデアを、</span>
+            <span class="block">画面の中から</span>
+            <span class="block">現実の世界へ</span>
+        </h1>
+        
+        <div class="space-y-4 text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
+            <p class="font-medium">課題にお悩みですか？</p>
+            <p>AI・IoTソリューションで、製造業・物流・農業・医療・小売業界の<br>DX推進を支援します。</p>
+            <p>PoCから本格実装まで、ワンストップで開発します。</p>
         </div>
-    </div>
-    <div class="flex items-center py-5 md:w-6/12 md:pb-20 md:pt-10">
-        <Image src={HeroIlust} alt="Hero Ilustration" loading="eager" />
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+            <a href="#contact" class="px-10 py-5 bg-blue-500 hover:bg-blue-600 rounded-2xl text-center text-white text-xl font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
+                無料相談申し込み (30分)
+            </a>
+            <a href="#pricing" class="px-10 py-5 bg-white hover:bg-gray-50 rounded-2xl text-center text-blue-500 border-2 border-blue-500 text-xl font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
+                料金体系を見る
+            </a>
+        </div>
     </div>
 </div>
 </Section>

@@ -1,0 +1,204 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section id="solutions">
+<div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            開発可能なソリューション
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            AIとIoTの技術を組み合わせて、あらゆる業界の課題を解決します
+        </p>
+    </div>
+    
+    <div class="max-w-6xl mx-auto space-y-8">
+        <!-- AIソリューション -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <button class="w-full p-6 text-left bg-blue-50 hover:bg-blue-100 transition-colors duration-300" onclick="toggleAccordion('ai-solutions')">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-bold text-blue-800">AIソリューション</h3>
+                    <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" id="ai-solutions-arrow" style="transform: rotate(180deg);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+            </button>
+            <div id="ai-solutions">
+                <div class="p-6">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-gray-200">
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">カテゴリ</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">対応状況</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">効果例</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-gray-900">業務自動化</td>
+                                    <td class="px-4 py-3">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                            ✅ 対応可能
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-600">
+                                        <strong>作業時間80%削減</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-gray-900">予測</td>
+                                    <td class="px-4 py-3">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                            ✅ 対応可能
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-600">
+                                        <strong>故障予測精度95%</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-gray-900">対話</td>
+                                    <td class="px-4 py-3">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                            ✅ 対応可能
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-600">
+                                        <strong>問い合わせ対応24時間化</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-gray-900">画像</td>
+                                    <td class="px-4 py-3">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                            ✅ 対応可能
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-600">
+                                        <strong>検査精度99%向上</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-gray-900">音声</td>
+                                    <td class="px-4 py-3">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                            ✅ 対応可能
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-600">
+                                        <strong>音声認識精度98%</strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- IoTソリューション -->
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <button class="w-full p-6 text-left bg-pink-50 hover:bg-pink-100 transition-colors duration-300" onclick="toggleAccordion('iot-solutions')">
+                <div class="flex justify-between items-center">
+                    <h3 class="text-2xl font-bold text-pink-800">IoTソリューション</h3>
+                    <svg class="w-6 h-6 text-pink-600 transition-transform duration-300" id="iot-solutions-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </div>
+            </button>
+            <div class="hidden" id="iot-solutions">
+                <div class="p-6">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-gray-200">
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">カテゴリ</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">対応状況</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">効果例</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-gray-900">環境監視</td>
+                                    <td class="px-4 py-3">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                            ✅ 対応可能
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-600">
+                                        <strong>リアルタイム環境データ収集</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-gray-900">位置追跡</td>
+                                    <td class="px-4 py-3">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                            ✅ 対応可能
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-600">
+                                        <strong>配送効率30%向上</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-gray-900">予知保全</td>
+                                    <td class="px-4 py-3">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                            ✅ 対応可能
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-600">
+                                        <strong>ダウンタイム50%削減</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-gray-900">ドローン</td>
+                                    <td class="px-4 py-3">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                            ✅ 対応可能
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-600">
+                                        <strong>危険作業90%削減</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-4 py-3 font-medium text-gray-900">ロボティクス</td>
+                                    <td class="px-4 py-3">
+                                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                            ✅ 対応可能
+                                        </span>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-600">
+                                        <strong>自動化率85%向上</strong>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// グローバルスコープに関数を定義
+window.toggleAccordion = function(id) {
+    const content = document.getElementById(id);
+    const arrow = document.getElementById(id + '-arrow');
+    
+    if (content && arrow) {
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            arrow.style.transform = 'rotate(180deg)';
+        } else {
+            content.classList.add('hidden');
+            arrow.style.transform = 'rotate(0deg)';
+        }
+    }
+}
+</script>
+</Section>

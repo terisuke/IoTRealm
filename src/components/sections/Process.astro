@@ -1,17 +1,85 @@
 ---
-import Accordion from "../ui/Accordion.astro";
-import SectionTitle from "../ui/SectionTitle.astro";
 import Section from "./Section.astro";
-
-const description = "Step-by-Step Guide to Achieving Your Business Goals";
 ---
 
 <Section id="process">
-  <div class="mt-[140px]">
-    <SectionTitle
-      sectionTitle="Our Working Process"
-      description={description}
-    />
-    <Accordion />
-  </div>
+<div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            導入プロセス
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            リスクを最小化した段階的なアプローチで、確実に成果を実現します
+        </p>
+    </div>
+    
+    <div class="max-w-6xl mx-auto">
+        <!-- プロセスフロー図 -->
+        <div class="mb-12">
+            <div class="bg-pink-50 rounded-2xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
+                    導入フロー
+                </h3>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6">
+                    <!-- ステップ1 -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-20 h-20 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
+                            1
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">ヒアリング</h4>
+                        <p class="text-sm text-gray-600">課題・要望の詳細調査</p>
+                    </div>
+                    
+                    <!-- 矢印 -->
+                    <div class="hidden md:block text-blue-500 text-3xl font-bold">→</div>
+                    
+                    <!-- ステップ2 -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-20 h-20 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
+                            2
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">PoC提案</h4>
+                        <p class="text-sm text-gray-600">最適なソリューション提案</p>
+                    </div>
+                    
+                    <!-- 矢印 -->
+                    <div class="hidden md:block text-blue-500 text-3xl font-bold">→</div>
+                    
+                    <!-- ステップ3 -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-20 h-20 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
+                            3
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">PoC開発</h4>
+                        <p class="text-sm text-gray-600">プロトタイプ実装</p>
+                    </div>
+                    
+                    <!-- 矢印 -->
+                    <div class="hidden md:block text-blue-500 text-3xl font-bold">→</div>
+                    
+                    <!-- ステップ4 -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-20 h-20 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
+                            4
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">効果検証</h4>
+                        <p class="text-sm text-gray-600">ROI・効果測定</p>
+                    </div>
+                    
+                    <!-- 矢印 -->
+                    <div class="hidden md:block text-blue-500 text-3xl font-bold">→</div>
+                    
+                    <!-- ステップ5 -->
+                    <div class="flex flex-col items-center text-center">
+                        <div class="w-20 h-20 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
+                            5
+                        </div>
+                        <h4 class="font-semibold text-gray-900 mb-2">本開発</h4>
+                        <p class="text-sm text-gray-600">本格システム構築</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 </Section>

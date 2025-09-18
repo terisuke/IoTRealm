@@ -1,0 +1,94 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section id="service-overview">
+<div class="container mx-auto px-4 py-16">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            サービス概要
+        </h2>
+        <div class="max-w-4xl mx-auto">
+            <p class="text-lg text-gray-700 leading-relaxed">
+                <strong>ブラウザ上のAIエージェントから、ドローンやロボットまで。</strong><br>
+                ソフトウェアとハードウェアの垣根を越えたAI・IoTソリューションをワンストップ開発。<br>
+                PoCから本格実装でリスクを最小化。
+            </p>
+        </div>
+    </div>
+    
+    <!-- ソリューション比較グラフ -->
+    <div class="max-w-4xl mx-auto bg-yellow-50 rounded-2xl shadow-lg p-8 mb-12">
+        <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
+            開発期間・コスト比較
+        </h3>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="text-center">
+                <h4 class="text-lg font-semibold text-gray-900 mb-4">一般的なIT企業</h4>
+                <div class="space-y-4">
+                    <div class="bg-black p-4 rounded-lg">
+                        <div class="text-sm text-white">PoC開発期間</div>
+                        <div class="text-2xl font-bold text-white">6-12ヶ月</div>
+                    </div>
+                    <div class="bg-black p-4 rounded-lg">
+                        <div class="text-sm text-white">PoC費用</div>
+                        <div class="text-2xl font-bold text-white">500-2000万円</div>
+                    </div>
+                    <div class="bg-black p-4 rounded-lg">
+                        <div class="text-sm text-white">本開発費用</div>
+                        <div class="text-2xl font-bold text-white">2000万円+</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <h4 class="text-lg font-semibold text-red-600 mb-4">Cor.inc</h4>
+                <div class="space-y-4">
+                    <div class="bg-red-600 p-4 rounded-lg">
+                        <div class="text-sm text-white">PoC開発期間</div>
+                        <div class="text-2xl font-bold text-white">1-3ヶ月</div>
+                    </div>
+                    <div class="bg-red-600 p-4 rounded-lg">
+                        <div class="text-sm text-white">PoC費用</div>
+                        <div class="text-2xl font-bold text-white">100-500万円</div>
+                    </div>
+                    <div class="bg-red-600 p-4 rounded-lg">
+                        <div class="text-sm text-white">本開発費用</div>
+                        <div class="text-2xl font-bold text-white">500万円〜</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- 技術スタック -->
+    <div class="max-w-4xl mx-auto">
+        <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
+            使用技術
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md text-center">
+                <div class="text-2xl mb-2">🤖</div>
+                <div class="font-semibold text-gray-800">GPT-4/Claude</div>
+                <div class="text-sm text-gray-600">AI開発</div>
+            </div>
+            <div class="p-6 rounded-lg shadow-md text-center" style="background-color: #f0fdf4 !important;">
+                <div class="text-2xl mb-2">📱</div>
+                <div class="font-semibold text-gray-800">M5Stack/<br>Raspberry Pi</div>
+                <div class="text-sm text-gray-600">IoTデバイス</div>
+            </div>
+            <div class="bg-purple-50 p-6 rounded-lg shadow-md text-center">
+                <div class="text-2xl mb-2">👁️</div>
+                <div class="font-semibold text-gray-800">YOLO/ROS</div>
+                <div class="text-sm text-gray-600">画像認識・ロボット</div>
+            </div>
+            <div class="bg-orange-50 p-6 rounded-lg shadow-md text-center">
+                <div class="text-2xl mb-2">🌐</div>
+                <div class="font-semibold text-gray-800">Astro.js</div>
+                <div class="text-sm text-gray-600">高速Web</div>
+            </div>
+        </div>
+    </div>
+</div>
+</Section>
