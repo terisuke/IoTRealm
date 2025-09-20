@@ -21,6 +21,7 @@ Leveraging the power of Astro and Tailwind CSS, IoTRealm offers:
 - Pre-built Sections.
 - Customizable Components.
 - Mobile-Responsiveness.
+- Prominent IoTRealm branding in navigation and footer.
 
 ## 🚀 Project Structure
 
@@ -44,6 +45,13 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 🔄 Recent Updates
+
+### Version 1.1.0 (2025-01-21)
+- **Enhanced Branding**: Added prominent IoTRealm text display next to logos in both Navbar and Footer components
+- **Improved Typography**: Implemented clean, modern font styling for brand identity
+- **Code Refactoring**: Removed inline styles in favor of Tailwind CSS utility classes for better maintainability
 
 ## 👀 Want to learn more?
 

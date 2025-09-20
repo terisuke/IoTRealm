@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
+import Logo from "../../../public/iotrealm.png";
 import Facebook from "../../assets/facebook.svg";
 import Linkedin from "../../assets/linkedin.svg";
-import Logo from "../../assets/logo-alt.svg";
 import Twitter from "../../assets/twitter.svg";
 
 const logos = [
@@ -30,11 +30,12 @@ const links = [
         <div
           class="flex flex-col lg:flex-row gap-7 items-center justify-between"
         >
-          <picture>
-            <a href="#home">
-              <Image src={Logo} alt="Logo for Kreatif Brand" />
+          <div class="flex items-center space-x-3">
+            <a href="#home" class="flex items-center space-x-3">
+              <Image src={Logo} alt="Logo for Kreatif Brand" class="h-12 w-auto" />
+              <span class="text-2xl font-bold text-green-400 tracking-tight font-sans">IoTRealm</span>
             </a>
-          </picture>
+          </div>
           <ul class="flex flex-col sm:flex-row gap-5">
             {
               links.map((link) => {
@@ -65,23 +66,21 @@ const links = [
           </ul>
         </div>
 
-        <div class="flex flex-col lg:flex-row mt-[40px] mb-[30px] justify-center">
-          <div
-            class="flex text-center flex-col w-full lg:w-auto"
-          >
-            <h3 class="mb-5 text-center text-2xl text-green">お問い合わせ</h3>
-            <div class="flex flex-col justify-center items-center gap-4">
-              <a 
-                href="https://cor-jp.com/contact/" 
-                target="_blank"
-                class="px-8 py-4 bg-green hover:bg-green-600 text-white font-semibold rounded-xl transition-colors duration-300 shadow-lg hover:shadow-xl"
-              >
-                お問い合わせフォーム
+        <div class="mt-[40px] mb-[30px]">
+          <div class="flex flex-col lg:flex-row gap-8 justify-center items-center">
+            <!-- Legal Links -->
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm text-center">
+              <a href="/privacy" class="text-gray-400 hover:text-white transition-colors">
+                プライバシーポリシー
               </a>
-              <p class="text-sm text-gray-300 text-center">
-                ご質問・ご相談はこちらから<br>
-                お気軽にお問い合わせください
-              </p>
+              <span class="text-gray-600 hidden sm:inline">|</span>
+              <a href="/terms" class="text-gray-400 hover:text-white transition-colors">
+                利用規約
+              </a>
+              <span class="text-gray-600 hidden sm:inline">|</span>
+              <a href="https://cor-jp.com/contact/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                お問い合わせ
+              </a>
             </div>
           </div>
         </div>
