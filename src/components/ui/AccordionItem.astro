@@ -1,11 +1,11 @@
 ---
-type Props = {
+interface Props {
   index: number;
   title: string;
   description: string;
-};
+}
 
-const { index, title, description } = Astro.props;
+const { index, title, description } = Astro.props as Props;
 ---
 
 <div

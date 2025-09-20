@@ -3,6 +3,7 @@ import Section from "./Section.astro";
 ---
 
 <Section id="pricing">
+<div class="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-indigo-50">
 <div class="container mx-auto px-4 py-16">
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -14,49 +15,77 @@ import Section from "./Section.astro";
     </div>
     
     <!-- 料金テーブル -->
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-5xl mx-auto">
         <div class="overflow-x-auto">
-            <table class="w-full bg-yellow-50 rounded-2xl shadow-lg overflow-hidden" style="background-color: #fefce8 !important;">
-                <thead class="bg-blue-50">
+            <table class="w-full bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200">
+                <thead class="bg-gradient-to-r from-blue-500 to-purple-600">
                     <tr>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">サービス</th>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">価格帯（税込）</th>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">期間</th>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">特徴</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-white">サービス</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-white">価格帯（税込）</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-white">期間</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-white">含まれるサービス</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
-                    <tr class="hover:bg-blue-100 bg-blue-50" style="background-color: #eff6ff !important;">
+                    <tr class="hover:bg-blue-50 transition-colors">
                         <td class="px-6 py-4">
-                            <div class="font-semibold text-gray-900">PoC（概念実証）</div>
-                            <div class="text-sm text-gray-600">プロトタイプ開発</div>
+                            <div class="font-semibold text-gray-900 text-lg">PoC（概念実証）</div>
+                            <div class="text-sm text-gray-600">プロトタイプ開発・検証</div>
                         </td>
                         <td class="px-6 py-4">
-                            <div class="text-2xl font-bold text-blue-600 px-3 py-2 rounded-lg">100万円〜500万円</div>
+                            <div class="text-2xl font-bold text-blue-600 px-3 py-2 rounded-lg bg-blue-50">100万円〜500万円</div>
+                            <div class="text-xs text-gray-500 mt-1">※規模により変動</div>
                         </td>
-                        <td class="px-6 py-4 text-gray-900">1-3ヶ月</td>
+                        <td class="px-6 py-4 text-gray-900 font-medium">1-3ヶ月</td>
                         <td class="px-6 py-4">
-                            <div class="text-sm text-gray-600">
-                                • 要件定義から実装まで<br>
-                                • 効果検証レポート付き<br>
-                                • 本開発への移行サポート
+                            <div class="text-sm text-gray-700 space-y-1">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                    <span>要件定義・設計</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                    <span>プロトタイプ開発</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                    <span>効果検証レポート</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-2 h-2 bg-blue-500 rounded-full"></span>
+                                    <span>本開発移行サポート</span>
+                                </div>
                             </div>
                         </td>
                     </tr>
-                    <tr class="hover:bg-blue-100 bg-blue-50" style="background-color: #eff6ff !important;">
+                    <tr class="hover:bg-green-50 transition-colors">
                         <td class="px-6 py-4">
-                            <div class="font-semibold text-gray-900">本開発</div>
-                            <div class="text-sm text-gray-600">本格実装</div>
+                            <div class="font-semibold text-gray-900 text-lg">本開発</div>
+                            <div class="text-sm text-gray-600">本格運用システム構築</div>
                         </td>
                         <td class="px-6 py-4">
-                            <div class="text-2xl font-bold text-green-600 px-3 py-2 rounded-lg">500万円〜</div>
+                            <div class="text-2xl font-bold text-green-600 px-3 py-2 rounded-lg bg-green-50">500万円〜</div>
+                            <div class="text-xs text-gray-500 mt-1">※機能・規模により変動</div>
                         </td>
-                        <td class="px-6 py-4 text-gray-900">3-12ヶ月</td>
+                        <td class="px-6 py-4 text-gray-900 font-medium">3-12ヶ月</td>
                         <td class="px-6 py-4">
-                            <div class="text-sm text-gray-600">
-                                • 本格運用システム構築<br>
-                                • 保守・運用サポート<br>
-                                • 長期的なパートナーシップ
+                            <div class="text-sm text-gray-700 space-y-1">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></span>
+                                    <span>本格運用システム構築</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></span>
+                                    <span>テスト・品質保証</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></span>
+                                    <span>運用・保守サポート</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-3 h-3 bg-green-500 rounded-full flex-shrink-0"></span>
+                                    <span>長期的パートナーシップ</span>
+                                </div>
                             </div>
                         </td>
                     </tr>
@@ -64,80 +93,6 @@ import Section from "./Section.astro";
             </table>
         </div>
         
-        <!-- 解約ポリシー -->
-        <div class="mt-6 text-center">
-            <p class="text-sm text-gray-500">
-                ※ 解約ポリシー: 1年以内の解約の場合は1年分の料金をお支払いいただきます
-            </p>
-            <p class="text-sm text-blue-600 font-medium mt-2">
-                長期的なパートナーシップを推奨
-            </p>
-        </div>
-        
-        <!-- 他社比較 -->
-        <div class="mt-12 bg-yellow-50 p-8 rounded-2xl">
-            <h3 class="text-2xl font-bold text-center mb-6 text-gray-900">
-                他社比破格の価格を実現
-            </h3>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="text-center">
-                    <h4 class="text-lg font-semibold text-gray-900 mb-4">一般的なIT企業</h4>
-                    <div class="space-y-3">
-                        <div class="bg-black p-4 rounded-lg shadow">
-                            <div class="text-sm text-white">PoC平均</div>
-                            <div class="text-xl font-bold text-white">500-2000万円</div>
-                        </div>
-                        <div class="bg-black p-4 rounded-lg shadow">
-                            <div class="text-sm text-white">本開発</div>
-                            <div class="text-xl font-bold text-white">2000万円+</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center">
-                    <h4 class="text-lg font-semibold text-red-600 mb-4">Cor.inc</h4>
-                    <div class="space-y-3">
-                        <div class="bg-red-600 p-4 rounded-lg shadow">
-                            <div class="text-sm text-white">PoC</div>
-                            <div class="text-xl font-bold text-white">100-500万円</div>
-                        </div>
-                        <div class="bg-red-600 p-4 rounded-lg shadow">
-                            <div class="text-sm text-white">本開発</div>
-                            <div class="text-xl font-bold text-white">500万円〜</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- 破格の価格を実現できる理由 -->
-        <div class="mt-12 bg-pink-50 p-8 rounded-2xl shadow-lg">
-            <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
-                破格の価格を実現できる理由
-            </h3>
-            <div class="max-w-4xl mx-auto">
-                <div class="space-y-4">
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                        <div class="flex items-center gap-3 flex-shrink-0">
-                            <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
-                            <span class="font-bold text-blue-800 text-sm sm:text-base">AI高速開発</span>
-                        </div>
-                        <span class="text-sm sm:text-base text-blue-700 leading-relaxed">
-                            最新AI技術で開発効率を大幅向上
-                        </span>
-                    </div>
-                    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-                        <div class="flex items-center gap-3 flex-shrink-0">
-                            <span class="w-3 h-3 bg-blue-500 rounded-full"></span>
-                            <span class="font-bold text-blue-800 text-sm sm:text-base">少人数ワンストップ</span>
-                        </div>
-                        <span class="text-sm sm:text-base text-blue-700 leading-relaxed">
-                            要件定義から本開発まで一貫対応
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
         
         <!-- 共創パートナー優待制度 -->
         <div class="mt-12 bg-gray-50 p-8 rounded-2xl text-center">
@@ -155,5 +110,6 @@ import Section from "./Section.astro";
             </a>
         </div>
     </div>
+</div>
 </div>
 </Section>

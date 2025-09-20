@@ -7,11 +7,23 @@ const { title, description, image, frontmatter, robots } = Astro.props;
 
 <head>
   <meta charset="utf-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-  <!-- iOS 
-  <link rel="apple-touch-icon" sizes="256x256" href="/path/to/your/icon.png" />
-  -->
+  <!-- Primary favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2" />
+
+  <!-- Fallback PNG favicons for better browser support -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/iotrealm.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/iotrealm.png" />
+
+  <!-- Apple Touch Icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/iotrealm.png" />
+
+  <!-- Manifest for PWA support (optional) -->
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Theme color for browser UI -->
+  <meta name="theme-color" content="#0066cc" />
   <meta name="viewport" content="width=device-width" />
   <meta name="generator" content={Astro.generator} />
 

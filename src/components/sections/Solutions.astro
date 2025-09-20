@@ -26,6 +26,66 @@ import Section from "./Section.astro";
             </button>
             <div id="ai-solutions">
                 <div class="p-6">
+                    <!-- 実装例セクション -->
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-4">🚢 実装例：博多ポートラジオAI</h4>
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 border border-blue-200">
+                            <div class="flex flex-col lg:flex-row gap-6">
+                                <div class="flex-1">
+                                    <h5 class="font-semibold text-blue-800 mb-3">海上交通管制のAI音声通信システム</h5>
+                                    <p class="text-gray-700 mb-4">
+                                        船舶と管制塔の間のVHF無線通信をAIが支援。リアルタイム音声認識・生成により、安全で効率的な海上交通を実現します。
+                                    </p>
+                                    <div class="space-y-2 text-sm text-gray-600">
+                                        <div class="flex items-center">
+                                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                                            <strong>技術スタック:</strong> OpenAI Realtime API + Next.js 15
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                                            <strong>PTT制御:</strong> プッシュ・トゥ・トーク機能でノイズレス通信
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                                            <strong>Function Calling:</strong> 自動チャンネル割り当て機能
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                                            <strong>IMO SMCP準拠:</strong> 国際海事機関標準プロトコル対応
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:w-80">
+                                    <div class="bg-white rounded-lg p-4 border border-blue-200">
+                                        <h6 class="font-semibold text-gray-900 mb-3">📊 導入効果</h6>
+                                        <div class="space-y-2 text-sm">
+                                            <div class="flex justify-between">
+                                                <span>通信効率</span>
+                                                <span class="font-semibold text-green-600">+200%</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span>誤解釈リスク</span>
+                                                <span class="font-semibold text-green-600">-90%</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span>応答時間</span>
+                                                <span class="font-semibold text-green-600">-80%</span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-4 pt-3 border-t border-gray-200">
+                                            <a href="https://hakata-port-radio-ai.vercel.app/" target="_blank" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm">
+                                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                                </svg>
+                                                デモサイトで体験
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="overflow-x-auto">
                         <table class="w-full">
                             <thead>
@@ -110,6 +170,66 @@ import Section from "./Section.astro";
             </button>
             <div class="hidden" id="iot-solutions">
                 <div class="p-6">
+                    <!-- 実装例セクション -->
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-gray-900 mb-4">🏥 実装例：Care Copilot</h4>
+                        <div class="bg-gradient-to-r from-pink-50 to-rose-50 rounded-lg p-6 border border-pink-200">
+                            <div class="flex flex-col lg:flex-row gap-6">
+                                <div class="flex-1">
+                                    <h5 class="font-semibold text-pink-800 mb-3">高齢者向けIoTケアモニタリングシステム</h5>
+                                    <p class="text-gray-700 mb-4">
+                                        プライバシーを重視しながら高齢者の安全を確保。カメラを使わずにToF距離センサーで転倒検知やベッド離脱を監視し、LINE通知で即座に介護者に知らせます。
+                                    </p>
+                                    <div class="space-y-2 text-sm text-gray-600">
+                                        <div class="flex items-center">
+                                            <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                                            <strong>ハードウェア:</strong> M5Stack Fire + ToF距離センサー + 環境センサー
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                                            <strong>通知システム:</strong> LINE Messaging API統合
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                                            <strong>プライバシー保護:</strong> カメラ不使用の動作検知技術
+                                        </div>
+                                        <div class="flex items-center">
+                                            <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                                            <strong>位置追跡:</strong> GPS機能で外出時の安全確保
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:w-80">
+                                    <div class="bg-white rounded-lg p-4 border border-pink-200">
+                                        <h6 class="font-semibold text-gray-900 mb-3">📊 導入効果</h6>
+                                        <div class="space-y-2 text-sm">
+                                            <div class="flex justify-between">
+                                                <span>転倒検知精度</span>
+                                                <span class="font-semibold text-green-600">95%</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span>緊急対応時間</span>
+                                                <span class="font-semibold text-green-600">-70%</span>
+                                            </div>
+                                            <div class="flex justify-between">
+                                                <span>介護負担軽減</span>
+                                                <span class="font-semibold text-green-600">+60%</span>
+                                            </div>
+                                        </div>
+                                        <div class="mt-4 pt-3 border-t border-gray-200">
+                                            <a href="https://www.hackster.io/user2740530/care-copilot-fa10b7" target="_blank" class="inline-flex items-center text-pink-600 hover:text-pink-800 font-medium text-sm">
+                                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                                </svg>
+                                                詳細記事を見る
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="overflow-x-auto">
                         <table class="w-full">
                             <thead>
@@ -185,11 +305,17 @@ import Section from "./Section.astro";
 </div>
 
 <script>
+declare global {
+    interface Window {
+        toggleAccordion: (id: string) => void;
+    }
+}
+
 // グローバルスコープに関数を定義
-window.toggleAccordion = function(id) {
+window.toggleAccordion = function(id: string) {
     const content = document.getElementById(id);
     const arrow = document.getElementById(id + '-arrow');
-    
+
     if (content && arrow) {
         if (content.classList.contains('hidden')) {
             content.classList.remove('hidden');

@@ -1,5 +1,10 @@
 ---
-const { sectionTitle, description } = Astro.props;
+interface Props {
+  sectionTitle: string;
+  description: string;
+}
+
+const { sectionTitle, description } = Astro.props as Props;
 ---
 
 <div class="flex flex-col items-center gap-10 mb-20 sm:flex-row">

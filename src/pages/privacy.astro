@@ -1,0 +1,185 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import Section from "@/components/sections/Section.astro";
+---
+
+<MainLayout
+  title="プライバシーポリシー | IoTRealm"
+  description="IoTRealmのプライバシーポリシー。お客様の個人情報の取り扱いについて説明しています。"
+>
+  <Section id="privacy">
+    <div class="container mx-auto px-4 py-16 max-w-4xl">
+      <h1 class="text-4xl font-bold mb-8 text-gray-900">プライバシーポリシー</h1>
+
+      <div class="prose prose-lg max-w-none">
+        <p class="text-gray-600 mb-8">
+          株式会社Cor（以下、「当社」といいます）は、AI・IoTソリューション「IoTRealm」の提供にあたり、
+          お客様の個人情報の保護を重要な責務と認識し、以下のプライバシーポリシーに従い適切に取り扱います。
+        </p>
+
+        <p class="text-sm text-gray-500 mb-8">制定日：2025年9月20日</p>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">1. 個人情報の定義</h2>
+          <p class="text-gray-700">
+            本プライバシーポリシーにおいて「個人情報」とは、個人情報保護法に定める個人情報を指し、
+            生存する個人に関する情報であって、氏名、生年月日、住所、電話番号、メールアドレス等、
+            特定の個人を識別できる情報を意味します。
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">2. 個人情報の収集</h2>
+          <p class="text-gray-700 mb-4">当社は、以下の場合に個人情報を収集することがあります。</p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li>お問い合わせフォームからのご連絡時</li>
+            <li>サービスのお申し込み時</li>
+            <li>無料相談のご予約時</li>
+            <li>PoC（概念実証）のご依頼時</li>
+            <li>IoTデバイスの設置・運用時</li>
+            <li>AIモデルの学習・運用時</li>
+            <li>セミナー・イベントへのお申し込み時</li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">3. IoTデバイスによるデータ収集</h2>
+          <p class="text-gray-700 mb-4">
+            当社のIoTソリューションでは、以下のようなデータを収集する場合があります。
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li>センサーデータ（温度、湿度、圧力、振動、位置情報等）</li>
+            <li>機器の稼働状態データ</li>
+            <li>画像・映像データ（カメラセンサー使用時）</li>
+            <li>音声データ（音声センサー使用時）</li>
+            <li>環境データ（照度、CO2濃度等）</li>
+          </ul>
+          <p class="text-gray-700 mt-4">
+            これらのデータは、お客様との契約に基づき、特定の目的のためにのみ収集・利用されます。
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">4. 個人情報の利用目的</h2>
+          <p class="text-gray-700 mb-4">収集した個人情報は、以下の目的で利用いたします。</p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li>AI・IoTソリューションの提供</li>
+            <li>お客様からのお問い合わせへの対応</li>
+            <li>サービスの改善・新サービスの開発</li>
+            <li>AIモデルの精度向上のための機械学習</li>
+            <li>システムの保守・運用</li>
+            <li>契約の履行</li>
+            <li>料金の請求</li>
+            <li>マーケティング活動（お客様の同意がある場合）</li>
+            <li>法令に基づく対応</li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">5. AIによるデータ処理</h2>
+          <p class="text-gray-700">
+            当社のAIソリューションでは、お客様のデータを機械学習アルゴリズムで処理することがあります。
+            この処理は以下の原則に従って行われます。
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700 mt-4">
+            <li>目的外の学習・利用は行いません</li>
+            <li>個人を特定できるデータは匿名化または仮名化処理を施します</li>
+            <li>学習済みモデルから個人情報が復元できないよう適切な処理を行います</li>
+            <li>AIの判断結果について説明可能性を確保します</li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">6. 個人情報の第三者提供</h2>
+          <p class="text-gray-700">
+            当社は、以下の場合を除き、お客様の同意なく個人情報を第三者に提供いたしません。
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700 mt-4">
+            <li>法令に基づく場合</li>
+            <li>人の生命、身体または財産の保護のために必要な場合</li>
+            <li>公衆衛生の向上または児童の健全な育成の推進のために必要な場合</li>
+            <li>国の機関もしくは地方公共団体またはその委託を受けた者が法令の定める事務を遂行することに対して協力する必要がある場合</li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">7. セキュリティ対策</h2>
+          <p class="text-gray-700 mb-4">
+            当社は、個人情報の漏洩、滅失、毀損の防止のため、以下のセキュリティ対策を実施しています。
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700">
+            <li>SSL/TLS暗号化通信の採用</li>
+            <li>ファイアウォールの設置</li>
+            <li>アクセス権限の適切な管理</li>
+            <li>定期的なセキュリティ監査</li>
+            <li>従業員への情報セキュリティ教育</li>
+            <li>IoTデバイスのセキュアな設定</li>
+            <li>エッジコンピューティングによるデータの分散処理</li>
+            <li>ブロックチェーン技術によるデータの改ざん防止（該当サービスのみ）</li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">8. データの保存期間</h2>
+          <p class="text-gray-700">
+            当社は、個人情報を利用目的の達成に必要な期間に限り保存し、保存期間経過後は速やかに削除いたします。
+            ただし、法令により保存が義務付けられている場合はこの限りではありません。
+          </p>
+          <ul class="list-disc pl-6 space-y-2 text-gray-700 mt-4">
+            <li>契約情報：契約終了後5年間</li>
+            <li>お問い合わせ情報：対応完了後3年間</li>
+            <li>IoTセンサーデータ：契約で定めた期間</li>
+            <li>AIモデルの学習データ：プロジェクト終了後1年間（お客様の同意がある場合）</li>
+          </ul>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">9. Cookie（クッキー）の使用</h2>
+          <p class="text-gray-700">
+            当社のウェブサイトでは、お客様の利便性向上のためCookieを使用しています。
+            Cookieの使用により収集される情報には個人を特定する情報は含まれません。
+            お客様はブラウザの設定によりCookieの使用を拒否することができます。
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">10. 個人情報の開示・訂正・削除</h2>
+          <p class="text-gray-700">
+            お客様は、当社が保有する個人情報について、開示、訂正、利用停止、削除を請求する権利を有しています。
+            請求を希望される場合は、本ポリシー末尾のお問い合わせ先までご連絡ください。
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">11. 未成年者の個人情報</h2>
+          <p class="text-gray-700">
+            未成年者から個人情報を収集する場合は、保護者の同意を得た上で行います。
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">12. プライバシーポリシーの変更</h2>
+          <p class="text-gray-700">
+            当社は、法令の改正やサービス内容の変更に応じて、本プライバシーポリシーを変更することがあります。
+            変更後のプライバシーポリシーは、当社ウェブサイトに掲載した時点から効力を生じるものとします。
+          </p>
+        </section>
+
+        <section class="mb-8">
+          <h2 class="text-2xl font-bold mb-4 text-gray-900">13. お問い合わせ窓口</h2>
+          <p class="text-gray-700 mb-4">
+            本プライバシーポリシーに関するお問い合わせは、以下の窓口までお願いいたします。
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <p class="text-gray-700">
+              株式会社Cor<br>
+              IoTRealm プライバシー保護担当<br>
+              メール：<a href="mailto:company@cor-jo.com" class="text-blue-600 hover:underline">company@cor-jo.com</a><br>
+              お問い合わせフォーム：<a href="https://cor-jp.com/contact/" target="_blank" class="text-blue-600 hover:underline">https://cor-jp.com/contact/</a>
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </Section>
+</MainLayout>

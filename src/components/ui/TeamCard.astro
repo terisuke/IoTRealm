@@ -1,9 +1,17 @@
 ---
 import { Image } from "astro:assets";
-import linkd from "../../assets/pics/profile-in.svg";
-import Card from "./Card.astro";
+import linkd from "@/assets/pics/profile-in.svg";
+import Card from "@/components/ui/Card.astro";
 
-const { pic, name, role, description, link } = Astro.props;
+interface Props {
+  pic: any;
+  name: string;
+  role: string;
+  description: string;
+  link: string;
+}
+
+const { pic, name, role, description, link } = Astro.props as Props;
 ---
 
 <Card isUnderline={true}>
