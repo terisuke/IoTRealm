@@ -11,16 +11,16 @@ const menuitems = [
   { href: '/#faq', label: 'FAQ' },
 ];
 
-const navButton = { href: '/#contact', label: '無料相談申し込み' };
 ---
 
 <div class="mt-20">
   <nav class="w-full top-0 left-0 z-50 fixed bg-white">
-    <header class="flex flex-col lg:flex-row justify-between items-center my-5 px-6 md:px-32">
+    <header class="flex flex-col lg:flex-row justify-between items-center my-6 px-6 md:px-32 py-4">
       <Astronav>
         <div class="flex w-full lg:w-auto items-center justify-between">
           <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="/Logo.svg" class="h-8" alt="Logo" />
+            <img src="/iotrealm.png" class="h-20" alt="Logo" />
+            <span class="text-3xl font-bold text-green-600 tracking-tight font-sans">IoTRealm</span>
           </a>
           <div class="block lg:hidden">
             <div id="menu-icon" class="w-8 h-8 text-black cursor-pointer">
@@ -37,27 +37,18 @@ const navButton = { href: '/#contact', label: '無料相談申し込み' };
         </div>
         
         <nav class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0" id="menu-items">
-          <ul class="font-medium flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0">
+          <ul class="font-medium flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row lg:space-x-12 lg:mt-0 lg:border-0">
             {menuitems.map((item) => (
               <li>
                 <a 
                   href={item.href} 
-                  class="mobile-nav-link block py-2 px-3 text-black rounded lg:bg-transparent lg:p-0"
+                  class="mobile-nav-link block py-3 px-4 text-black rounded lg:bg-transparent lg:p-0 text-lg font-semibold"
                   data-close-menu="true"
                 >
                   {item.label}
                 </a>
               </li>
             ))}
-            <div class="lg:hidden flex items-center justify-center mt-3 gap-4">
-              <a 
-                class="mobile-nav-link px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" 
-                href={navButton.href}
-                data-close-menu="true"
-              >
-                <h2 class="text-center text-xl font-normal leading-7">{navButton.label}</h2>
-              </a>
-            </div>
           </ul>
         </nav>
       </Astronav>
@@ -65,9 +56,6 @@ const navButton = { href: '/#contact', label: '無料相談申し込み' };
       <div>
         <div class="hidden lg:flex items-center gap-4">
           <LanguageSwitcher />
-          <a class="px-9 py-5 rounded-2xl border border-zinc-900 bg-white hover:bg-black text-black hover:text-white inline-flex" href={navButton.href}>
-            <h2 class="text-center text-xl font-normal leading-7">{navButton.label}</h2>
-          </a>
         </div>
       </div>
     </header>

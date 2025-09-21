@@ -3,6 +3,7 @@ import Section from "./Section.astro";
 ---
 
 <Section id="service-overview">
+<div class="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 rounded-3xl">
 <div class="container mx-auto px-4 py-16">
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
@@ -18,77 +19,200 @@ import Section from "./Section.astro";
     </div>
     
     <!-- ソリューション比較グラフ -->
-    <div class="max-w-4xl mx-auto bg-yellow-50 rounded-2xl shadow-lg p-8 mb-12">
+    <div class="max-w-6xl mx-auto bg-yellow-50 rounded-2xl shadow-lg p-8 mb-12">
         <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
             開発期間・コスト比較
         </h3>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="text-center">
-                <h4 class="text-lg font-semibold text-gray-900 mb-4">一般的なIT企業</h4>
-                <div class="space-y-4">
-                    <div class="bg-black p-4 rounded-lg">
-                        <div class="text-sm text-white">PoC開発期間</div>
-                        <div class="text-2xl font-bold text-white">6-12ヶ月</div>
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- 比較グラフ -->
+            <div class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">一般的なIT企業</h4>
+                        <div class="space-y-4">
+                            <div class="bg-black p-4 rounded-lg">
+                                <div class="text-sm text-white">PoC開発期間</div>
+                                <div class="text-2xl font-bold text-white">6-12ヶ月</div>
+                            </div>
+                            <div class="bg-black p-4 rounded-lg">
+                                <div class="text-sm text-white">PoC費用</div>
+                                <div class="text-2xl font-bold text-white">500-2000万円</div>
+                            </div>
+                            <div class="bg-black p-4 rounded-lg">
+                                <div class="text-sm text-white">本開発費用</div>
+                                <div class="text-2xl font-bold text-white">2000万円+</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-black p-4 rounded-lg">
-                        <div class="text-sm text-white">PoC費用</div>
-                        <div class="text-2xl font-bold text-white">500-2000万円</div>
-                    </div>
-                    <div class="bg-black p-4 rounded-lg">
-                        <div class="text-sm text-white">本開発費用</div>
-                        <div class="text-2xl font-bold text-white">2000万円+</div>
+                    
+                    <div class="text-center">
+                        <h4 class="text-lg font-semibold text-red-600 mb-4">Cor.inc</h4>
+                        <div class="space-y-4">
+                            <div class="bg-red-600 p-4 rounded-lg">
+                                <div class="text-sm text-white">PoC開発期間</div>
+                                <div class="text-2xl font-bold text-white">1-3ヶ月</div>
+                            </div>
+                            <div class="bg-red-600 p-4 rounded-lg">
+                                <div class="text-sm text-white">PoC費用</div>
+                                <div class="text-2xl font-bold text-white">100-500万円</div>
+                            </div>
+                            <div class="bg-red-600 p-4 rounded-lg">
+                                <div class="text-sm text-white">本開発費用</div>
+                                <div class="text-2xl font-bold text-white">500万円〜</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="text-center">
-                <h4 class="text-lg font-semibold text-red-600 mb-4">Cor.inc</h4>
-                <div class="space-y-4">
-                    <div class="bg-red-600 p-4 rounded-lg">
-                        <div class="text-sm text-white">PoC開発期間</div>
-                        <div class="text-2xl font-bold text-white">1-3ヶ月</div>
+            <!-- 破格価格実現の理由 -->
+            <div class="bg-white rounded-xl p-6">
+                <h4 class="text-xl font-bold text-center mb-6 text-gray-900">
+                    破格の価格を実現できる理由
+                </h4>
+                <div class="space-y-6">
+                    <div>
+                        <h5 class="text-lg font-semibold text-gray-900 mb-3">🤖 AI駆動開発による効率化</h5>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <div class="flex justify-between">
+                                <span>開発時間短縮</span>
+                                <span class="font-bold text-green-600">最大55%削減</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>エラー発生率</span>
+                                <span class="font-bold text-green-600">最大78%低減</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>企画期間</span>
+                                <span class="font-bold text-green-600">10分の1に短縮</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-red-600 p-4 rounded-lg">
-                        <div class="text-sm text-white">PoC費用</div>
-                        <div class="text-2xl font-bold text-white">100-500万円</div>
-                    </div>
-                    <div class="bg-red-600 p-4 rounded-lg">
-                        <div class="text-sm text-white">本開発費用</div>
-                        <div class="text-2xl font-bold text-white">500万円〜</div>
+                    <div>
+                        <h5 class="text-lg font-semibold text-gray-900 mb-3">🔄 一貫対応による効果</h5>
+                        <div class="space-y-2 text-sm text-gray-700">
+                            <div class="flex justify-between">
+                                <span>手戻り発生</span>
+                                <span class="font-bold text-green-600">大幅削減</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>コミュニケーション効率</span>
+                                <span class="font-bold text-green-600">情報ロス最小化</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>品質向上</span>
+                                <span class="font-bold text-green-600">一貫した品質保証</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
     </div>
     
     <!-- 技術スタック -->
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-6xl mx-auto">
         <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
             使用技術
         </h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="bg-blue-50 p-6 rounded-lg shadow-md text-center">
-                <div class="text-2xl mb-2">🤖</div>
-                <div class="font-semibold text-gray-800">GPT-4/Claude</div>
-                <div class="text-sm text-gray-600">AI開発</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- AI開発 -->
+            <div class="bg-white p-6 rounded-xl shadow-2xl border border-gray-100 transform hover:scale-105 transition-all duration-300">
+                <div class="text-2xl mb-3 text-center">🤖</div>
+                <div class="font-semibold text-gray-800 mb-2">AI開発</div>
+                <div class="text-sm text-gray-600 space-y-2">
+                    <div>
+                        <strong>
+                            <a href="https://openai.com/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">OpenAI</a>
+                            /
+                            <a href="https://www.anthropic.com/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Anthropic</a>
+                            /
+                            <a href="https://ai.google/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Google</a>
+                            /
+                            <a href="https://x.ai/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">xAI</a>
+                        </strong><br>
+                        各種AI APIを状況に応じて使い分け
+                    </div>
+                    <div>
+                        <strong>
+                            <a href="https://ollama.ai/" target="_blank" class="text-blue-600 hover:text-blue-800 underline">Ollama</a>
+                        </strong><br>
+                        ローカルLLMによる高速・セキュアな処理
+                    </div>
+                </div>
             </div>
-            <div class="p-6 rounded-lg shadow-md text-center" style="background-color: #f0fdf4 !important;">
-                <div class="text-2xl mb-2">📱</div>
-                <div class="font-semibold text-gray-800">M5Stack/<br>Raspberry Pi</div>
-                <div class="text-sm text-gray-600">IoTデバイス</div>
+            
+            <!-- IoTデバイス -->
+            <div class="bg-white p-6 rounded-xl shadow-2xl border border-gray-100 transform hover:scale-105 transition-all duration-300">
+                <div class="text-2xl mb-3 text-center">📱</div>
+                <div class="font-semibold text-gray-800 mb-2">IoTデバイス</div>
+                <div class="text-sm text-gray-600 space-y-2">
+                    <div>
+                        <strong>
+                            <a href="https://m5stack.com/" target="_blank" class="text-green-600 hover:text-green-800 underline">M5Stack</a>
+                            /
+                            <a href="https://www.raspberrypi.org/" target="_blank" class="text-green-600 hover:text-green-800 underline">Raspberry Pi</a>
+                        </strong><br>
+                        小型IoTデバイス開発
+                    </div>
+                    <div>
+                        <strong>
+                            <a href="https://www.therobotstudio.com/" target="_blank" class="text-green-600 hover:text-green-800 underline">SO-100/SO-101</a>
+                        </strong><br>
+                        The Robot Studio製オープンソースロボットハンド
+                    </div>
+                    <div>
+                        <strong>
+                            <a href="https://www.seeedstudio.com/" target="_blank" class="text-green-600 hover:text-green-800 underline">StarAI Robot Arm</a>
+                        </strong><br>
+                        Seed Studio製ロボットアーム
+                    </div>
+                </div>
             </div>
-            <div class="bg-purple-50 p-6 rounded-lg shadow-md text-center">
-                <div class="text-2xl mb-2">👁️</div>
-                <div class="font-semibold text-gray-800">YOLO/ROS</div>
-                <div class="text-sm text-gray-600">画像認識・ロボット</div>
+            
+            <!-- クラウド・機械学習 -->
+            <div class="bg-white p-6 rounded-xl shadow-2xl border border-gray-100 transform hover:scale-105 transition-all duration-300">
+                <div class="text-2xl mb-3 text-center">☁️</div>
+                <div class="font-semibold text-gray-800 mb-2">クラウド・機械学習</div>
+                <div class="text-sm text-gray-600 space-y-2">
+                    <div>
+                        <strong>
+                            <a href="https://github.com/ultralytics/ultralytics" target="_blank" class="text-purple-600 hover:text-purple-800 underline">YOLO</a>
+                        </strong><br>
+                        リアルタイム物体検出
+                    </div>
+                    <div>
+                        <strong>
+                            <a href="https://cloud.google.com/vertex-ai" target="_blank" class="text-purple-600 hover:text-purple-800 underline">Vertex AI</a>
+                            /
+                            <a href="https://aws.amazon.com/bedrock/" target="_blank" class="text-purple-600 hover:text-purple-800 underline">Amazon Bedrock</a>
+                        </strong><br>
+                        クラウドベースAIサービス
+                    </div>
+                </div>
             </div>
-            <div class="bg-orange-50 p-6 rounded-lg shadow-md text-center">
-                <div class="text-2xl mb-2">🌐</div>
-                <div class="font-semibold text-gray-800">Astro.js</div>
-                <div class="text-sm text-gray-600">高速Web</div>
+            
+            <!-- AIエージェント・フレームワーク -->
+            <div class="bg-white p-6 rounded-xl shadow-2xl border border-gray-100 transform hover:scale-105 transition-all duration-300">
+                <div class="text-2xl mb-3 text-center">🛠️</div>
+                <div class="font-semibold text-gray-800 mb-2">AIエージェント・フレームワーク</div>
+                <div class="text-sm text-gray-600 space-y-2">
+                    <div>
+                        <strong>
+                            <a href="https://mastra.ai/" target="_blank" class="text-orange-600 hover:text-orange-800 underline">Mastra</a>
+                        </strong><br>
+                        TypeScript/Node.js環境向け
+                    </div>
+                    <div>
+                        <strong>
+                            <a href="https://langchain-ai.github.io/langgraph/" target="_blank" class="text-orange-600 hover:text-orange-800 underline">LangGraph</a>
+                        </strong><br>
+                        複雑なワークフロー構築
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 </Section>

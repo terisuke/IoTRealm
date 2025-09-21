@@ -30,51 +30,62 @@ import Section from "./Section.astro";
                 無料相談申し込み
             </h3>
             <p class="text-center text-gray-600 mb-8">
-                以下のフォームにご記入いただくか、直接お電話ください
+                以下のフォームからお気軽にご相談ください
             </p>
-            
-            <!-- Google Forms埋め込み用のプレースホルダー -->
-            <div class="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-                <div class="text-gray-500 mb-4">
-                    <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+            <!-- お問い合わせフォームへのリンク -->
+            <div class="bg-gradient-to-br from-blue-50 to-green-50 rounded-lg p-8 text-center">
+                <div class="text-blue-600 mb-4">
+                    <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                     </svg>
                 </div>
-                <p class="text-gray-600 mb-4">
-                    Google Forms による相談フォーム
+                <h4 class="text-xl font-bold text-gray-900 mb-4">
+                    お問い合わせフォーム
+                </h4>
+                <p class="text-gray-600 mb-6">
+                    詳細なご相談内容をお聞かせください。<br>
+                    担当者より1営業日以内にご返信いたします。
                 </p>
-                <div class="space-y-2 text-sm text-gray-500">
-                    <p>• 業界（必須）</p>
-                    <p>• 主な課題（必須）</p>
-                    <p>• AI/IoT使用状況（必須）</p>
-                    <p>• 解決したい課題（任意）</p>
-                    <p>• グローバル対応要望（任意）</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://cor-jp.com/contact/"
+                       target="_blank"
+                       class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
+                        <span class="flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                            </svg>
+                            フォームで相談する
+                        </span>
+                    </a>
                 </div>
-                <a href="https://forms.google.com/iotrealm-consultation" 
-                   target="_blank"
-                   class="inline-block mt-4 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300">
-                    フォームを開く
-                </a>
             </div>
-            
-            <!-- 代替連絡方法 -->
-            <div class="mt-8 grid md:grid-cols-2 gap-6">
-                <div class="text-center p-6 bg-blue-50 rounded-lg">
-                    <div class="text-3xl mb-3">📞</div>
-                    <h4 class="font-semibold text-gray-900 mb-2">お電話でのお問い合わせ</h4>
-                    <p class="text-gray-600 mb-3">平日 9:00-18:00</p>
-                    <a href="tel:070-8561-1659" class="text-blue-600 font-semibold hover:text-blue-700">
-                        070-8561-1659
-                    </a>
-                </div>
-                
-                <div class="text-center p-6 bg-blue-50 rounded-lg">
-                    <div class="text-3xl mb-3">📧</div>
-                    <h4 class="font-semibold text-gray-900 mb-2">メールでのお問い合わせ</h4>
-                    <p class="text-gray-600 mb-3">24時間受付</p>
-                    <a href="mailto:contact@cor-jp.com" class="text-green-600 font-semibold hover:text-green-700">
-                        contact@cor-jp.com
-                    </a>
+
+            <!-- 連絡方法 -->
+            <div class="mt-8">
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <h4 class="font-semibold text-gray-900 mb-4 text-center">その他のお問い合わせ方法</h4>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="text-center p-4 bg-white rounded-lg">
+                            <div class="text-2xl mb-2">📧</div>
+                            <h5 class="font-medium text-gray-800 mb-1">メールでのお問い合わせ</h5>
+                            <p class="text-sm text-gray-600 mb-2">24時間受付</p>
+                            <a href="mailto:company@cor-jo.com" class="text-green-600 font-semibold hover:text-green-700">
+                                company@cor-jo.com
+                            </a>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg">
+                            <div class="text-2xl mb-2">💬</div>
+                            <h5 class="font-medium text-gray-800 mb-1">フォームでのご相談</h5>
+                            <p class="text-sm text-gray-600 mb-2">最短1営業日以内にご返信</p>
+                            <a href="https://cor-jp.com/contact/" target="_blank" class="text-blue-600 font-semibold hover:text-blue-700">
+                                相談フォームはこちら
+                            </a>
+                        </div>
+                    </div>
+                    <p class="text-center text-sm text-gray-500 mt-4">
+                        ※お急ぎの場合はフォームに「至急」とご記入ください
+                    </p>
                 </div>
             </div>
         </div>

@@ -1,15 +1,15 @@
 ---
-import { formatDate } from "../../utils";
+import { formatDate } from "@/utils";
 import type { CollectionEntry } from "astro:content";
-import ArticleIcon from "../../components/Icons/ArticleIcon.astro";
-import VideoIcon from "../../components/Icons/VideoIcon.astro";
-import Card from "../ui/Card.astro";
-
-const { article } = Astro.props;
+import ArticleIcon from "@/components/Icons/ArticleIcon.astro";
+import VideoIcon from "@/components/Icons/VideoIcon.astro";
+import Card from "@/components/ui/Card.astro";
 
 interface Props {
   article: CollectionEntry<'blog'>;
 }
+
+const { article } = Astro.props as Props;
 ---
 <Card isUnderline={true}>
 <article class="p-6">
