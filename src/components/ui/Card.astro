@@ -6,6 +6,6 @@ interface Props {
 const { isUnderline = false } = Astro.props as Props;
 ---
 
-<div class={`rounded-[45px] ${isUnderline ? 'border border-dark shadow-[0px_5px_0px_#191a23]' : ''}`}>
+<div class={`rounded-[45px] transform hover:scale-105 transition-all duration-300 ${isUnderline ? 'border border-dark shadow-2xl' : 'shadow-2xl border border-gray-100'}`}>
   <slot />
 </div>
