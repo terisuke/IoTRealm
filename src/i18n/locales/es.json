@@ -1,0 +1,897 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "services": "Servicios",
+    "about": "Acerca de",
+    "pricing": "Precios",
+    "contact": "Contacto",
+    "language": "Idioma",
+    "solutions": "Soluciones",
+    "industries": "Industrias",
+    "cases": "Casos",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Revoluciona tu Negocio con Soluciones IoT",
+    "subtitle": "IoTRealm proporciona soluciones IoT integrales que ayudan a las empresas a transformarse digitalmente.",
+    "cta": "Comenzar"
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "subtitle": "Soluciones IoT innovadoras para acelerar el crecimiento de tu negocio",
+    "comparison": {
+      "title": "Comparación de Período/Costo de Desarrollo",
+      "generalIT": {
+        "title": "Empresa IT General",
+        "pocPeriod": "Período de Desarrollo PoC",
+        "pocCost": "Costo PoC",
+        "fullDevCost": "Costo de Desarrollo Completo",
+        "pocPeriodValue": "6-12 meses",
+        "pocCostValue": "¥500-2000万",
+        "fullDevCostValue": "¥2000万+"
+      },
+      "iotrealm": {
+        "title": "IoTRealm",
+        "pocPeriod": "Período de Desarrollo PoC",
+        "pocCost": "Costo PoC",
+        "fullDevCost": "Costo de Desarrollo Completo",
+        "pocPeriodValue": "1-3 meses",
+        "pocCostValue": "¥100-500万",
+        "fullDevCostValue": "¥500万~"
+      },
+      "reasons": {
+        "title": "Razones para lograr precios sin precedentes",
+        "aiDriven": {
+          "title": "Eficiencia a través del desarrollo impulsado por IA",
+          "devTime": "Tiempo de Desarrollo Reducido",
+          "errorRate": "Tasa de Errores",
+          "planningPeriod": "Período de Planificación",
+          "devTimeValue": "Máx. 55% reducción",
+          "errorRateValue": "Máx. 78% reducción",
+          "planningPeriodValue": "Reducido a 1/10"
+        },
+        "consistentSupport": {
+          "title": "Efectos del soporte consistente",
+          "rework": "Ocurrencia de Retrabajo",
+          "communication": "Eficiencia de Comunicación",
+          "quality": "Garantía de Calidad Consistente",
+          "reworkValue": "Reducción significativa",
+          "communicationValue": "Pérdida de información minimizada",
+          "qualityValue": "✓"
+        }
+      }
+    },
+    "iotDevelopment": {
+      "title": "Desarrollo IoT",
+      "description": "Desarrollo de dispositivos y aplicaciones IoT personalizados"
+    },
+    "dataAnalytics": {
+      "title": "Análisis de Datos",
+      "description": "Análisis de datos en tiempo real y generación de insights"
+    },
+    "cloudSolutions": {
+      "title": "Soluciones en la Nube",
+      "description": "Infraestructura de nube escalable"
+    },
+    "consulting": {
+      "title": "Consultoría",
+      "description": "Asesoramiento experto en estrategia e implementación IoT"
+    }
+  },
+  "techStack": {
+    "title": "Tecnologías Utilizadas",
+    "aiDevelopment": {
+      "title": "Desarrollo de IA",
+      "apis": "Varias APIs de IA utilizadas según la situación",
+      "ollama": "Procesamiento rápido y seguro con LLM local"
+    },
+    "iotDevices": {
+      "title": "Dispositivos IoT",
+      "smallDevices": "Desarrollo de dispositivos IoT pequeños",
+      "robotHand": "Mano robótica de código abierto de The Robot Studio",
+      "robotArm": "Brazo robótico de Seed Studio"
+    },
+    "cloudML": {
+      "title": "Nube / Aprendizaje Automático",
+      "yolo": "Detección de objetos en tiempo real",
+      "cloudAI": "Servicios de IA basados en la nube"
+    },
+    "aiAgent": {
+      "title": "Agente de IA / Marco",
+      "mastra": "Para entorno TypeScript/Node.js",
+      "langgraph": "Construcción de flujos de trabajo complejos"
+    }
+  },
+  "solutions": {
+    "title": "Soluciones Desarrollables",
+    "subtitle": "Combinando tecnologías de IA e IoT para resolver desafíos en todas las industrias",
+    "aiSolutions": {
+      "title": "Soluciones de IA",
+      "hakataPort": {
+        "title": "Ejemplo de Implementación: Hakata Port Radio AI",
+        "subtitle": "Sistema de Comunicación de Voz con IA para Control de Tráfico Marítimo",
+        "description": "La IA apoya la comunicación inalámbrica VHF entre barcos y torres de control. El reconocimiento y generación de voz en tiempo real permiten un tráfico marítimo seguro y eficiente.",
+        "techStack": "Stack Tecnológico:",
+        "techStackValue": "OpenAI Realtime API + Next.js 15",
+        "pttControl": "Control PTT:",
+        "pttControlValue": "Comunicación sin ruido con función Push-to-Talk",
+        "functionCalling": "Function Calling:",
+        "functionCallingValue": "Función de asignación automática de canales",
+        "imoSmcp": "Cumple IMO SMCP:",
+        "imoSmcpValue": "Soporta el Protocolo Estándar de la Organización Marítima Internacional",
+        "effects": "Efectos de Introducción",
+        "communicationEfficiency": "Eficiencia de Comunicación",
+        "misinterpretationRisk": "Riesgo de Malinterpretación",
+        "responseTime": "Tiempo de Respuesta",
+        "demoButton": "Experimentar en el Sitio de Demostración"
+      },
+      "table": {
+        "category": "Categoría",
+        "status": "Estado",
+        "effect": "Ejemplo de Efecto",
+        "available": "Disponible",
+        "businessAutomation": "Automatización de Negocios",
+        "businessAutomationEffect": "80% de reducción en tiempo de trabajo",
+        "prediction": "Predicción",
+        "predictionEffect": "95% de precisión en predicción de fallas",
+        "dialogue": "Diálogo",
+        "dialogueEffect": "Respuesta de consultas 24 horas",
+        "image": "Imagen",
+        "imageEffect": "99% de mejora en precisión de inspección",
+        "voice": "Voz",
+        "voiceEffect": "98% de precisión en reconocimiento de voz"
+      }
+    },
+    "iotSolutions": {
+      "title": "Soluciones IoT",
+      "careCopilot": {
+        "title": "Ejemplo de Implementación: Care Copilot",
+        "subtitle": "Sistema de Monitoreo de Cuidado IoT para Personas Mayores",
+        "description": "Asegurando la seguridad de las personas mayores mientras se respeta la privacidad. Monitorear detección de caídas y salida de cama usando sensores de distancia ToF sin cámaras, y notificar inmediatamente a los cuidadores a través de notificaciones LINE.",
+        "hardware": "Hardware:",
+        "hardwareValue": "M5Stack Fire + sensor de distancia ToF + sensor ambiental",
+        "notificationSystem": "Sistema de Notificación:",
+        "notificationSystemValue": "Integración de LINE Messaging API",
+        "privacyProtection": "Protección de Privacidad:",
+        "privacyProtectionValue": "Tecnología de detección de movimiento sin cámaras",
+        "locationTracking": "Seguimiento de Ubicación:",
+        "locationTrackingValue": "Asegurar seguridad al salir con función GPS",
+        "effects": "Efectos de Introducción",
+        "fallDetectionAccuracy": "Precisión de detección de caídas",
+        "emergencyResponseTime": "Tiempo de respuesta de emergencia",
+        "caregiverBurdenReduction": "Reducción de carga del cuidador",
+        "articleButton": "Ver artículo detallado"
+      },
+      "table": {
+        "category": "Categoría",
+        "status": "Estado",
+        "effect": "Ejemplo de Efecto",
+        "available": "Disponible",
+        "environmentalMonitoring": "Monitoreo Ambiental",
+        "environmentalMonitoringEffect": "Recolección de datos ambientales en tiempo real",
+        "locationTracking": "Seguimiento de Ubicación",
+        "locationTrackingEffect": "30% de mejora en eficiencia de entrega",
+        "predictiveMaintenance": "Mantenimiento Predictivo",
+        "predictiveMaintenanceEffect": "50% de reducción en tiempo de inactividad",
+        "drone": "Drone",
+        "droneEffect": "90% de reducción en trabajo peligroso",
+        "robotics": "Robótica",
+        "roboticsEffect": "85% de mejora en tasa de automatización"
+      }
+    }
+  },
+  "differentiation": {
+    "title": "Puntos de Diferenciación",
+    "subtitle": "Ventaja competitiva abrumadora no encontrada en otras empresas",
+    "oneStopDevelopment": {
+      "title": "Comparación de Desarrollo Todo en Uno",
+      "table": {
+        "item": "Elemento",
+        "generalITCompany": "Empresa IT General",
+        "corInc": "Cor.inc",
+        "requirementsDefinition": "Definición de Requisitos",
+        "pocDevelopment": "Desarrollo PoC",
+        "mainDevelopment": "Desarrollo Principal",
+        "maintenanceOperation": "Mantenimiento/Operación",
+        "separateCompany": "Empresa Separada",
+        "consistentSupport": "Soporte Consistente",
+        "separateCompanyNoCooperation": "Empresa Separada・Sin Cooperación",
+        "partnerCompanyCooperation": "Empresa Asociada + Sistema de Cooperación"
+      },
+      "collaborationSystem": {
+        "title": "Sistema de Colaboración de Mantenimiento/Operación",
+        "costOptimization": {
+          "title": "Optimización de Costos",
+          "description": "Reducción de costos a través de subcontratación de empresas asociadas"
+        },
+        "constantCooperation": {
+          "title": "Cooperación Constante",
+          "description": "Verificaciones regulares de estado y comunicación"
+        },
+        "rapidResponse": {
+          "title": "Respuesta Rápida",
+          "description": "Respuesta directa durante modificaciones a gran escala"
+        }
+      }
+    },
+    "secureLocalDevelopment": {
+      "title": "Desarrollo Local de Alta Seguridad",
+      "lllmColosseum": {
+        "title": "Ejemplo de Implementación: LLLM Colosseum",
+        "subtitle": "Arena de Debate de LLM Local",
+        "systemOverview": "Resumen del Sistema",
+        "description": "Una plataforma donde múltiples modelos LLM debaten en tiempo real y comparan capacidades. Opera completamente en un entorno local, equilibrando privacidad y rendimiento.",
+        "techStack": "Stack Tecnológico:",
+        "techStackValue": "FastAPI + Next.js + Ollama",
+        "eloRating": "Calificación ELO:",
+        "eloRatingValue": "Evaluación cuantitativa del rendimiento del modelo",
+        "websocket": "WebSocket:",
+        "websocketValue": "Streaming de tokens en tiempo real",
+        "securityEffects": "Efectos de Seguridad",
+        "dataExternalTransmission": "Transmisión Externa de Datos",
+        "informationLeakageRisk": "Riesgo de Filtración de Información",
+        "informationLeakageRiskValue": "Cero",
+        "privacyProtection": "Protección de Privacidad",
+        "regulatoryCompliance": "Cumplimiento Regulatorio",
+        "regulatoryComplianceValue": "Totalmente Cumple",
+        "githubButton": "Ver Implementación en GitHub"
+      },
+      "benefits": {
+        "completeLocalExecution": {
+          "title": "Ejecución Local Completa",
+          "description": "Ejecutar todo el procesamiento incluyendo IA en entorno interno. Eliminar dependencia de servicios en la nube externos"
+        },
+        "dataProtectionEnhancement": {
+          "title": "Mejora de Protección de Datos",
+          "description": "Prevenir completamente la transmisión externa de datos confidenciales. Cumplimiento total con GDPR, Ley de Protección de Información Personal, etc."
+        },
+        "customizability": {
+          "title": "Personalización",
+          "description": "Configuraciones flexibles según los requisitos del cliente. Cumplimiento total con restricciones de red y políticas de seguridad"
+        }
+      },
+      "applicableIndustries": {
+        "title": "Industrias y Usos Aplicables",
+        "healthcare": {
+          "title": "Salud",
+          "description": "Protección completa de datos de pacientes"
+        },
+        "finance": {
+          "title": "Finanzas/Seguros",
+          "description": "Protección de información personal y datos de transacciones"
+        },
+        "government": {
+          "title": "Gobierno",
+          "description": "Gestión estricta de información confidencial"
+        },
+        "manufacturing": {
+          "title": "Manufactura",
+          "description": "Protección de propiedad intelectual e información técnica"
+        }
+      }
+    },
+    "expertCollaboration": {
+      "title": "Colaboración de Expertos",
+      "agriculture": {
+        "title": "Agricultura",
+        "description": "Colaboración con expertos en agricultura inteligente"
+      },
+      "welfare": {
+        "title": "Bienestar",
+        "description": "Conocimiento experto en campos de cuidado y bienestar"
+      },
+      "marine": {
+        "title": "Marino",
+        "description": "Tecnología especializada para ambiente marino y pesca"
+      },
+      "localAI": {
+        "title": "IA Local",
+        "description": "Tecnología de optimización de IA Edge"
+      }
+    }
+  },
+  "process": {
+    "title": "Proceso de Introducción",
+    "subtitle": "Logramos resultados confiables con un enfoque por fases que minimiza el riesgo",
+    "flow": {
+      "title": "Flujo de Introducción",
+      "steps": {
+        "hearing": {
+          "title": "Audiencia",
+          "description": "Investigación detallada de problemas y solicitudes"
+        },
+        "pocProposal": {
+          "title": "Propuesta PoC",
+          "description": "Propuesta de solución óptima"
+        },
+        "pocDevelopment": {
+          "title": "Desarrollo PoC",
+          "description": "Implementación de prototipo"
+        },
+        "effectVerification": {
+          "title": "Verificación de Efectos",
+          "description": "Medición de ROI y efectos"
+        },
+        "mainDevelopment": {
+          "title": "Desarrollo Principal",
+          "description": "Construcción de sistema a gran escala"
+        }
+      }
+    }
+  },
+  "industries": {
+    "title": "Industrias y Aplicaciones Aplicables",
+    "subtitle": "Apoyamos la resolución de desafíos en una amplia gama de industrias",
+    "manufacturing": {
+      "title": "Manufactura",
+      "features": [
+        "Automatización de inspección de calidad",
+        "Sistema de mantenimiento predictivo",
+        "Optimización de producción"
+      ],
+      "effectExample": "Ejemplo de Efecto",
+      "effect": "50% de reducción en tiempo de inactividad"
+    },
+    "logistics": {
+      "title": "Logística",
+      "features": [
+        "Optimización de entrega",
+        "Entrega con drones",
+        "Robots de almacén"
+      ],
+      "effectExample": "Ejemplo de Efecto",
+      "effect": "30% de mejora en eficiencia de entrega"
+    },
+    "agriculture": {
+      "title": "Agricultura",
+      "features": [
+        "Agricultura inteligente",
+        "Predicción de cosecha",
+        "Detección de plagas y enfermedades"
+      ],
+      "effectExample": "Ejemplo de Efecto",
+      "effect": "20% de aumento en rendimiento de cosecha"
+    },
+    "healthcare": {
+      "title": "Salud",
+      "features": [
+        "Sistema de monitoreo",
+        "Apoyo de rehabilitación",
+        "Gestión de medicamentos"
+      ],
+      "effectExample": "Ejemplo de Efecto",
+      "effect": "40% de reducción en carga de cuidado"
+    },
+    "retail": {
+      "title": "Minorista",
+      "features": [
+        "Análisis de visitas a tienda",
+        "Optimización de inventario",
+        "Servicio al cliente con robots"
+      ],
+      "effectExample": "Ejemplo de Efecto",
+      "effect": "25% de aumento en ventas"
+    },
+    "energy": {
+      "title": "Energía",
+      "features": [
+        "Inspección con drones de energía eólica",
+        "Optimización de energía solar",
+        "Pronóstico de demanda eléctrica"
+      ],
+      "effectExample": "Ejemplo de Efecto",
+      "effect": "70% de reducción en tiempo de inspección"
+    },
+    "others": {
+      "title": "Otros",
+      "features": [
+        "Educación y capacitación",
+        "Construcción e ingeniería civil"
+      ],
+      "effectExample": "Ejemplo de Efecto",
+      "effect": "Soluciones personalizadas"
+    }
+  },
+  "cases": {
+    "title": "Casos de Estudio y Resultados",
+    "subtitle": "Resultados en Números",
+    "table": {
+      "headers": {
+        "case": "Caso",
+        "industry": "Industria",
+        "solution": "Solución",
+        "effect": "Efecto"
+      },
+      "rows": [
+        {
+          "title": "Sistema de Transcripción de Voz Portuaria",
+          "description": "Automatización de instrucciones de trabajo",
+          "industry": "Logística",
+          "solution": "Reconocimiento de voz AI + transcripción automática",
+          "effect": "90% de reducción en tiempo de trabajo"
+        },
+        {
+          "title": "Sistema de Monitoreo de Hogares de Cuidado",
+          "description": "Monitoreo automático 24 horas",
+          "industry": "Salud",
+          "solution": "Sensores IoT + análisis AI",
+          "effect": "80% de reducción en tasa de errores"
+        },
+        {
+          "title": "Inspección con Drones de Energía Eólica",
+          "description": "Automatización de trabajo peligroso",
+          "industry": "Energía",
+          "solution": "Drone + AI de reconocimiento de imágenes",
+          "effect": "70% de reducción en tiempo de inspección"
+        },
+        {
+          "title": "Mantenimiento Predictivo de Manufactura",
+          "description": "Detección predictiva de fallas de equipos",
+          "industry": "Manufactura",
+          "solution": "Sensores IoT + aprendizaje automático",
+          "effect": "50% de reducción en tiempo de inactividad"
+        },
+        {
+          "title": "Sensores Inteligentes Agrícolas",
+          "description": "Implementación de agricultura de precisión",
+          "industry": "Agricultura",
+          "solution": "Sensores ambientales + análisis AI",
+          "effect": "20% de aumento en rendimiento de cosecha"
+        }
+      ]
+    },
+    "effects": {
+      "workTimeReduction": {
+        "value": "90%",
+        "description": "Reducción de tiempo de trabajo",
+        "source": "Reconocimiento de voz IoTRealm"
+      },
+      "annualCostReduction": {
+        "value": "120万円",
+        "description": "Reducción de costos anuales",
+        "source": "BoltSite sin papel"
+      },
+      "errorRateReduction": {
+        "value": "80%",
+        "description": "Reducción de tasa de errores",
+        "source": "Sistema de monitoreo IoTRealm"
+      },
+      "customerSatisfaction": {
+        "value": "30%",
+        "description": "Mejora en satisfacción del cliente",
+        "source": "Visualización rápida BoltSite"
+      },
+      "seoRanking": {
+        "value": "5-10º",
+        "description": "Mejora en ranking SEO",
+        "source": "Optimización SEO BoltSite"
+      },
+      "downtimeReduction": {
+        "value": "50%",
+        "description": "Reducción de tiempo de inactividad",
+        "source": "Sistema de mantenimiento predictivo"
+      }
+    },
+    "testimonials": {
+      "title": "Testimonios de Clientes",
+      "tanaka": {
+        "name": "Taro Tanaka",
+        "position": "Propietario de Manufactura",
+        "quote": "\"Con la introducción del sistema de mantenimiento predictivo, ahora podemos detectar fallas de equipos con anticipación y realizar mantenimiento planificado. El tiempo de inactividad se ha reducido significativamente y la eficiencia de producción ha mejorado.\""
+      },
+      "sato": {
+        "name": "Hanako Sato",
+        "position": "Gerente Agrícola",
+        "quote": "\"Con el sistema de agricultura inteligente, podemos monitorear las condiciones del suelo en tiempo real y regar y fertilizar en momentos óptimos. El rendimiento de cosecha ha aumentado 20% y el uso de pesticidas se ha reducido.\""
+      }
+    }
+  },
+  "futureDevelopment": {
+    "title": "Desarrollo Futuro",
+    "subtitle": "Innovación continua utilizando la tecnología más avanzada",
+    "technologies": {
+      "edgeAI": {
+        "title": "Edge AI",
+        "description": "Logrando tanto rendimiento en tiempo real como privacidad a través del procesamiento de IA en el lado del dispositivo"
+      },
+      "5gIntegration": {
+        "title": "Integración 5G",
+        "description": "Procesamiento en tiempo real de datos de gran volumen utilizando comunicación ultrarrápida"
+      },
+      "digitalTwin": {
+        "title": "Digital Twin",
+        "description": "Optimización de simulación a través de la replicación digital completa del espacio físico"
+      },
+      "quantumComputing": {
+        "title": "Computación Cuántica",
+        "description": "Solución de alta velocidad para problemas complejos de optimización"
+      },
+      "brainMachineInterface": {
+        "title": "Interfaz Cerebro-Máquina",
+        "description": "Control intuitivo de dispositivos usando señales cerebrales"
+      },
+      "blockchainIntegration": {
+        "title": "Integración Blockchain",
+        "description": "Sistema distribuido que asegura transparencia y confiabilidad de datos"
+      }
+    },
+    "roadmap": {
+      "title": "Hoja de Ruta I+D",
+      "shortTerm": {
+        "year": "2025",
+        "title": "Plan a Corto Plazo",
+        "items": [
+          "Implementación de Edge AI",
+          "Inicio de integración 5G",
+          "Optimización de LLM local"
+        ]
+      },
+      "mediumTerm": {
+        "year": "2026",
+        "title": "Plan a Mediano Plazo",
+        "items": [
+          "Introducción de Digital Twin",
+          "Verificación de computación cuántica",
+          "Desarrollo de IA específica para industrias"
+        ]
+      },
+      "longTerm": {
+        "year": "2027+",
+        "title": "Plan a Largo Plazo",
+        "items": [
+          "Interfaz Cerebro-Máquina",
+          "Sistemas completamente autónomos",
+          "Expansión global"
+        ]
+      }
+    },
+    "partnership": {
+      "title": "Asociaciones de I+D",
+      "universities": {
+        "title": "Universidades e Instituciones de Investigación",
+        "description": "Acelerando la aplicación práctica de tecnologías básicas a través de colaboración con investigación de vanguardia"
+      },
+      "companies": {
+        "title": "Empresas y Organizaciones",
+        "description": "Desarrollando soluciones prácticas con profundo entendimiento de los desafíos de la industria"
+      }
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Respondemos a las preguntas frecuentes de nuestros clientes",
+    "mainQuestions": {
+      "poc": {
+        "question": "¿Cómo se lleva a cabo el PoC (Prueba de Concepto)?",
+        "answer": {
+          "intro": "El PoC se lleva a cabo en las siguientes 5 etapas:",
+          "steps": [
+            "Audiencia - Investigación detallada de problemas y requisitos (1-2 semanas)",
+            "Propuesta PoC - Propuesta de solución óptima (1 semana)",
+            "Desarrollo PoC - Implementación de prototipo (1-3 meses)",
+            "Verificación de Efectos - Medición de ROI y efectos (2-4 semanas)",
+            "Desarrollo Principal - Construcción de sistema a gran escala (3-12 meses)"
+          ],
+          "conclusion": "Como confirmamos los efectos en cada etapa antes de proceder a la siguiente, podemos minimizar los riesgos."
+        }
+      },
+      "security": {
+        "question": "¿Está bien la seguridad?",
+        "answer": {
+          "intro": "Prestamos máxima atención a la seguridad:",
+          "dataProtection": {
+            "title": "🔒 Protección de Datos y Privacidad",
+            "items": [
+              "Ollama (LLM Local)<br>Los datos no se envían externamente y se procesan en el entorno de la empresa",
+              "Riesgo cero de filtración de información<br>Protección completa de privacidad de datos confidenciales",
+              "Soporte on-premises<br>Procesamiento local completo en su entorno"
+            ]
+          },
+          "compliance": {
+            "title": "🛡️ Regulaciones y Cumplimiento",
+            "items": [
+              "Cumplimiento GDPR<br>Cumplimiento completo con el Reglamento General de Protección de Datos de la UE",
+              "Cumplimiento de la Ley de Protección de Información Personal<br>Cumplimiento con los requisitos legales japoneses",
+              "Cumplimiento de Estándares de la Industria<br>Certificaciones como ISO27001, SOC2 ya obtenidas"
+            ]
+          },
+          "technicalSecurity": {
+            "title": "🔐 Medidas de Seguridad Técnica",
+            "communication": {
+              "title": "Seguridad de Comunicaciones",
+              "items": ["Comunicación encriptada TLS 1.3", "Soporte de conexión VPN"]
+            },
+            "accessControl": {
+              "title": "Control de Acceso",
+              "items": ["Autenticación multifactor (MFA)", "Control de acceso basado en roles", "Gestión estricta de permisos"]
+            },
+            "monitoring": {
+              "title": "Monitoreo y Registro",
+              "items": ["Sistema de monitoreo 24 horas", "Registro integral de logs", "Sistema de detección de anomalías"]
+            }
+          }
+        }
+      },
+      "pricing": {
+        "question": "¿Por qué sus precios son más baratos que otras empresas?",
+        "answer": {
+          "intro": "Las razones por las que podemos lograr precios excepcionales son las siguientes:",
+          "aiDriven": {
+            "title": "🤖 Eficiencia a través del desarrollo impulsado por IA",
+            "items": [
+              "Reducción de tiempo de desarrollo - Hasta 55% de reducción",
+              "Tasa de ocurrencia de errores - Hasta 78% de reducción",
+              "Período de planificación - Reducido a 1/10"
+            ]
+          },
+          "consistentSupport": {
+            "title": "🔄 Efectos del soporte consistente",
+            "items": [
+              "Ocurrencia de rework - Significativamente reducida",
+              "Eficiencia de comunicación - Pérdida de información minimizada",
+              "Mejora de calidad - Garantía de calidad consistente"
+            ]
+          },
+          "priceComparison": {
+            "title": "💰 Comparación específica de precios",
+            "generalIT": "Empresas de TI generales",
+            "corInc": "Cor.inc",
+            "pocPrice": "PoC: 100-500万円",
+            "mainDevPrice": "Desarrollo principal: 500万円〜"
+          }
+        }
+      }
+    },
+    "otherQuestions": {
+      "title": "Otras Preguntas",
+      "techStack": {
+        "question": "¿Qué tipo de stack tecnológico utilizan?",
+        "answer": {
+          "intro": "Utilizamos el stack tecnológico más reciente según la situación:",
+          "aiDevelopment": {
+            "title": "🤖 Desarrollo de IA",
+            "items": [
+              "OpenAI/Anthropic/Google/xAI<br>Varias APIs de IA utilizadas según la situación",
+              "Ollama<br>Procesamiento rápido y seguro con LLM local"
+            ]
+          },
+          "iotDevices": {
+            "title": "📱 Dispositivos IoT",
+            "items": [
+              "M5Stack/Raspberry Pi<br>Desarrollo de dispositivos IoT pequeños",
+              "SO-100/SO-101<br>Brazo robot abierto de HuggingFace",
+              "StarAI Robot Arm<br>Brazo robot de Seed Studio"
+            ]
+          },
+          "cloudML": {
+            "title": "☁️ Nube y Aprendizaje Automático",
+            "items": [
+              "YOLO<br>Detección de objetos en tiempo real",
+              "Vertex AI/Amazon Bedrock<br>Servicios de IA basados en la nube"
+            ]
+          },
+          "aiAgent": {
+            "title": "🛠️ Agente de IA y Framework",
+            "items": [
+              "Mastra<br>Para entorno TypeScript/Node.js",
+              "LangGraph<br>Construcción de flujos de trabajo complejos"
+            ]
+          },
+          "note": "※ Seleccionamos y combinamos la tecnología óptima según los requisitos del proyecto."
+        }
+      },
+      "roi": {
+        "question": "¿Qué nivel de retorno de inversión (ROI) se puede esperar?",
+        "answer": {
+          "intro": "ROI específico de casos de implementación:",
+          "metrics": [
+            "Hasta 55% - Reducción de tiempo de desarrollo",
+            "Hasta 78% - Reducción de tasa de ocurrencia de errores",
+            "1/10 - Reducción de período de planificación"
+          ],
+          "caseStudies": {
+            "title": "💼 Casos de implementación reales",
+            "manufacturing": {
+              "title": "Empresa Manufacturera A (200 empleados)",
+              "items": [
+                "Implementación de sistema de gestión de inventario",
+                "Reducción de costos anuales: 20 millones de yenes",
+                "Período de recuperación de inversión: 6 meses"
+              ]
+            },
+            "logistics": {
+              "title": "Empresa de Logística B (50 empleados)",
+              "items": [
+                "Implementación de sistema de optimización de entrega",
+                "Mejora de eficiencia laboral: 40%",
+                "Período de recuperación de inversión: 8 meses"
+              ]
+            }
+          },
+          "note": "※ El período de recuperación de inversión generalmente se logra en 6-12 meses. Los efectos específicos varían según la industria y escala."
+        }
+      },
+      "sme": {
+        "question": "¿Puede ser introducido incluso por pequeñas y medianas empresas?",
+        "answer": {
+          "intro": "Sí, puede ser introducido por pequeñas y medianas empresas:",
+          "benefits": [
+            "Baja inversión inicial - Puede comenzar desde 100万円〜 para PoC",
+            "Introducción por etapas - Introducción a gran escala después de confirmar efectos",
+            "Precios flexibles - Planes de precios según el tamaño de la empresa",
+            "Soporte integral - Soporte consistente desde la introducción hasta la operación"
+          ],
+          "conclusion": "Primero, propondremos sus problemas y soluciones óptimas en una consulta gratuita (30 minutos)."
+        }
+      },
+      "maintenance": {
+        "question": "¿Se proporcionará mantenimiento?",
+        "answer": {
+          "intro": "Sí, también proporcionamos soporte de mantenimiento y operación:",
+          "costEffective": {
+            "title": "💰 Sistema de mantenimiento rentable",
+            "items": [
+              "Subcontratación a empresas asociadas<br>Básicamente subcontratado a empresas asociadas para reducción de costos",
+              "Sistema de comunicación frecuente<br>Confirmación regular de estado y comunicación",
+              "Garantía de transparencia<br>Reporte claro del contenido de mantenimiento y costos"
+            ]
+          },
+          "rapidResponse": {
+            "title": "⚡ Sistema de respuesta rápida",
+            "items": [
+              "Respuesta rápida a modificaciones a gran escala<br>Respuesta directa inmediata cuando sea necesario",
+              "Propuestas proactivas<br>Anticipar problemas con anticipación y proponer soluciones",
+              "Soporte 24 horas<br>Respuesta dentro de 24 horas en emergencias"
+            ]
+          },
+          "maintenanceFlow": {
+            "title": "🔄 Flujo de mantenimiento",
+            "steps": [
+              "Monitoreo regular - Monitoreo continuo del estado del sistema",
+              "Reporte y comunicación - Reportes mensuales y compartir estado",
+              "Descubrimiento de problemas - Detección temprana y análisis de problemas",
+              "Respuesta rápida - Respuesta directa según sea necesario"
+            ]
+          },
+          "note": "※ Cuando determinamos que las modificaciones a gran escala son necesarias, respondemos directamente sin pasar por empresas asociadas."
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "Solicitud de Consulta Gratuita",
+    "subtitle": "Cuéntanos sobre tu proyecto",
+    "freeConsultationButton": "Solicitud de Consulta Gratuita",
+    "freeTime": "¡30 minutos gratis!",
+    "formTitle": "Solicitud de Consulta Gratuita",
+    "formSubtitle": "Por favor, siéntete libre de consultarnos usando el formulario a continuación",
+    "inquiryForm": {
+      "title": "Formulario de Consulta",
+      "description": "Por favor, cuéntanos los detalles de tu consulta.<br>Un representante responderá dentro de 1 día hábil.",
+      "button": "Consultar con el formulario"
+    },
+    "otherMethods": {
+      "title": "Otros Métodos de Consulta",
+      "email": {
+        "title": "Consultas por correo electrónico",
+        "description": "Recepción 24 horas",
+        "address": "company@cor-jo.com"
+      },
+      "form": {
+        "title": "Consulta a través de formulario",
+        "description": "Respuesta dentro de 1 día hábil como mínimo",
+        "link": "El formulario de consulta está aquí"
+      },
+      "urgentNote": "※Si es urgente, por favor escribe \"Urgente\" en el formulario"
+    },
+    "results": {
+      "title": "Resultados de Implementación",
+      "companies": "Número de empresas introducidas",
+      "satisfaction": "Satisfacción del cliente",
+      "recoveryPeriod": "Período promedio de recuperación de inversión"
+    }
+  },
+  "footer": {
+    "privacyPolicy": "Política de Privacidad",
+    "termsOfUse": "Términos de Uso",
+    "contact": "Contáctanos",
+    "companyInfo": "Desarrollo de soluciones AI/IoT de co-creación por"
+  },
+  "about": {
+    "title": "Acerca de IoTRealm",
+    "subtitle": "Damos forma al futuro de las empresas a través de la tecnología IoT",
+    "description": "Nuestro equipo experimentado ofrece soluciones utilizando tecnología IoT de vanguardia para ayudarte a alcanzar tus objetivos comerciales."
+  },
+  "pricing": {
+    "title": "Planes de Precios",
+    "subtitle": "Planes de precios flexibles adaptados a tus necesidades",
+    "table": {
+      "service": "Servicio",
+      "priceRange": "Rango de Precios (impuestos incluidos)",
+      "duration": "Duración",
+      "includedServices": "Servicios Incluidos",
+      "poc": {
+        "title": "PoC (Prueba de Concepto)",
+        "description": "Desarrollo y verificación de prototipo",
+        "price": "100万円〜500万円",
+        "priceNote": "*Varía según la escala",
+        "duration": "1-3 meses",
+        "features": [
+          "Definición de requisitos y diseño",
+          "Desarrollo de prototipo",
+          "Informe de verificación de efectos",
+          "Soporte de transición al desarrollo principal"
+        ]
+      },
+      "mainDev": {
+        "title": "Desarrollo Principal",
+        "description": "Construcción de sistema operacional a gran escala",
+        "price": "500万円〜",
+        "priceNote": "*Varía según función y escala",
+        "duration": "3-12 meses",
+        "features": [
+          "Construcción de sistema operacional a gran escala",
+          "Pruebas y garantía de calidad",
+          "Soporte de operación y mantenimiento",
+          "Asociación a largo plazo"
+        ]
+      }
+    },
+    "partnership": {
+      "title": "Sistema Preferencial de Socios Co-creadores",
+      "description": "Para clientes que utilizan otros servicios de Cor. Co., Ltd.,<br>ofrecemos precios especiales basados en asociaciones a largo plazo.<br>Por favor contáctanos para más detalles.",
+      "contactButton": "Contáctanos"
+    },
+    "starter": {
+      "title": "Plan Básico",
+      "price": "€450",
+      "period": "/mes",
+      "features": [
+        "Gestión básica de dispositivos IoT",
+        "10GB de procesamiento de datos por mes",
+        "Soporte por correo",
+        "Informes de análisis básicos"
+      ]
+    },
+    "professional": {
+      "title": "Plan Profesional",
+      "price": "€1,350",
+      "period": "/mes",
+      "features": [
+        "Gestión avanzada de dispositivos IoT",
+        "100GB de procesamiento de datos por mes",
+        "Soporte 24/7",
+        "Informes de análisis detallados",
+        "Panel personalizado"
+      ]
+    },
+    "enterprise": {
+      "title": "Plan Empresarial",
+      "price": "Personalizado",
+      "period": "",
+      "features": [
+        "Gestión ilimitada de dispositivos IoT",
+        "Procesamiento de datos ilimitado",
+        "Soporte dedicado",
+        "Soluciones personalizadas",
+        "Opciones de despliegue local"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contáctanos",
+    "subtitle": "Cuéntanos sobre tu proyecto",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "submit": "Enviar Mensaje"
+  },
+  "footer": {
+    "description": "Revolucionando los negocios con soluciones IoT",
+    "links": {
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio"
+    },
+    "copyright": "© 2024 IoTRealm. Todos los derechos reservados."
+  }
+}

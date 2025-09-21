@@ -1,66 +1,69 @@
 ---
-// 言語切り替えコンポーネント
-const languages = [
-  { code: 'ja', name: '日本語', flag: '🇯🇵' },
-  { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'zh', name: '中文', flag: '🇨🇳' },
-  { code: 'es', name: 'Español', flag: '🇪🇸' }
-];
+import { languages, type Language } from '../../i18n/config';
+import { createLocalizedPath } from '../../i18n/utils';
 
-const currentLang = 'ja'; // デフォルトは日本語
+export interface Props {
+  currentLanguage?: Language;
+  currentPath?: string;
+}
+
+const { currentLanguage = 'ja', currentPath = '/' } = Astro.props;
 ---
 
-<div class="relative inline-block text-left">
-  <div>
-    <button type="button" 
-            class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-            onclick="toggleLanguageMenu()">
-      <span class="mr-2">{languages.find(lang => lang.code === currentLang)?.flag}</span>
-      {languages.find(lang => lang.code === currentLang)?.name}
-      <svg class="-mr-1 ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-      </svg>
-    </button>
-  </div>
-
-  <div class="hidden origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" 
-       id="language-menu">
-    <div class="py-1" role="menu">
-      {languages.map(lang => (
-        <a href={`/${lang.code}`} 
-           class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-           role="menuitem">
-          <span class="mr-3">{lang.flag}</span>
-          {lang.name}
-        </a>
-      ))}
-    </div>
+<div class="relative w-full lg:w-auto">
+  <select 
+    id="language-switcher"
+    class="appearance-none bg-white border-2 border-gray-300 rounded-lg px-4 py-3 pr-10 text-base font-medium text-gray-800 hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 cursor-pointer w-full lg:w-auto shadow-sm"
+    onchange="handleLanguageChange(this.value)"
+  >
+    {Object.entries(languages).map(([code, name]) => {
+      const localizedPath = createLocalizedPath(currentPath, code as Language);
+      const isSelected = code === currentLanguage;
+      
+      return (
+        <option value={localizedPath} selected={isSelected}>
+          {name}
+        </option>
+      );
+    })}
+  </select>
+  
+  <!-- Custom dropdown arrow -->
+  <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+    </svg>
   </div>
 </div>
 
-<script>
-function toggleLanguageMenu() {
-  const menu = document.getElementById('language-menu');
-  if (menu) {
-    if (menu.classList.contains('hidden')) {
-      menu.classList.remove('hidden');
-    } else {
-      menu.classList.add('hidden');
-    }
+<style>
+  #language-switcher {
+    /* Remove default browser arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
-}
+  
+  /* Ensure proper padding for custom arrow */
+  #language-switcher {
+    padding-right: 3rem;
+  }
+</style>
 
-// メニュー外をクリックしたら閉じる
-document.addEventListener('click', function(event) {
-  const menu = document.getElementById('language-menu');
-  if (event.target && menu) {
-    const button = (event.target as Element).closest('button');
+<script is:inline>
+  function handleLanguageChange(url) {
+    // Close mobile menu if open
+    const menuItems = document.getElementById('menu-items');
+    const openIcon = document.getElementById('open-icon');
+    const closeIcon = document.getElementById('close-icon');
     
-    if (!button || !button.onclick || button.onclick.toString().indexOf('toggleLanguageMenu') === -1) {
-      if (!menu.contains(event.target as Node)) {
-        menu.classList.add('hidden');
-      }
+    if (menuItems && !menuItems.classList.contains('hidden')) {
+      menuItems.classList.add('hidden');
+      if (openIcon) openIcon.classList.remove('hidden');
+      if (closeIcon) closeIcon.classList.add('hidden');
     }
+    
+    // Navigate to new language
+    window.location.href = url;
   }
-});
 </script>

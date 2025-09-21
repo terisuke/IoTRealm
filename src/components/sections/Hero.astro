@@ -1,5 +1,13 @@
 ---
 import Section from "./Section.astro";
+import { loadTranslations, type Language } from '../../i18n/utils';
+
+export interface Props {
+  currentLanguage?: Language;
+}
+
+const { currentLanguage = 'ja' } = Astro.props;
+const translations = await loadTranslations(currentLanguage);
 ---
 
 <Section id="home">
@@ -24,24 +32,20 @@ import Section from "./Section.astro";
         <!-- Semi-transparent backdrop for title -->
         <div class="bg-black/40 backdrop-blur-sm rounded-2xl p-8 md:p-10">
             <h1 class="text-5xl md:text-7xl font-black leading-tight text-white hero-title">
-                <span class="block animate-fade-in-up" style="animation-delay: 0.2s">アイデアを、</span>
-                <span class="block animate-fade-in-up" style="animation-delay: 0.4s">画面の中から</span>
-                <span class="block animate-fade-in-up" style="animation-delay: 0.6s">現実の世界へ</span>
+                <span class="block animate-fade-in-up" style="animation-delay: 0.2s">{translations.hero.title}</span>
             </h1>
         </div>
 
         <div class="bg-black/30 backdrop-blur-sm rounded-xl p-6 space-y-4 text-lg md:text-xl max-w-3xl mx-auto animate-fade-in-up" style="animation-delay: 0.8s">
-            <p class="font-bold text-white hero-subtitle">課題にお悩みですか？</p>
-            <p class="text-white hero-text font-medium">AI・IoTソリューションで、製造業・物流・農業・医療・小売業界の<br>DX推進を支援します。</p>
-            <p class="text-white hero-text font-medium">PoCから本格実装まで、ワンストップで開発します。</p>
+            <p class="text-white hero-text font-medium">{translations.hero.subtitle}</p>
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8 animate-fade-in-up" style="animation-delay: 1s">
             <a href="#contact" class="hero-button px-10 py-5 bg-blue-600 hover:bg-blue-700 rounded-2xl text-center text-white text-xl font-bold transition-all duration-300 hover:scale-105 backdrop-blur-sm border-2 border-blue-800">
-                無料相談申し込み (30分)
+                {translations.hero.cta}
             </a>
             <a href="#pricing" class="hero-button px-10 py-5 bg-white hover:bg-gray-100 rounded-2xl text-center text-blue-700 border-2 border-white text-xl font-bold transition-all duration-300 hover:scale-105">
-                料金体系を見る
+                {translations.nav.pricing}
             </a>
         </div>
     </div>

@@ -1,0 +1,897 @@
+{
+  "nav": {
+    "home": "首页",
+    "services": "服务",
+    "about": "关于我们",
+    "pricing": "价格",
+    "contact": "联系我们",
+    "language": "语言",
+    "solutions": "解决方案",
+    "industries": "目标行业",
+    "cases": "案例研究",
+    "faq": "常见问题"
+  },
+  "hero": {
+    "title": "用物联网解决方案革新您的业务",
+    "subtitle": "IoTRealm提供全面的物联网解决方案，帮助企业实现数字化转型。",
+    "cta": "立即开始"
+  },
+  "services": {
+    "title": "我们的服务",
+    "subtitle": "创新的物联网解决方案，加速您的业务增长",
+    "comparison": {
+      "title": "开发周期/成本比较",
+      "generalIT": {
+        "title": "一般IT公司",
+        "pocPeriod": "概念验证开发周期",
+        "pocCost": "概念验证费用",
+        "fullDevCost": "全面开发费用",
+        "pocPeriodValue": "6-12个月",
+        "pocCostValue": "¥500-2000万",
+        "fullDevCostValue": "¥2000万+"
+      },
+      "iotrealm": {
+        "title": "IoTRealm",
+        "pocPeriod": "概念验证开发周期",
+        "pocCost": "概念验证费用",
+        "fullDevCost": "全面开发费用",
+        "pocPeriodValue": "1-3个月",
+        "pocCostValue": "¥100-500万",
+        "fullDevCostValue": "¥500万~"
+      },
+      "reasons": {
+        "title": "实现前所未有的价格的原因",
+        "aiDriven": {
+          "title": "通过AI驱动开发提高效率",
+          "devTime": "缩短开发时间",
+          "errorRate": "错误率",
+          "planningPeriod": "规划周期",
+          "devTimeValue": "最多减少55%",
+          "errorRateValue": "最多减少78%",
+          "planningPeriodValue": "缩短至1/10"
+        },
+        "consistentSupport": {
+          "title": "持续支持的效果",
+          "rework": "返工发生",
+          "communication": "沟通效率",
+          "quality": "一致的品质保证",
+          "reworkValue": "大幅减少",
+          "communicationValue": "最小化信息损失",
+          "qualityValue": "✓"
+        }
+      }
+    },
+    "iotDevelopment": {
+      "title": "物联网开发",
+      "description": "定制物联网设备和应用程序开发"
+    },
+    "dataAnalytics": {
+      "title": "数据分析",
+      "description": "实时数据分析和洞察生成"
+    },
+    "cloudSolutions": {
+      "title": "云解决方案",
+      "description": "可扩展的云基础设施解决方案"
+    },
+    "consulting": {
+      "title": "咨询服务",
+      "description": "物联网策略和实施的专家建议"
+    }
+  },
+  "techStack": {
+    "title": "使用技术",
+    "aiDevelopment": {
+      "title": "AI开发",
+      "apis": "根据情况使用各种AI API",
+      "ollama": "通过本地LLM实现快速安全处理"
+    },
+    "iotDevices": {
+      "title": "IoT设备",
+      "smallDevices": "小型IoT设备开发",
+      "robotHand": "The Robot Studio开源机器人手",
+      "robotArm": "Seed Studio机器人手臂"
+    },
+    "cloudML": {
+      "title": "云/机器学习",
+      "yolo": "实时物体检测",
+      "cloudAI": "基于云的AI服务"
+    },
+    "aiAgent": {
+      "title": "AI代理/框架",
+      "mastra": "适用于TypeScript/Node.js环境",
+      "langgraph": "复杂工作流构建"
+    }
+  },
+  "solutions": {
+    "title": "可开发解决方案",
+    "subtitle": "结合AI和IoT技术解决各行业挑战",
+    "aiSolutions": {
+      "title": "AI解决方案",
+      "hakataPort": {
+        "title": "实施案例：博多港无线电AI",
+        "subtitle": "海上交通管制AI语音通信系统",
+        "description": "AI支持船舶与管制塔之间的VHF无线通信。实时语音识别和生成实现安全高效的海上交通。",
+        "techStack": "技术栈：",
+        "techStackValue": "OpenAI Realtime API + Next.js 15",
+        "pttControl": "PTT控制：",
+        "pttControlValue": "推按通话功能实现无噪音通信",
+        "functionCalling": "Function Calling：",
+        "functionCallingValue": "自动频道分配功能",
+        "imoSmcp": "IMO SMCP合规：",
+        "imoSmcpValue": "支持国际海事组织标准协议",
+        "effects": "引入效果",
+        "communicationEfficiency": "通信效率",
+        "misinterpretationRisk": "误解风险",
+        "responseTime": "响应时间",
+        "demoButton": "在演示网站体验"
+      },
+      "table": {
+        "category": "类别",
+        "status": "状态",
+        "effect": "效果示例",
+        "available": "可用",
+        "businessAutomation": "业务自动化",
+        "businessAutomationEffect": "工作时间减少80%",
+        "prediction": "预测",
+        "predictionEffect": "故障预测精度95%",
+        "dialogue": "对话",
+        "dialogueEffect": "24小时查询响应",
+        "image": "图像",
+        "imageEffect": "检查精度提升99%",
+        "voice": "语音",
+        "voiceEffect": "语音识别精度98%"
+      }
+    },
+    "iotSolutions": {
+      "title": "IoT解决方案",
+      "careCopilot": {
+        "title": "实施案例：Care Copilot",
+        "subtitle": "面向老年人的IoT护理监控系统",
+        "description": "在重视隐私的同时确保老年人安全。使用ToF距离传感器（不使用摄像头）监控跌倒检测和离床，通过LINE通知立即告知护理人员。",
+        "hardware": "硬件：",
+        "hardwareValue": "M5Stack Fire + ToF距离传感器 + 环境传感器",
+        "notificationSystem": "通知系统：",
+        "notificationSystemValue": "LINE Messaging API集成",
+        "privacyProtection": "隐私保护：",
+        "privacyProtectionValue": "不使用摄像头的动作检测技术",
+        "locationTracking": "位置跟踪：",
+        "locationTrackingValue": "GPS功能确保外出安全",
+        "effects": "引入效果",
+        "fallDetectionAccuracy": "跌倒检测精度",
+        "emergencyResponseTime": "紧急响应时间",
+        "caregiverBurdenReduction": "护理负担减轻",
+        "articleButton": "查看详细文章"
+      },
+      "table": {
+        "category": "类别",
+        "status": "状态",
+        "effect": "效果示例",
+        "available": "可用",
+        "environmentalMonitoring": "环境监控",
+        "environmentalMonitoringEffect": "实时环境数据收集",
+        "locationTracking": "位置跟踪",
+        "locationTrackingEffect": "配送效率提升30%",
+        "predictiveMaintenance": "预测性维护",
+        "predictiveMaintenanceEffect": "停机时间减少50%",
+        "drone": "无人机",
+        "droneEffect": "危险作业减少90%",
+        "robotics": "机器人技术",
+        "roboticsEffect": "自动化率提升85%"
+      }
+    }
+  },
+  "differentiation": {
+    "title": "差异化要点",
+    "subtitle": "其他公司所没有的压倒性竞争优势",
+    "oneStopDevelopment": {
+      "title": "一站式开发比较",
+      "table": {
+        "item": "项目",
+        "generalITCompany": "一般IT企业",
+        "corInc": "Cor.inc",
+        "requirementsDefinition": "需求定义",
+        "pocDevelopment": "PoC开发",
+        "mainDevelopment": "主开发",
+        "maintenanceOperation": "维护/运营",
+        "separateCompany": "其他公司",
+        "consistentSupport": "一贯支持",
+        "separateCompanyNoCooperation": "其他公司・无协作",
+        "partnerCompanyCooperation": "合作公司+协作体制"
+      },
+      "collaborationSystem": {
+        "title": "维护/运营协作体制",
+        "costOptimization": {
+          "title": "成本优化",
+          "description": "通过合作公司委托降低成本"
+        },
+        "constantCooperation": {
+          "title": "常时协作",
+          "description": "定期状况确认和沟通"
+        },
+        "rapidResponse": {
+          "title": "快速响应",
+          "description": "大规模修改时直接对应"
+        }
+      }
+    },
+    "secureLocalDevelopment": {
+      "title": "高安全性本地开发",
+      "lllmColosseum": {
+        "title": "实施案例：LLLM Colosseum",
+        "subtitle": "本地LLM辩论竞技场",
+        "systemOverview": "系统概述",
+        "description": "多个LLM模型实时进行辩论并比较能力的平台。完全在本地环境中运行，平衡隐私和性能。",
+        "techStack": "技术栈：",
+        "techStackValue": "FastAPI + Next.js + Ollama",
+        "eloRating": "ELO评级：",
+        "eloRatingValue": "模型性能的定量评估",
+        "websocket": "WebSocket：",
+        "websocketValue": "实时令牌流",
+        "securityEffects": "安全效果",
+        "dataExternalTransmission": "数据外部传输",
+        "informationLeakageRisk": "信息泄露风险",
+        "informationLeakageRiskValue": "零",
+        "privacyProtection": "隐私保护",
+        "regulatoryCompliance": "法规要求合规",
+        "regulatoryComplianceValue": "完全合规",
+        "githubButton": "在GitHub上查看实现"
+      },
+      "benefits": {
+        "completeLocalExecution": {
+          "title": "完全本地执行",
+          "description": "在内部环境中执行包括AI在内的所有处理。消除对外部云服务的依赖"
+        },
+        "dataProtectionEnhancement": {
+          "title": "数据保护强化",
+          "description": "完全防止机密数据的外部传输。完全符合GDPR、个人信息保护法等"
+        },
+        "customizability": {
+          "title": "可定制性",
+          "description": "根据客户要求的灵活设置。完全符合网络限制和安全策略"
+        }
+      },
+      "applicableIndustries": {
+        "title": "适用行业和用途",
+        "healthcare": {
+          "title": "医疗/健康",
+          "description": "患者数据的完全保护"
+        },
+        "finance": {
+          "title": "金融/保险",
+          "description": "个人信息和交易数据保护"
+        },
+        "government": {
+          "title": "政府/自治体",
+          "description": "机密信息的严格管理"
+        },
+        "manufacturing": {
+          "title": "制造业",
+          "description": "知识产权和技术信息保护"
+        }
+      }
+    },
+    "expertCollaboration": {
+      "title": "专家协作",
+      "agriculture": {
+        "title": "农业",
+        "description": "与智能农业专家协作"
+      },
+      "welfare": {
+        "title": "福利",
+        "description": "护理和福利领域的专业知识"
+      },
+      "marine": {
+        "title": "海洋",
+        "description": "海洋环境和渔业的专业技术"
+      },
+      "localAI": {
+        "title": "本地AI",
+        "description": "边缘AI优化技术"
+      }
+    }
+  },
+  "process": {
+    "title": "导入流程",
+    "subtitle": "通过分阶段方法最小化风险，确保实现可靠成果",
+    "flow": {
+      "title": "导入流程",
+      "steps": {
+        "hearing": {
+          "title": "需求调研",
+          "description": "详细调查问题和需求"
+        },
+        "pocProposal": {
+          "title": "PoC提案",
+          "description": "最优解决方案提案"
+        },
+        "pocDevelopment": {
+          "title": "PoC开发",
+          "description": "原型实现"
+        },
+        "effectVerification": {
+          "title": "效果验证",
+          "description": "ROI和效果测量"
+        },
+        "mainDevelopment": {
+          "title": "主开发",
+          "description": "完整系统构建"
+        }
+      }
+    }
+  },
+  "industries": {
+    "title": "适用行业和应用",
+    "subtitle": "我们支持解决广泛行业的挑战",
+    "manufacturing": {
+      "title": "制造业",
+      "features": [
+        "质量检查自动化",
+        "预测性维护系统",
+        "生产优化"
+      ],
+      "effectExample": "效果示例",
+      "effect": "停机时间减少50%"
+    },
+    "logistics": {
+      "title": "物流",
+      "features": [
+        "配送优化",
+        "无人机配送",
+        "仓库机器人"
+      ],
+      "effectExample": "效果示例",
+      "effect": "配送效率提升30%"
+    },
+    "agriculture": {
+      "title": "农业",
+      "features": [
+        "智能农业",
+        "收获预测",
+        "病虫害检测"
+      ],
+      "effectExample": "效果示例",
+      "effect": "收获量提升20%"
+    },
+    "healthcare": {
+      "title": "医疗",
+      "features": [
+        "监护系统",
+        "康复支持",
+        "用药管理"
+      ],
+      "effectExample": "效果示例",
+      "effect": "护理负担减轻40%"
+    },
+    "retail": {
+      "title": "零售",
+      "features": [
+        "到店分析",
+        "库存优化",
+        "机器人客服"
+      ],
+      "effectExample": "效果示例",
+      "effect": "销售额提升25%"
+    },
+    "energy": {
+      "title": "能源",
+      "features": [
+        "风力发电无人机检查",
+        "太阳能发电优化",
+        "电力需求预测"
+      ],
+      "effectExample": "效果示例",
+      "effect": "检查时间缩短70%"
+    },
+    "others": {
+      "title": "其他",
+      "features": [
+        "教育培训",
+        "建设土木"
+      ],
+      "effectExample": "效果示例",
+      "effect": "定制化解决方案"
+    }
+  },
+  "cases": {
+    "title": "案例与成果",
+    "subtitle": "数字看成果",
+    "table": {
+      "headers": {
+        "case": "案例",
+        "industry": "行业",
+        "solution": "解决方案",
+        "effect": "效果"
+      },
+      "rows": [
+        {
+          "title": "港口语音转写系统",
+          "description": "作业指示自动化",
+          "industry": "物流",
+          "solution": "AI语音识别 + 自动转写",
+          "effect": "作业时间减少90%"
+        },
+        {
+          "title": "养老院看护系统",
+          "description": "24小时自动监控",
+          "industry": "医疗",
+          "solution": "IoT传感器 + AI分析",
+          "effect": "错误率减少80%"
+        },
+        {
+          "title": "风力发电无人机检查",
+          "description": "危险作业自动化",
+          "industry": "能源",
+          "solution": "无人机 + 图像识别AI",
+          "effect": "检查时间缩短70%"
+        },
+        {
+          "title": "制造业预测性维护",
+          "description": "设备故障预测",
+          "industry": "制造业",
+          "solution": "IoT传感器 + 机器学习",
+          "effect": "停机时间减少50%"
+        },
+        {
+          "title": "农业智能传感器",
+          "description": "精准农业实现",
+          "industry": "农业",
+          "solution": "环境传感器 + AI分析",
+          "effect": "收获量提升20%"
+        }
+      ]
+    },
+    "effects": {
+      "workTimeReduction": {
+        "value": "90%",
+        "description": "作业时间减少",
+        "source": "IoTRealm语音识别"
+      },
+      "annualCostReduction": {
+        "value": "120万円",
+        "description": "年度成本减少",
+        "source": "BoltSite无纸化"
+      },
+      "errorRateReduction": {
+        "value": "80%",
+        "description": "错误率降低",
+        "source": "IoTRealm看护系统"
+      },
+      "customerSatisfaction": {
+        "value": "30%",
+        "description": "客户满意度提升",
+        "source": "BoltSite快速显示"
+      },
+      "seoRanking": {
+        "value": "5-10位",
+        "description": "SEO排名改善",
+        "source": "BoltSite SEO优化"
+      },
+      "downtimeReduction": {
+        "value": "50%",
+        "description": "停机时间减少",
+        "source": "预测性维护系统"
+      }
+    },
+    "testimonials": {
+      "title": "客户评价",
+      "tanaka": {
+        "name": "田中太郎",
+        "position": "制造业老板",
+        "quote": "「通过引入预测性维护系统，我们现在可以提前检测设备故障并进行计划性维护。停机时间大幅减少，生产效率得到提升。」"
+      },
+      "sato": {
+        "name": "佐藤花子",
+        "position": "农业经营者",
+        "quote": "「通过智能农业系统，我们可以实时监控土壤状况，在最佳时机进行浇水和施肥。收获量提升了20%，农药使用量也得到减少。」"
+      }
+    }
+  },
+  "futureDevelopment": {
+    "title": "未来发展",
+    "subtitle": "利用最新技术进行持续创新",
+    "technologies": {
+      "edgeAI": {
+        "title": "Edge AI",
+        "description": "通过在设备端进行AI处理，实现实时性和隐私性的平衡"
+      },
+      "5gIntegration": {
+        "title": "5G集成",
+        "description": "利用超高速通信进行大容量数据的实时处理"
+      },
+      "digitalTwin": {
+        "title": "Digital Twin",
+        "description": "通过物理空间的完整数字复制实现仿真优化"
+      },
+      "quantumComputing": {
+        "title": "量子计算",
+        "description": "复杂优化问题的高速解决"
+      },
+      "brainMachineInterface": {
+        "title": "Brain-Machine Interface",
+        "description": "使用脑信号进行直观的设备控制"
+      },
+      "blockchainIntegration": {
+        "title": "区块链集成",
+        "description": "确保数据透明性和可靠性的分布式系统"
+      }
+    },
+    "roadmap": {
+      "title": "研发路线图",
+      "shortTerm": {
+        "year": "2025",
+        "title": "短期计划",
+        "items": [
+          "Edge AI实用化",
+          "5G集成开始",
+          "本地LLM优化"
+        ]
+      },
+      "mediumTerm": {
+        "year": "2026",
+        "title": "中期计划",
+        "items": [
+          "Digital Twin导入",
+          "量子计算验证",
+          "行业专用AI开发"
+        ]
+      },
+      "longTerm": {
+        "year": "2027+",
+        "title": "长期计划",
+        "items": [
+          "Brain-Machine Interface",
+          "完全自主系统",
+          "全球扩张"
+        ]
+      }
+    },
+    "partnership": {
+      "title": "研发合作伙伴关系",
+      "universities": {
+        "title": "大学和研究机构",
+        "description": "通过与前沿研究的合作，加速基础技术的实用化"
+      },
+      "companies": {
+        "title": "企业和组织",
+        "description": "深入理解行业挑战，开发实用解决方案"
+      }
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "subtitle": "我们回答客户经常提出的问题",
+    "mainQuestions": {
+      "poc": {
+        "question": "PoC（概念验证）是如何进行的？",
+        "answer": {
+          "intro": "PoC按以下5个阶段进行：",
+          "steps": [
+            "需求调研 - 详细调查问题和需求（1-2周）",
+            "PoC提案 - 最优解决方案提案（1周）",
+            "PoC开发 - 原型实现（1-3个月）",
+            "效果验证 - ROI和效果测量（2-4周）",
+            "正式开发 - 完整系统构建（3-12个月）"
+          ],
+          "conclusion": "由于我们在每个阶段确认效果后再进入下一阶段，因此可以最小化风险。"
+        }
+      },
+      "security": {
+        "question": "安全性如何？",
+        "answer": {
+          "intro": "我们对安全性给予最大关注：",
+          "dataProtection": {
+            "title": "🔒 数据保护与隐私",
+            "items": [
+              "Ollama（本地LLM）<br>数据不会发送到外部，在公司环境中处理",
+              "信息泄露风险为零<br>机密数据的完全隐私保护",
+              "本地部署支持<br>在您的环境中进行完全本地处理"
+            ]
+          },
+          "compliance": {
+            "title": "🛡️ 法规与合规",
+            "items": [
+              "GDPR合规<br>完全符合欧盟通用数据保护条例",
+              "个人信息保护法合规<br>符合日本法律要求",
+              "行业标准合规<br>已获得ISO27001、SOC2等认证"
+            ]
+          },
+          "technicalSecurity": {
+            "title": "🔐 技术安全措施",
+            "communication": {
+              "title": "通信安全",
+              "items": ["TLS 1.3加密通信", "VPN连接支持"]
+            },
+            "accessControl": {
+              "title": "访问控制",
+              "items": ["多因素认证（MFA）", "基于角色的访问控制", "严格的权限管理"]
+            },
+            "monitoring": {
+              "title": "监控与日志",
+              "items": ["24小时监控系统", "全面的日志记录", "异常检测系统"]
+            }
+          }
+        }
+      },
+      "pricing": {
+        "question": "为什么价格比其他公司便宜？",
+        "answer": {
+          "intro": "我们能够实现超低价格的原因如下：",
+          "aiDriven": {
+            "title": "🤖 AI驱动开发的效率化",
+            "items": [
+              "开发时间缩短 - 最多减少55%",
+              "错误发生率 - 最多减少78%",
+              "规划期间 - 缩短至1/10"
+            ]
+          },
+          "consistentSupport": {
+            "title": "🔄 一贯支持的效果",
+            "items": [
+              "返工发生 - 大幅减少",
+              "沟通效率 - 信息损失最小化",
+              "质量提升 - 一致的质量保证"
+            ]
+          },
+          "priceComparison": {
+            "title": "💰 具体价格比较",
+            "generalIT": "一般IT公司",
+            "corInc": "Cor.inc",
+            "pocPrice": "PoC: 100-500万円",
+            "mainDevPrice": "正式开发: 500万円〜"
+          }
+        }
+      }
+    },
+    "otherQuestions": {
+      "title": "其他问题",
+      "techStack": {
+        "question": "使用什么样的技术栈？",
+        "answer": {
+          "intro": "我们根据情况使用最新的技术栈：",
+          "aiDevelopment": {
+            "title": "🤖 AI开发",
+            "items": [
+              "OpenAI/Anthropic/Google/xAI<br>根据情况使用各种AI API",
+              "Ollama<br>通过本地LLM实现快速、安全的处理"
+            ]
+          },
+          "iotDevices": {
+            "title": "📱 IoT设备",
+            "items": [
+              "M5Stack/Raspberry Pi<br>小型IoT设备开发",
+              "SO-100/SO-101<br>HuggingFace开放机器人手臂",
+              "StarAI Robot Arm<br>Seed Studio机器人手臂"
+            ]
+          },
+          "cloudML": {
+            "title": "☁️ 云与机器学习",
+            "items": [
+              "YOLO<br>实时物体检测",
+              "Vertex AI/Amazon Bedrock<br>基于云的AI服务"
+            ]
+          },
+          "aiAgent": {
+            "title": "🛠️ AI代理与框架",
+            "items": [
+              "Mastra<br>适用于TypeScript/Node.js环境",
+              "LangGraph<br>复杂工作流构建"
+            ]
+          },
+          "note": "※ 我们根据项目要求选择并组合最优技术。"
+        }
+      },
+      "roi": {
+        "question": "投资回报率（ROI）可以期待到什么程度？",
+        "answer": {
+          "intro": "从实施案例看具体ROI：",
+          "metrics": [
+            "最多55% - 开发时间减少",
+            "最多78% - 错误发生率减少",
+            "1/10 - 规划期间缩短"
+          ],
+          "caseStudies": {
+            "title": "💼 实际实施案例",
+            "manufacturing": {
+              "title": "制造业A公司（200名员工）",
+              "items": [
+                "库存管理系统实施",
+                "年度成本削减: 2000万円",
+                "投资回收期: 6个月"
+              ]
+            },
+            "logistics": {
+              "title": "物流业B公司（50名员工）",
+              "items": [
+                "配送优化系统实施",
+                "工作效率提升: 40%",
+                "投资回收期: 8个月"
+              ]
+            }
+          },
+          "note": "※ 投资回收期一般在6-12个月内实现。具体效果因行业和规模而异。"
+        }
+      },
+      "sme": {
+        "question": "中小企业也可以引入吗？",
+        "answer": {
+          "intro": "是的，中小企业也可以引入：",
+          "benefits": [
+            "低初期投资 - PoC可从100万円〜开始",
+            "阶段性引入 - 确认效果后再正式引入",
+            "灵活的价格设定 - 根据企业规模的收费计划",
+            "充实的支持 - 从引入到运营的一贯支持"
+          ],
+          "conclusion": "首先，我们将在免费咨询（30分钟）中为您的问题和最优解决方案提供建议。"
+        }
+      },
+      "maintenance": {
+        "question": "会提供维护吗？",
+        "answer": {
+          "intro": "是的，我们也提供维护和运营支持：",
+          "costEffective": {
+            "title": "💰 成本效益的维护体制",
+            "items": [
+              "委托给合作公司<br>为了降低成本，基本上委托给合作公司",
+              "频繁的联系体制<br>定期的状况确认和沟通",
+              "透明性确保<br>维护内容和费用的明确报告"
+            ]
+          },
+          "rapidResponse": {
+            "title": "⚡ 快速响应体制",
+            "items": [
+              "大规模改修的快速响应<br>必要时立即直接响应",
+              "主动提案<br>提前察觉问题并提出建议",
+              "24小时支持<br>紧急时24小时内响应"
+            ]
+          },
+          "maintenanceFlow": {
+            "title": "🔄 维护流程",
+            "steps": [
+              "定期监控 - 持续监控系统状况",
+              "报告与联系 - 月度报告和状况共享",
+              "问题发现 - 问题的早期发现和分析",
+              "快速响应 - 根据需要直接响应"
+            ]
+          },
+          "note": "※ 当判断需要大规模改修时，我们将不通过合作公司直接响应。"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "免费咨询申请",
+    "subtitle": "请告诉我们您的项目情况",
+    "freeConsultationButton": "免费咨询申请",
+    "freeTime": "30分钟免费！",
+    "formTitle": "免费咨询申请",
+    "formSubtitle": "请通过以下表单轻松咨询我们",
+    "inquiryForm": {
+      "title": "咨询表单",
+      "description": "请告诉我们您咨询的详细信息。<br>我们的代表将在1个工作日内回复。",
+      "button": "通过表单咨询"
+    },
+    "otherMethods": {
+      "title": "其他咨询方式",
+      "email": {
+        "title": "邮件咨询",
+        "description": "24小时接收",
+        "address": "company@cor-jo.com"
+      },
+      "form": {
+        "title": "表单咨询",
+        "description": "最短1个工作日内回复",
+        "link": "咨询表单在这里"
+      },
+      "urgentNote": "※如果紧急，请在表单中填写"紧急""
+    },
+    "results": {
+      "title": "实施成果",
+      "companies": "引入企业数量",
+      "satisfaction": "客户满意度",
+      "recoveryPeriod": "平均投资回收期"
+    }
+  },
+  "footer": {
+    "privacyPolicy": "隐私政策",
+    "termsOfUse": "使用条款",
+    "contact": "联系我们",
+    "companyInfo": "共创型AI/IoT解决方案开发"
+  },
+  "about": {
+    "title": "关于IoTRealm",
+    "subtitle": "我们通过物联网技术塑造企业的未来",
+    "description": "我们经验丰富的团队使用尖端的物联网技术提供解决方案，帮助您实现业务目标。"
+  },
+  "pricing": {
+    "title": "价格方案",
+    "subtitle": "根据您的需求定制的灵活价格方案",
+    "table": {
+      "service": "服务",
+      "priceRange": "价格范围（含税）",
+      "duration": "期间",
+      "includedServices": "包含服务",
+      "poc": {
+        "title": "PoC（概念验证）",
+        "description": "原型开发和验证",
+        "price": "100万円〜500万円",
+        "priceNote": "*根据规模变动",
+        "duration": "1-3个月",
+        "features": [
+          "需求定义和设计",
+          "原型开发",
+          "效果验证报告",
+          "主开发过渡支持"
+        ]
+      },
+      "mainDev": {
+        "title": "主开发",
+        "description": "全面运营系统构建",
+        "price": "500万円〜",
+        "priceNote": "*根据功能和规模变动",
+        "duration": "3-12个月",
+        "features": [
+          "全面运营系统构建",
+          "测试和质量保证",
+          "运营和维护支持",
+          "长期合作伙伴关系"
+        ]
+      }
+    },
+    "partnership": {
+      "title": "共创合作伙伴优惠制度",
+      "description": "对于使用Cor.株式会社其他服务的客户，<br>我们基于长期合作伙伴关系提供特殊价格。<br>详情请联系我们。",
+      "contactButton": "联系我们"
+    },
+    "starter": {
+      "title": "入门方案",
+      "price": "¥3,500",
+      "period": "/月",
+      "features": [
+        "基本物联网设备管理",
+        "每月10GB数据处理",
+        "邮件支持",
+        "基本分析报告"
+      ]
+    },
+    "professional": {
+      "title": "专业方案",
+      "price": "¥10,500",
+      "period": "/月",
+      "features": [
+        "高级物联网设备管理",
+        "每月100GB数据处理",
+        "24/7支持",
+        "详细分析报告",
+        "自定义仪表板"
+      ]
+    },
+    "enterprise": {
+      "title": "企业方案",
+      "price": "定制",
+      "period": "",
+      "features": [
+        "无限物联网设备管理",
+        "无限数据处理",
+        "专属支持",
+        "定制解决方案",
+        "本地部署选项"
+      ]
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "告诉我们您的项目",
+    "name": "姓名",
+    "email": "邮箱",
+    "message": "消息",
+    "submit": "发送消息"
+  },
+  "footer": {
+    "description": "用物联网解决方案革新业务",
+    "links": {
+      "privacy": "隐私政策",
+      "terms": "服务条款"
+    },
+    "copyright": "© 2024 IoTRealm. 版权所有。"
+  }
+}

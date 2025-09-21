@@ -11,15 +11,15 @@ import FutureDevelopment from "@/components/sections/FutureDevelopment.astro";
 import FAQ from "@/components/sections/FAQ.astro";
 import CTA from "@/components/sections/CTA.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
-import { getLanguageFromPath } from '../i18n/utils';
+import { getLanguageFromPath } from '../../i18n/utils';
 
-const currentLanguage = getLanguageFromPath(Astro.url?.pathname || '/');
-const currentPath = Astro.url?.pathname || '/';
+const currentLanguage = getLanguageFromPath(Astro.url?.pathname || '/es');
+const currentPath = Astro.url?.pathname || '/es';
 ---
 
 <MainLayout
-  title="IoTRealm - AI・IoTソリューション開発"
-  description="IoTRealm: AI・IoTで現実を変革。PoC100万円〜で課題解決。アイデアを、画面の中から現実の世界へ。製造業・物流・農業・医療・小売業界のDX推進を支援。"
+  title="IoTRealm - Desarrollo de Soluciones AI e IoT"
+  description="IoTRealm: Transforma la realidad con AI e IoT. Resuelve desafíos desde €10K para PoC. Convierte ideas de la pantalla a la realidad. Apoyando el avance DX en industrias de manufactura, logística, agricultura, salud y retail."
   currentLanguage={currentLanguage}
   currentPath={currentPath}
 >

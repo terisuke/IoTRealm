@@ -1,15 +1,23 @@
 ---
-import Section from "./Section.astro";
+import Section from './Section.astro';
+import { loadTranslations, type Language } from '../../i18n/utils';
+
+export interface Props {
+  currentLanguage?: Language;
+}
+
+const { currentLanguage = 'ja' } = Astro.props;
+const translations = await loadTranslations(currentLanguage);
 ---
 
 <Section id="industries">
 <div class="container mx-auto px-4 py-16">
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            対応可能な業界・用途
+            {translations.industries.title}
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            幅広い業界の課題解決を支援します
+            {translations.industries.subtitle}
         </p>
     </div>
     
@@ -18,26 +26,20 @@ import Section from "./Section.astro";
         <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
             <div class="bg-blue-100 p-6 text-blue-800">
                 <div class="text-4xl mb-3">🏭</div>
-                <h3 class="text-2xl font-bold">製造業</h3>
+                <h3 class="text-2xl font-bold">{translations.industries.manufacturing.title}</h3>
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
-                        <span>品質検査の自動化</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
-                        <span>予知保全システム</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
-                        <span>生産最適化</span>
-                    </li>
+                    {translations.industries.manufacturing.features.map((feature) => (
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                            <span>{feature}</span>
+                        </li>
+                    ))}
                 </ul>
                 <div class="bg-blue-50 p-4 rounded-lg">
-                    <div class="text-sm font-semibold text-blue-800">効果例</div>
-                    <div class="text-lg font-bold text-blue-600">ダウンタイム50%削減</div>
+                    <div class="text-sm font-semibold text-blue-800">{translations.industries.manufacturing.effectExample}</div>
+                    <div class="text-lg font-bold text-blue-600">{translations.industries.manufacturing.effect}</div>
                 </div>
             </div>
         </div>
@@ -46,26 +48,20 @@ import Section from "./Section.astro";
         <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
             <div class="bg-orange-100 p-6 text-orange-800">
                 <div class="text-4xl mb-3">🚚</div>
-                <h3 class="text-2xl font-bold">物流</h3>
+                <h3 class="text-2xl font-bold">{translations.industries.logistics.title}</h3>
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></span>
-                        <span>配送最適化</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></span>
-                        <span>ドローン配送</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></span>
-                        <span>倉庫ロボット</span>
-                    </li>
+                    {translations.industries.logistics.features.map((feature) => (
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></span>
+                            <span>{feature}</span>
+                        </li>
+                    ))}
                 </ul>
                 <div class="bg-orange-50 p-4 rounded-lg">
-                    <div class="text-sm font-semibold text-orange-800">効果例</div>
-                    <div class="text-lg font-bold text-orange-600">配送効率30%向上</div>
+                    <div class="text-sm font-semibold text-orange-800">{translations.industries.logistics.effectExample}</div>
+                    <div class="text-lg font-bold text-orange-600">{translations.industries.logistics.effect}</div>
                 </div>
             </div>
         </div>
@@ -74,26 +70,20 @@ import Section from "./Section.astro";
         <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
             <div class="bg-yellow-100 p-6 text-yellow-800">
                 <div class="text-4xl mb-3">🌾</div>
-                <h3 class="text-2xl font-bold">農業</h3>
+                <h3 class="text-2xl font-bold">{translations.industries.agriculture.title}</h3>
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></span>
-                        <span>スマート農業</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></span>
-                        <span>収穫予測</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></span>
-                        <span>病害虫検知</span>
-                    </li>
+                    {translations.industries.agriculture.features.map((feature) => (
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></span>
+                            <span>{feature}</span>
+                        </li>
+                    ))}
                 </ul>
                 <div class="bg-yellow-50 p-4 rounded-lg">
-                    <div class="text-sm font-semibold text-yellow-800">効果例</div>
-                    <div class="text-lg font-bold text-yellow-600">収穫量20%向上</div>
+                    <div class="text-sm font-semibold text-yellow-800">{translations.industries.agriculture.effectExample}</div>
+                    <div class="text-lg font-bold text-yellow-600">{translations.industries.agriculture.effect}</div>
                 </div>
             </div>
         </div>
@@ -102,26 +92,20 @@ import Section from "./Section.astro";
         <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
             <div class="bg-red-100 p-6 text-red-800">
                 <div class="text-4xl mb-3">🏥</div>
-                <h3 class="text-2xl font-bold">医療</h3>
+                <h3 class="text-2xl font-bold">{translations.industries.healthcare.title}</h3>
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-red-500 rounded-full mr-3 mt-2"></span>
-                        <span>見守りシステム</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-red-500 rounded-full mr-3 mt-2"></span>
-                        <span>リハビリ支援</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-red-500 rounded-full mr-3 mt-2"></span>
-                        <span>服薬管理</span>
-                    </li>
+                    {translations.industries.healthcare.features.map((feature) => (
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-red-500 rounded-full mr-3 mt-2"></span>
+                            <span>{feature}</span>
+                        </li>
+                    ))}
                 </ul>
                 <div class="bg-red-50 p-4 rounded-lg">
-                    <div class="text-sm font-semibold text-red-800">効果例</div>
-                    <div class="text-lg font-bold text-red-600">介護負担40%軽減</div>
+                    <div class="text-sm font-semibold text-red-800">{translations.industries.healthcare.effectExample}</div>
+                    <div class="text-lg font-bold text-red-600">{translations.industries.healthcare.effect}</div>
                 </div>
             </div>
         </div>
@@ -130,26 +114,20 @@ import Section from "./Section.astro";
         <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
             <div class="bg-purple-100 p-6 text-purple-800">
                 <div class="text-4xl mb-3">🛒</div>
-                <h3 class="text-2xl font-bold">小売</h3>
+                <h3 class="text-2xl font-bold">{translations.industries.retail.title}</h3>
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></span>
-                        <span>来店分析</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></span>
-                        <span>在庫最適化</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></span>
-                        <span>ロボット接客</span>
-                    </li>
+                    {translations.industries.retail.features.map((feature) => (
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></span>
+                            <span>{feature}</span>
+                        </li>
+                    ))}
                 </ul>
                 <div class="bg-purple-50 p-4 rounded-lg">
-                    <div class="text-sm font-semibold text-purple-800">効果例</div>
-                    <div class="text-lg font-bold text-purple-600">売上25%向上</div>
+                    <div class="text-sm font-semibold text-purple-800">{translations.industries.retail.effectExample}</div>
+                    <div class="text-lg font-bold text-purple-600">{translations.industries.retail.effect}</div>
                 </div>
             </div>
         </div>
@@ -158,26 +136,20 @@ import Section from "./Section.astro";
         <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
             <div class="bg-green-100 p-6 text-green-800" style="background-color: #dcfce7 !important;">
                 <div class="text-4xl mb-3">⚡</div>
-                <h3 class="text-2xl font-bold">エネルギー</h3>
+                <h3 class="text-2xl font-bold">{translations.industries.energy.title}</h3>
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
-                        <span>風力発電ドローン検査</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
-                        <span>太陽光発電最適化</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
-                        <span>電力需要予測</span>
-                    </li>
+                    {translations.industries.energy.features.map((feature) => (
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
+                            <span>{feature}</span>
+                        </li>
+                    ))}
                 </ul>
                 <div class="bg-green-50 p-4 rounded-lg" style="background-color: #f0fdf4 !important;">
-                    <div class="text-sm font-semibold text-green-800" style="color: #166534 !important;">効果例</div>
-                    <div class="text-lg font-bold text-green-600" style="color: #16a34a !important;">検査時間70%短縮</div>
+                    <div class="text-sm font-semibold text-green-800" style="color: #166534 !important;">{translations.industries.energy.effectExample}</div>
+                    <div class="text-lg font-bold text-green-600" style="color: #16a34a !important;">{translations.industries.energy.effect}</div>
                 </div>
             </div>
         </div>
@@ -186,22 +158,20 @@ import Section from "./Section.astro";
         <div class="bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
             <div class="bg-gray-100 p-6 text-gray-800" style="background-color: #f3f4f6 !important;">
                 <div class="text-4xl mb-3">🔧</div>
-                <h3 class="text-2xl font-bold">その他</h3>
+                <h3 class="text-2xl font-bold">{translations.industries.others.title}</h3>
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-black rounded-full mr-3 mt-2" style="background-color: #000000 !important;"></span>
-                        <span>教育・研修</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="w-2 h-2 bg-black rounded-full mr-3 mt-2" style="background-color: #000000 !important;"></span>
-                        <span>建設・土木</span>
-                    </li>
+                    {translations.industries.others.features.map((feature) => (
+                        <li class="flex items-start">
+                            <span class="w-2 h-2 bg-black rounded-full mr-3 mt-2" style="background-color: #000000 !important;"></span>
+                            <span>{feature}</span>
+                        </li>
+                    ))}
                 </ul>
                 <div class="bg-gray-100 p-4 rounded-lg" style="background-color: #f9fafb !important;">
-                    <div class="text-sm font-semibold text-gray-800" style="color: #1f2937 !important;">効果例</div>
-                    <div class="text-lg font-bold text-gray-700" style="color: #374151 !important;">カスタマイズ対応</div>
+                    <div class="text-sm font-semibold text-gray-800" style="color: #1f2937 !important;">{translations.industries.others.effectExample}</div>
+                    <div class="text-lg font-bold text-gray-700" style="color: #374151 !important;">{translations.industries.others.effect}</div>
                 </div>
             </div>
         </div>

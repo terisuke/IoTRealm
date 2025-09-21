@@ -1,5 +1,13 @@
 ---
-import Section from "./Section.astro";
+import Section from './Section.astro';
+import { loadTranslations, type Language } from '../../i18n/utils';
+
+export interface Props {
+  currentLanguage?: Language;
+}
+
+const { currentLanguage = 'ja' } = Astro.props;
+const translations = await loadTranslations(currentLanguage);
 ---
 
 <Section id="faq">
@@ -7,10 +15,10 @@ import Section from "./Section.astro";
 <div class="container mx-auto px-4 py-16">
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            よくある質問
+            {translations.faq.title}
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            お客様からよくいただくご質問にお答えします
+            {translations.faq.subtitle}
         </p>
     </div>
     
@@ -20,7 +28,7 @@ import Section from "./Section.astro";
             <div class="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
                 <button class="w-full p-6 text-left bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition-all duration-300" onclick="toggleFAQ('faq1')">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-900">PoC（概念実証）はどのように進められますか？</h3>
+                        <h3 class="text-lg font-semibold text-gray-900">{translations.faq.mainQuestions.poc.question}</h3>
                         <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" id="faq1-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
@@ -28,17 +36,15 @@ import Section from "./Section.astro";
                 </button>
                 <div class="hidden p-6 bg-white" id="faq1">
                     <p class="text-gray-700 mb-4">
-                        PoCは以下の5段階で進められます：
+                        {translations.faq.mainQuestions.poc.answer.intro}
                     </p>
                     <ol class="list-decimal list-inside space-y-2 text-gray-700">
-                        <li><strong>ヒアリング</strong> - 課題・要望の詳細調査（1-2週間）</li>
-                        <li><strong>PoC提案</strong> - 最適なソリューション提案（1週間）</li>
-                        <li><strong>PoC開発</strong> - プロトタイプ実装（1-3ヶ月）</li>
-                        <li><strong>効果検証</strong> - ROI・効果測定（2-4週間）</li>
-                        <li><strong>本開発</strong> - 本格システム構築（3-12ヶ月）</li>
+                        {translations.faq.mainQuestions.poc.answer.steps.map((step) => (
+                            <li set:html={step.replace(' - ', ' - ')}></li>
+                        ))}
                     </ol>
                     <p class="text-gray-700 mt-4">
-                        各段階で効果を確認してから次に進むため、リスクを最小化できます。
+                        {translations.faq.mainQuestions.poc.answer.conclusion}
                     </p>
                 </div>
             </div>
@@ -46,7 +52,7 @@ import Section from "./Section.astro";
             <div class="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
                 <button class="w-full p-6 text-left bg-gradient-to-r from-pink-50 to-pink-100 hover:from-pink-100 hover:to-pink-200 transition-all duration-300" onclick="toggleFAQ('faq2')">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-900">セキュリティは大丈夫ですか？</h3>
+                        <h3 class="text-lg font-semibold text-gray-900">{translations.faq.mainQuestions.security.question}</h3>
                         <svg class="w-6 h-6 text-pink-600 transition-transform duration-300" id="faq2-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
@@ -54,50 +60,51 @@ import Section from "./Section.astro";
                 </button>
                 <div class="hidden p-6 bg-white" id="faq2">
                     <p class="text-gray-700 mb-4">
-                        セキュリティには最大限の注意を払っています：
+                        {translations.faq.mainQuestions.security.answer.intro}
                     </p>
                     <div class="grid md:grid-cols-2 gap-6 mb-4">
                         <div class="bg-blue-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-900 mb-3">🔒 データ保護・プライバシー</h4>
+                            <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.mainQuestions.security.answer.dataProtection.title}</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-                                <li><strong>Ollama（ローカルLLM）</strong><br>データは外部に送信されず、社内環境で処理</li>
-                                <li><strong>情報漏洩リスクゼロ</strong><br>機密データの完全なプライバシー保護</li>
-                                <li><strong>オンプレミス対応</strong><br>お客様の環境での完全なローカル処理</li>
+                                {translations.faq.mainQuestions.security.answer.dataProtection.items.map((item) => (
+                                    <li set:html={item}></li>
+                                ))}
                             </ul>
                         </div>
                         <div class="bg-green-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-900 mb-3">🛡️ 規制・コンプライアンス</h4>
+                            <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.mainQuestions.security.answer.compliance.title}</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-                                <li><strong>GDPR準拠</strong><br>EU一般データ保護規則への完全対応</li>
-                                <li><strong>個人情報保護法対応</strong><br>日本の法的要件への適合</li>
-                                <li><strong>業界標準準拠</strong><br>ISO27001、SOC2などの認証取得済み</li>
+                                {translations.faq.mainQuestions.security.answer.compliance.items.map((item) => (
+                                    <li set:html={item}></li>
+                                ))}
                             </ul>
                         </div>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-gray-900 mb-3">🔐 技術的セキュリティ対策</h4>
+                        <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.mainQuestions.security.answer.technicalSecurity.title}</h4>
                         <div class="grid md:grid-cols-3 gap-4 text-sm">
                             <div>
-                                <div class="font-semibold text-gray-800 mb-1">通信セキュリティ</div>
+                                <div class="font-semibold text-gray-800 mb-1">{translations.faq.mainQuestions.security.answer.technicalSecurity.communication.title}</div>
                                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                                    <li>TLS 1.3暗号化通信</li>
-                                    <li>VPN接続対応</li>
+                                    {translations.faq.mainQuestions.security.answer.technicalSecurity.communication.items.map((item) => (
+                                        <li>{item}</li>
+                                    ))}
                                 </ul>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-800 mb-1">アクセス制御</div>
+                                <div class="font-semibold text-gray-800 mb-1">{translations.faq.mainQuestions.security.answer.technicalSecurity.accessControl.title}</div>
                                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                                    <li>多要素認証（MFA）</li>
-                                    <li>ロールベースアクセス制御</li>
-                                    <li>厳格な権限管理</li>
+                                    {translations.faq.mainQuestions.security.answer.technicalSecurity.accessControl.items.map((item) => (
+                                        <li>{item}</li>
+                                    ))}
                                 </ul>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-800 mb-1">監視・ログ</div>
+                                <div class="font-semibold text-gray-800 mb-1">{translations.faq.mainQuestions.security.answer.technicalSecurity.monitoring.title}</div>
                                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                                    <li>24時間監視体制</li>
-                                    <li>包括的なログ記録</li>
-                                    <li>異常検知システム</li>
+                                    {translations.faq.mainQuestions.security.answer.technicalSecurity.monitoring.items.map((item) => (
+                                        <li>{item}</li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -108,7 +115,7 @@ import Section from "./Section.astro";
             <div class="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
                 <button class="w-full p-6 text-left bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition-all duration-300" onclick="toggleFAQ('faq3')">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-900">なぜ価格が他社より安いのですか？</h3>
+                        <h3 class="text-lg font-semibold text-gray-900">{translations.faq.mainQuestions.pricing.question}</h3>
                         <svg class="w-6 h-6 text-yellow-600 transition-transform duration-300" id="faq3-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
@@ -116,59 +123,53 @@ import Section from "./Section.astro";
                 </button>
                 <div class="hidden p-6 bg-white" id="faq3">
                     <p class="text-gray-700 mb-4">
-                        破格の価格を実現できる理由は以下の通りです：
+                        {translations.faq.mainQuestions.pricing.answer.intro}
                     </p>
                     <div class="grid md:grid-cols-2 gap-6 mb-6">
                         <div class="bg-blue-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-900 mb-3">🤖 AI駆動開発による効率化</h4>
+                            <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.mainQuestions.pricing.answer.aiDriven.title}</h4>
                             <div class="space-y-2 text-sm text-gray-700">
-                                <div class="flex justify-between">
-                                    <span>開発時間短縮</span>
-                                    <span class="font-bold text-green-600">最大55%削減</span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span>エラー発生率</span>
-                                    <span class="font-bold text-green-600">最大78%低減</span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span>企画期間</span>
-                                    <span class="font-bold text-green-600">10分の1に短縮</span>
-                                </div>
+                                {translations.faq.mainQuestions.pricing.answer.aiDriven.items.map((item) => {
+                                    const [label, value] = item.split(' - ');
+                                    return (
+                                        <div class="flex justify-between">
+                                            <span>{label}</span>
+                                            <span class="font-bold text-green-600">{value}</span>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                         <div class="bg-green-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-900 mb-3">🔄 一貫対応による効果</h4>
+                            <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.mainQuestions.pricing.answer.consistentSupport.title}</h4>
                             <div class="space-y-2 text-sm text-gray-700">
-                                <div class="flex justify-between">
-                                    <span>手戻り発生</span>
-                                    <span class="font-bold text-green-600">大幅削減</span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span>コミュニケーション効率</span>
-                                    <span class="font-bold text-green-600">情報ロス最小化</span>
-                                </div>
-                                <div class="flex justify-between">
-                                    <span>品質向上</span>
-                                    <span class="font-bold text-green-600">一貫した品質保証</span>
-                                </div>
+                                {translations.faq.mainQuestions.pricing.answer.consistentSupport.items.map((item) => {
+                                    const [label, value] = item.split(' - ');
+                                    return (
+                                        <div class="flex justify-between">
+                                            <span>{label}</span>
+                                            <span class="font-bold text-green-600">{value}</span>
+                                        </div>
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>
                     <div class="bg-yellow-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-gray-900 mb-3">💰 具体的な価格比較</h4>
+                        <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.mainQuestions.pricing.answer.priceComparison.title}</h4>
                         <div class="grid md:grid-cols-2 gap-4 text-sm">
                             <div class="text-center">
-                                <div class="font-semibold text-gray-900 mb-2">一般的なIT企業</div>
+                                <div class="font-semibold text-gray-900 mb-2">{translations.faq.mainQuestions.pricing.answer.priceComparison.generalIT}</div>
                                 <div class="bg-gray-800 text-white p-3 rounded-lg">
                                     <div class="text-xs">PoC: 500-2000万円</div>
                                     <div class="text-xs">本開発: 2000万円+</div>
                                 </div>
                             </div>
                             <div class="text-center">
-                                <div class="font-semibold text-red-600 mb-2">Cor.inc</div>
+                                <div class="font-semibold text-red-600 mb-2">{translations.faq.mainQuestions.pricing.answer.priceComparison.corInc}</div>
                                 <div class="bg-red-600 text-white p-3 rounded-lg">
-                                    <div class="text-xs">PoC: 100-500万円</div>
-                                    <div class="text-xs">本開発: 500万円〜</div>
+                                    <div class="text-xs">{translations.faq.mainQuestions.pricing.answer.priceComparison.pocPrice}</div>
+                                    <div class="text-xs">{translations.faq.mainQuestions.pricing.answer.priceComparison.mainDevPrice}</div>
                                 </div>
                             </div>
                         </div>
@@ -180,13 +181,13 @@ import Section from "./Section.astro";
         <!-- その他の質問 -->
         <div class="space-y-6">
             <h3 class="text-2xl font-bold text-center mb-8 text-green-600">
-                その他の質問
+                {translations.faq.otherQuestions.title}
             </h3>
             
             <div class="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
                 <button class="w-full p-6 text-left bg-gradient-to-r from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200 transition-all duration-300" onclick="toggleFAQ('faq4')">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-900">どのような技術スタックを使用していますか？</h3>
+                        <h3 class="text-lg font-semibold text-gray-900">{translations.faq.otherQuestions.techStack.question}</h3>
                         <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" id="faq4-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
@@ -194,41 +195,44 @@ import Section from "./Section.astro";
                 </button>
                 <div class="hidden p-6 bg-white" id="faq4">
                     <p class="text-gray-700 mb-4">
-                        最新の技術スタックを状況に応じて使い分けています：
+                        {translations.faq.otherQuestions.techStack.answer.intro}
                     </p>
                     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
                         <div class="bg-blue-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-900 mb-2">🤖 AI開発</h4>
+                            <h4 class="font-semibold text-gray-900 mb-2">{translations.faq.otherQuestions.techStack.answer.aiDevelopment.title}</h4>
                             <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
-                                <li><strong>OpenAI/Anthropic/Google/xAI</strong><br>各種AI APIを状況に応じて使い分け</li>
-                                <li><strong>Ollama</strong><br>ローカルLLMによる高速・セキュアな処理</li>
+                                {translations.faq.otherQuestions.techStack.answer.aiDevelopment.items.map((item) => (
+                                    <li set:html={item}></li>
+                                ))}
                             </ul>
                         </div>
                         <div class="bg-green-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-900 mb-2">📱 IoTデバイス</h4>
+                            <h4 class="font-semibold text-gray-900 mb-2">{translations.faq.otherQuestions.techStack.answer.iotDevices.title}</h4>
                             <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
-                                <li><strong>M5Stack/Raspberry Pi</strong><br>小型IoTデバイス開発</li>
-                                <li><strong>SO-100/SO-101</strong><br>HuggingFaceオープンロボットアーム</li>
-                                <li><strong>StarAI Robot Arm</strong><br>Seed Studio製ロボットアーム</li>
+                                {translations.faq.otherQuestions.techStack.answer.iotDevices.items.map((item) => (
+                                    <li set:html={item}></li>
+                                ))}
                             </ul>
                         </div>
                         <div class="bg-purple-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-900 mb-2">☁️ クラウド・機械学習</h4>
+                            <h4 class="font-semibold text-gray-900 mb-2">{translations.faq.otherQuestions.techStack.answer.cloudML.title}</h4>
                             <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
-                                <li><strong>YOLO</strong><br>リアルタイム物体検出</li>
-                                <li><strong>Vertex AI/Amazon Bedrock</strong><br>クラウドベースAIサービス</li>
+                                {translations.faq.otherQuestions.techStack.answer.cloudML.items.map((item) => (
+                                    <li set:html={item}></li>
+                                ))}
                             </ul>
                         </div>
                         <div class="bg-orange-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-900 mb-2">🛠️ AIエージェント・フレームワーク</h4>
+                            <h4 class="font-semibold text-gray-900 mb-2">{translations.faq.otherQuestions.techStack.answer.aiAgent.title}</h4>
                             <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
-                                <li><strong>Mastra</strong><br>TypeScript/Node.js環境向け</li>
-                                <li><strong>LangGraph</strong><br>複雑なワークフロー構築</li>
+                                {translations.faq.otherQuestions.techStack.answer.aiAgent.items.map((item) => (
+                                    <li set:html={item}></li>
+                                ))}
                             </ul>
                         </div>
                     </div>
                     <p class="text-gray-700 mt-4 text-sm">
-                        ※ プロジェクトの要件に応じて最適な技術を選択し、組み合わせて使用します。
+                        {translations.faq.otherQuestions.techStack.answer.note}
                     </p>
                 </div>
             </div>
@@ -236,7 +240,7 @@ import Section from "./Section.astro";
             <div class="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
                 <button class="w-full p-6 text-left bg-gradient-to-r from-pink-50 to-pink-100 hover:from-pink-100 hover:to-pink-200 transition-all duration-300" onclick="toggleFAQ('faq5')">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-900">投資対効果（ROI）はどの程度期待できますか？</h3>
+                        <h3 class="text-lg font-semibold text-gray-900">{translations.faq.otherQuestions.roi.question}</h3>
                         <svg class="w-6 h-6 text-pink-600 transition-transform duration-300" id="faq5-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
@@ -244,45 +248,44 @@ import Section from "./Section.astro";
                 </button>
                 <div class="hidden p-6 bg-white" id="faq5">
                     <p class="text-gray-700 mb-4">
-                        導入事例から見る具体的なROI：
+                        {translations.faq.otherQuestions.roi.answer.intro}
                     </p>
                     <div class="grid md:grid-cols-3 gap-4 mb-6">
-                        <div class="bg-blue-50 p-4 rounded-lg text-center">
-                            <div class="text-2xl font-bold text-blue-600">最大55%</div>
-                            <div class="text-sm text-gray-600">開発時間削減</div>
-                        </div>
-                        <div class="bg-green-50 p-4 rounded-lg text-center">
-                            <div class="text-2xl font-bold text-green-600">最大78%</div>
-                            <div class="text-sm text-gray-600">エラー発生率低減</div>
-                        </div>
-                        <div class="bg-purple-50 p-4 rounded-lg text-center">
-                            <div class="text-2xl font-bold text-purple-600">10分の1</div>
-                            <div class="text-sm text-gray-600">企画期間短縮</div>
-                        </div>
+                        {translations.faq.otherQuestions.roi.answer.metrics.map((metric, index) => {
+                            const [value, description] = metric.split(' - ');
+                            const colors = ['text-blue-600', 'text-green-600', 'text-purple-600'];
+                            const bgColors = ['bg-blue-50', 'bg-green-50', 'bg-purple-50'];
+                            return (
+                                <div class={`${bgColors[index]} p-4 rounded-lg text-center`}>
+                                    <div class={`text-2xl font-bold ${colors[index]}`}>{value}</div>
+                                    <div class="text-sm text-gray-600">{description}</div>
+                                </div>
+                            );
+                        })}
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg mb-4">
-                        <h4 class="font-semibold text-gray-900 mb-3">💼 実際の導入事例</h4>
+                        <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.otherQuestions.roi.answer.caseStudies.title}</h4>
                         <div class="grid md:grid-cols-2 gap-4 text-sm">
                             <div>
-                                <div class="font-semibold text-gray-800 mb-2">製造業A社（従業員200名）</div>
+                                <div class="font-semibold text-gray-800 mb-2">{translations.faq.otherQuestions.roi.answer.caseStudies.manufacturing.title}</div>
                                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                                    <li>在庫管理システム導入</li>
-                                    <li>年間コスト削減: 2,000万円</li>
-                                    <li>投資回収期間: 6ヶ月</li>
+                                    {translations.faq.otherQuestions.roi.answer.caseStudies.manufacturing.items.map((item) => (
+                                        <li>{item}</li>
+                                    ))}
                                 </ul>
                             </div>
                             <div>
-                                <div class="font-semibold text-gray-800 mb-2">物流業B社（従業員50名）</div>
+                                <div class="font-semibold text-gray-800 mb-2">{translations.faq.otherQuestions.roi.answer.caseStudies.logistics.title}</div>
                                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                                    <li>配送最適化システム導入</li>
-                                    <li>作業効率向上: 40%</li>
-                                    <li>投資回収期間: 8ヶ月</li>
+                                    {translations.faq.otherQuestions.roi.answer.caseStudies.logistics.items.map((item) => (
+                                        <li>{item}</li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <p class="text-gray-700 text-sm">
-                        ※ 投資回収期間は一般的に6-12ヶ月で実現しています。具体的な効果は業界・規模により異なります。
+                        {translations.faq.otherQuestions.roi.answer.note}
                     </p>
                 </div>
             </div>
@@ -290,7 +293,7 @@ import Section from "./Section.astro";
             <div class="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
                 <button class="w-full p-6 text-left bg-gradient-to-r from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200 transition-all duration-300" onclick="toggleFAQ('faq6')">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-900">中小企業でも導入可能ですか？</h3>
+                        <h3 class="text-lg font-semibold text-gray-900">{translations.faq.otherQuestions.sme.question}</h3>
                         <svg class="w-6 h-6 text-yellow-600 transition-transform duration-300" id="faq6-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
@@ -298,16 +301,15 @@ import Section from "./Section.astro";
                 </button>
                 <div class="hidden p-6 bg-white" id="faq6">
                     <p class="text-gray-700 mb-4">
-                        はい、中小企業様でも導入可能です：
+                        {translations.faq.otherQuestions.sme.answer.intro}
                     </p>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        <li><strong>低初期投資</strong> - PoCから100万円〜で開始可能</li>
-                        <li><strong>段階的導入</strong> - 効果を確認してから本格導入</li>
-                        <li><strong>柔軟な価格設定</strong> - 企業規模に応じた料金プラン</li>
-                        <li><strong>充実のサポート</strong> - 導入から運用まで一貫サポート</li>
+                        {translations.faq.otherQuestions.sme.answer.benefits.map((benefit) => (
+                            <li set:html={benefit.replace(' - ', ' - ')}></li>
+                        ))}
                     </ul>
                     <p class="text-gray-700 mt-4">
-                        まずは無料相談（30分）で、お客様の課題と最適なソリューションをご提案いたします。
+                        {translations.faq.otherQuestions.sme.answer.conclusion}
                     </p>
                 </div>
             </div>
@@ -315,7 +317,7 @@ import Section from "./Section.astro";
             <div class="bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden transform hover:scale-105 transition-all duration-300">
                 <button class="w-full p-6 text-left bg-gradient-to-r from-indigo-50 to-indigo-100 hover:from-indigo-100 hover:to-indigo-200 transition-all duration-300" onclick="toggleFAQ('faq7')">
                     <div class="flex justify-between items-center">
-                        <h3 class="text-lg font-semibold text-gray-900">保守はしてもらえるのですか？</h3>
+                        <h3 class="text-lg font-semibold text-gray-900">{translations.faq.otherQuestions.maintenance.question}</h3>
                         <svg class="w-6 h-6 text-indigo-600 transition-transform duration-300" id="faq7-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
@@ -323,53 +325,43 @@ import Section from "./Section.astro";
                 </button>
                 <div class="hidden p-6 bg-white" id="faq7">
                     <p class="text-gray-700 mb-4">
-                        はい、保守・運用サポートも提供しています：
+                        {translations.faq.otherQuestions.maintenance.answer.intro}
                     </p>
                     <div class="grid md:grid-cols-2 gap-6 mb-4">
                         <div class="bg-blue-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-900 mb-3">💰 コスト効率的な保守体制</h4>
+                            <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.otherQuestions.maintenance.answer.costEffective.title}</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-                                <li><strong>提携会社への委託</strong><br>コスト削減のため基本的に提携会社に委託</li>
-                                <li><strong>こまめな連絡体制</strong><br>定期的な状況確認とコミュニケーション</li>
-                                <li><strong>透明性の確保</strong><br>保守内容と費用の明確な報告</li>
+                                {translations.faq.otherQuestions.maintenance.answer.costEffective.items.map((item) => (
+                                    <li set:html={item}></li>
+                                ))}
                             </ul>
                         </div>
                         <div class="bg-green-50 p-4 rounded-lg">
-                            <h4 class="font-semibold text-gray-900 mb-3">⚡ 迅速対応体制</h4>
+                            <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.otherQuestions.maintenance.answer.rapidResponse.title}</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-                                <li><strong>大規模改修の迅速対応</strong><br>必要時は即座に直接対応</li>
-                                <li><strong>プロアクティブな提案</strong><br>問題を事前に察知し提案</li>
-                                <li><strong>24時間サポート</strong><br>緊急時は24時間以内に対応</li>
+                                {translations.faq.otherQuestions.maintenance.answer.rapidResponse.items.map((item) => (
+                                    <li set:html={item}></li>
+                                ))}
                             </ul>
                         </div>
                     </div>
                     <div class="bg-gray-50 p-4 rounded-lg">
-                        <h4 class="font-semibold text-gray-900 mb-3">🔄 保守の流れ</h4>
+                        <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.otherQuestions.maintenance.answer.maintenanceFlow.title}</h4>
                         <div class="grid md:grid-cols-4 gap-3 text-sm">
-                            <div class="text-center">
-                                <div class="w-8 h-8 bg-indigo-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-xs font-bold">1</div>
-                                <div class="font-semibold text-gray-800">定期監視</div>
-                                <div class="text-gray-600">システム状況を継続監視</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="w-8 h-8 bg-indigo-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-xs font-bold">2</div>
-                                <div class="font-semibold text-gray-800">報告・連絡</div>
-                                <div class="text-gray-600">月次報告と状況共有</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="w-8 h-8 bg-indigo-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-xs font-bold">3</div>
-                                <div class="font-semibold text-gray-800">課題発見</div>
-                                <div class="text-gray-600">問題の早期発見・分析</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="w-8 h-8 bg-indigo-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-xs font-bold">4</div>
-                                <div class="font-semibold text-gray-800">迅速対応</div>
-                                <div class="text-gray-600">必要に応じて直接対応</div>
-                            </div>
+                            {translations.faq.otherQuestions.maintenance.answer.maintenanceFlow.steps.map((step, index) => {
+                                const [title, description] = step.split(' - ');
+                                return (
+                                    <div class="text-center">
+                                        <div class="w-8 h-8 bg-indigo-500 text-white rounded-full flex items-center justify-center mx-auto mb-2 text-xs font-bold">{index + 1}</div>
+                                        <div class="font-semibold text-gray-800">{title}</div>
+                                        <div class="text-gray-600">{description}</div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                     <p class="text-gray-700 mt-4 text-sm">
-                        ※ 大規模改修が必要と判断した場合は、提携会社を通さず直接対応いたします。
+                        {translations.faq.otherQuestions.maintenance.answer.note}
                     </p>
                 </div>
             </div>

@@ -1,15 +1,23 @@
 ---
-import Section from "./Section.astro";
+import Section from './Section.astro';
+import { loadTranslations, type Language } from '../../i18n/utils';
+
+export interface Props {
+  currentLanguage?: Language;
+}
+
+const { currentLanguage = 'ja' } = Astro.props;
+const translations = await loadTranslations(currentLanguage);
 ---
 
 <Section id="process">
 <div class="container mx-auto px-4 py-16">
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            導入プロセス
+            {translations.process.title}
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            リスクを最小化した段階的なアプローチで、確実に成果を実現します
+            {translations.process.subtitle}
         </p>
     </div>
     
@@ -18,7 +26,7 @@ import Section from "./Section.astro";
         <div class="mb-12">
             <div class="bg-pink-50 rounded-2xl shadow-lg p-8">
                 <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
-                    導入フロー
+                    {translations.process.flow.title}
                 </h3>
                 <div class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-6">
                     <!-- ステップ1 -->
@@ -26,8 +34,8 @@ import Section from "./Section.astro";
                         <div class="w-20 h-20 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
                             1
                         </div>
-                        <h4 class="font-semibold text-gray-900 mb-2">ヒアリング</h4>
-                        <p class="text-sm text-gray-600">課題・要望の詳細調査</p>
+                        <h4 class="font-semibold text-gray-900 mb-2">{translations.process.flow.steps.hearing.title}</h4>
+                        <p class="text-sm text-gray-600">{translations.process.flow.steps.hearing.description}</p>
                     </div>
                     
                     <!-- 矢印 -->
@@ -38,8 +46,8 @@ import Section from "./Section.astro";
                         <div class="w-20 h-20 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
                             2
                         </div>
-                        <h4 class="font-semibold text-gray-900 mb-2">PoC提案</h4>
-                        <p class="text-sm text-gray-600">最適なソリューション提案</p>
+                        <h4 class="font-semibold text-gray-900 mb-2">{translations.process.flow.steps.pocProposal.title}</h4>
+                        <p class="text-sm text-gray-600">{translations.process.flow.steps.pocProposal.description}</p>
                     </div>
                     
                     <!-- 矢印 -->
@@ -50,8 +58,8 @@ import Section from "./Section.astro";
                         <div class="w-20 h-20 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
                             3
                         </div>
-                        <h4 class="font-semibold text-gray-900 mb-2">PoC開発</h4>
-                        <p class="text-sm text-gray-600">プロトタイプ実装</p>
+                        <h4 class="font-semibold text-gray-900 mb-2">{translations.process.flow.steps.pocDevelopment.title}</h4>
+                        <p class="text-sm text-gray-600">{translations.process.flow.steps.pocDevelopment.description}</p>
                     </div>
                     
                     <!-- 矢印 -->
@@ -62,8 +70,8 @@ import Section from "./Section.astro";
                         <div class="w-20 h-20 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
                             4
                         </div>
-                        <h4 class="font-semibold text-gray-900 mb-2">効果検証</h4>
-                        <p class="text-sm text-gray-600">ROI・効果測定</p>
+                        <h4 class="font-semibold text-gray-900 mb-2">{translations.process.flow.steps.effectVerification.title}</h4>
+                        <p class="text-sm text-gray-600">{translations.process.flow.steps.effectVerification.description}</p>
                     </div>
                     
                     <!-- 矢印 -->
@@ -74,8 +82,8 @@ import Section from "./Section.astro";
                         <div class="w-20 h-20 bg-blue-500 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
                             5
                         </div>
-                        <h4 class="font-semibold text-gray-900 mb-2">本開発</h4>
-                        <p class="text-sm text-gray-600">本格システム構築</p>
+                        <h4 class="font-semibold text-gray-900 mb-2">{translations.process.flow.steps.mainDevelopment.title}</h4>
+                        <p class="text-sm text-gray-600">{translations.process.flow.steps.mainDevelopment.description}</p>
                     </div>
                 </div>
             </div>

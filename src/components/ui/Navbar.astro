@@ -1,14 +1,24 @@
 ---
 import { Astronav } from "astro-navbar";
 import LanguageSwitcher from "./LanguageSwitcher.astro";
+import { loadTranslations, type Language } from '../../i18n/utils';
+import { getLanguageFromPath } from '../../i18n/utils';
+
+export interface Props {
+  currentLanguage?: Language;
+  currentPath?: string;
+}
+
+const { currentLanguage = 'ja', currentPath = '/' } = Astro.props;
+const translations = await loadTranslations(currentLanguage);
 
 const menuitems = [
-  { href: '/#service-overview', label: 'サービス概要' },
-  { href: '/#pricing', label: '料金体系' },
-  { href: '/#solutions', label: 'ソリューション' },
-  { href: '/#industries', label: '対応業界' },
-  { href: '/#cases', label: '実績・事例' },
-  { href: '/#faq', label: 'FAQ' },
+  { href: '/#service-overview', label: translations.nav.services },
+  { href: '/#pricing', label: translations.nav.pricing },
+  { href: '/#solutions', label: translations.nav.solutions },
+  { href: '/#industries', label: translations.nav.industries },
+  { href: '/#cases', label: translations.nav.cases },
+  { href: '/#faq', label: translations.nav.faq },
 ];
 
 ---
@@ -37,7 +47,7 @@ const menuitems = [
         </div>
         
         <nav class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0" id="menu-items">
-          <ul class="font-medium flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row lg:space-x-12 lg:mt-0 lg:border-0">
+          <ul class="font-medium flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row lg:space-x-12 lg:mt-0 lg:border-0 bg-white lg:bg-transparent shadow-lg lg:shadow-none">
             {menuitems.map((item) => (
               <li>
                 <a 
@@ -49,13 +59,22 @@ const menuitems = [
                 </a>
               </li>
             ))}
+            <!-- Mobile Language Switcher -->
+            <li class="lg:hidden mt-4 pt-4 border-t border-gray-300">
+              <div class="px-4 py-3 bg-gray-50 rounded-lg">
+                <label class="block text-sm font-semibold text-gray-800 mb-3">
+                  {translations.nav.language}
+                </label>
+                <LanguageSwitcher currentLanguage={currentLanguage} currentPath={currentPath} />
+              </div>
+            </li>
           </ul>
         </nav>
       </Astronav>
 
       <div>
         <div class="hidden lg:flex items-center gap-4">
-          <LanguageSwitcher />
+          <LanguageSwitcher currentLanguage={currentLanguage} currentPath={currentPath} />
         </div>
       </div>
     </header>

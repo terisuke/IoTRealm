@@ -1,15 +1,23 @@
 ---
-import Section from "./Section.astro";
+import Section from './Section.astro';
+import { loadTranslations, type Language } from '../../i18n/utils';
+
+export interface Props {
+  currentLanguage?: Language;
+}
+
+const { currentLanguage = 'ja' } = Astro.props;
+const translations = await loadTranslations(currentLanguage);
 ---
 
 <Section id="future-development">
 <div class="container mx-auto px-4 py-16">
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            今後の展開
+            {translations.futureDevelopment.title}
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            最新技術を活用した継続的なイノベーション
+            {translations.futureDevelopment.subtitle}
         </p>
     </div>
     
@@ -18,54 +26,50 @@ import Section from "./Section.astro";
             <!-- Edge AI -->
             <div class="bg-pink-50 rounded-2xl shadow-lg p-6 text-center">
                 <div class="text-4xl mb-4">🧠</div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Edge AI</h3>
-                <p class="text-gray-600 text-sm">
-                    デバイス側でのAI処理により、<br>リアルタイム性とプライバシーを両立
+                <h3 class="text-xl font-bold text-gray-900 mb-3">{translations.futureDevelopment.technologies.edgeAI.title}</h3>
+                <p class="text-gray-600 text-sm" set:html={translations.futureDevelopment.technologies.edgeAI.description.replace('、', '、<br>')}>
                 </p>
             </div>
             
             <!-- 5G統合 -->
             <div class="bg-blue-50 rounded-2xl shadow-lg p-6 text-center">
                 <div class="text-4xl mb-4">📡</div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">5G統合</h3>
-                <p class="text-gray-600 text-sm">
-                    超高速通信を活用した、<br>大容量データのリアルタイム処理
+                <h3 class="text-xl font-bold text-gray-900 mb-3">{translations.futureDevelopment.technologies["5gIntegration"].title}</h3>
+                <p class="text-gray-600 text-sm" set:html={translations.futureDevelopment.technologies["5gIntegration"].description.replace('、', '、<br>')}>
                 </p>
             </div>
             
             <!-- Digital Twin -->
             <div class="rounded-2xl shadow-lg p-6 text-center" style="background-color: #f0fdf4 !important;">
                 <div class="text-4xl mb-4">🔄</div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Digital Twin</h3>
-                <p class="text-gray-600 text-sm">
-                    物理空間の完全なデジタル複製による、<br>シミュレーション最適化
+                <h3 class="text-xl font-bold text-gray-900 mb-3">{translations.futureDevelopment.technologies.digitalTwin.title}</h3>
+                <p class="text-gray-600 text-sm" set:html={translations.futureDevelopment.technologies.digitalTwin.description.replace('による、', 'による、<br>')}>
                 </p>
             </div>
             
             <!-- 量子コンピューティング -->
             <div class="bg-purple-50 rounded-2xl shadow-lg p-6 text-center">
                 <div class="text-4xl mb-4">⚛️</div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">量子コンピューティング</h3>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">{translations.futureDevelopment.technologies.quantumComputing.title}</h3>
                 <p class="text-gray-600 text-sm">
-                    複雑な最適化問題の高速解決
+                    {translations.futureDevelopment.technologies.quantumComputing.description}
                 </p>
             </div>
             
             <!-- Brain-Machine Interface -->
             <div class="bg-orange-50 rounded-2xl shadow-lg p-6 text-center">
                 <div class="text-4xl mb-4">🧬</div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">Brain-Machine Interface</h3>
+                <h3 class="text-xl font-bold text-gray-900 mb-3">{translations.futureDevelopment.technologies.brainMachineInterface.title}</h3>
                 <p class="text-gray-600 text-sm">
-                    脳信号による直感的なデバイス制御
+                    {translations.futureDevelopment.technologies.brainMachineInterface.description}
                 </p>
             </div>
             
             <!-- ブロックチェーン統合 -->
             <div class="rounded-2xl shadow-lg p-6 text-center" style="background-color: #f9fafb !important;">
                 <div class="text-4xl mb-4">🔗</div>
-                <h3 class="text-xl font-bold text-gray-900 mb-3">ブロックチェーン統合</h3>
-                <p class="text-gray-600 text-sm">
-                    データの透明性と信頼性を確保した<br>分散システム
+                <h3 class="text-xl font-bold text-gray-900 mb-3">{translations.futureDevelopment.technologies.blockchainIntegration.title}</h3>
+                <p class="text-gray-600 text-sm" set:html={translations.futureDevelopment.technologies.blockchainIntegration.description.replace('した', 'した<br>')}>
                 </p>
             </div>
         </div>
@@ -73,42 +77,42 @@ import Section from "./Section.astro";
         <!-- R&Dロードマップ -->
         <div class="mt-16 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8">
             <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
-                R&Dロードマップ
+                {translations.futureDevelopment.roadmap.title}
             </h3>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="text-center">
                     <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                        2025
+                        {translations.futureDevelopment.roadmap.shortTerm.year}
                     </div>
-                    <h4 class="font-semibold text-gray-900 mb-2">短期計画</h4>
+                    <h4 class="font-semibold text-gray-900 mb-2">{translations.futureDevelopment.roadmap.shortTerm.title}</h4>
                     <ul class="text-sm text-gray-600 space-y-1">
-                        <li>• Edge AI実用化</li>
-                        <li>• 5G統合開始</li>
-                        <li>• ローカルLLM最適化</li>
+                        {translations.futureDevelopment.roadmap.shortTerm.items.map((item) => (
+                            <li>• {item}</li>
+                        ))}
                     </ul>
                 </div>
                 
                 <div class="text-center">
                     <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                        2026
+                        {translations.futureDevelopment.roadmap.mediumTerm.year}
                     </div>
-                    <h4 class="font-semibold text-gray-900 mb-2">中期計画</h4>
+                    <h4 class="font-semibold text-gray-900 mb-2">{translations.futureDevelopment.roadmap.mediumTerm.title}</h4>
                     <ul class="text-sm text-gray-600 space-y-1">
-                        <li>• Digital Twin導入</li>
-                        <li>• 量子コンピューティング検証</li>
-                        <li>• 業界特化型AI開発</li>
+                        {translations.futureDevelopment.roadmap.mediumTerm.items.map((item) => (
+                            <li>• {item}</li>
+                        ))}
                     </ul>
                 </div>
                 
                 <div class="text-center">
                     <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                        2027+
+                        {translations.futureDevelopment.roadmap.longTerm.year}
                     </div>
-                    <h4 class="font-semibold text-gray-900 mb-2">長期計画</h4>
+                    <h4 class="font-semibold text-gray-900 mb-2">{translations.futureDevelopment.roadmap.longTerm.title}</h4>
                     <ul class="text-sm text-gray-600 space-y-1">
-                        <li>• Brain-Machine Interface</li>
-                        <li>• 完全自律システム</li>
-                        <li>• グローバル展開</li>
+                        {translations.futureDevelopment.roadmap.longTerm.items.map((item) => (
+                            <li>• {item}</li>
+                        ))}
                     </ul>
                 </div>
             </div>
@@ -117,19 +121,19 @@ import Section from "./Section.astro";
         <!-- パートナーシップ -->
         <div class="mt-12 bg-yellow-50 rounded-2xl shadow-lg p-8">
             <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
-                研究開発パートナーシップ
+                {translations.futureDevelopment.partnership.title}
             </h3>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="text-center p-6 bg-white rounded-lg">
-                    <h4 class="text-lg font-semibold text-gray-900 mb-3">大学・研究機関</h4>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">{translations.futureDevelopment.partnership.universities.title}</h4>
                     <p class="text-sm text-gray-600">
-                        最先端研究との連携により、基礎技術の実用化を加速
+                        {translations.futureDevelopment.partnership.universities.description}
                     </p>
                 </div>
                 <div class="text-center p-6 bg-white rounded-lg">
-                    <h4 class="text-lg font-semibold text-gray-900 mb-3">企業・団体</h4>
+                    <h4 class="text-lg font-semibold text-gray-900 mb-3">{translations.futureDevelopment.partnership.companies.title}</h4>
                     <p class="text-sm text-gray-600">
-                        業界の課題を深く理解した実用的なソリューション開発
+                        {translations.futureDevelopment.partnership.companies.description}
                     </p>
                 </div>
             </div>

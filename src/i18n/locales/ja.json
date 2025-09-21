@@ -1,0 +1,897 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "services": "サービス",
+    "about": "会社概要",
+    "pricing": "料金",
+    "contact": "お問い合わせ",
+    "language": "言語",
+    "solutions": "ソリューション",
+    "industries": "対応業界",
+    "cases": "実績・事例",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "IoTソリューションでビジネスを革新",
+    "subtitle": "IoTRealmは、企業のデジタル変革を支援する包括的なIoTソリューションを提供します。",
+    "cta": "今すぐ始める"
+  },
+  "services": {
+    "title": "私たちのサービス",
+    "subtitle": "ビジネスの成長を加速する革新的なIoTソリューション",
+    "comparison": {
+      "title": "開発期間・コスト比較",
+      "generalIT": {
+        "title": "一般的なIT企業",
+        "pocPeriod": "PoC開発期間",
+        "pocCost": "PoC費用",
+        "fullDevCost": "本開発費用",
+        "pocPeriodValue": "6-12ヶ月",
+        "pocCostValue": "500-2000万円",
+        "fullDevCostValue": "2000万円+"
+      },
+      "iotrealm": {
+        "title": "IoTRealm",
+        "pocPeriod": "PoC開発期間",
+        "pocCost": "PoC費用",
+        "fullDevCost": "本開発費用",
+        "pocPeriodValue": "1-3ヶ月",
+        "pocCostValue": "100-500万円",
+        "fullDevCostValue": "500万円~"
+      },
+      "reasons": {
+        "title": "破格の価格を実現できる理由",
+        "aiDriven": {
+          "title": "AI駆動開発による効率化",
+          "devTime": "開発時間短縮",
+          "errorRate": "エラー発生率",
+          "planningPeriod": "企画期間",
+          "devTimeValue": "最大55%削減",
+          "errorRateValue": "最大78%低減",
+          "planningPeriodValue": "10分の1に短縮"
+        },
+        "consistentSupport": {
+          "title": "一貫対応による効果",
+          "rework": "手戻り発生",
+          "communication": "コミュニケーション効率",
+          "quality": "一貫した品質保証",
+          "reworkValue": "大幅削減",
+          "communicationValue": "情報ロス最小化",
+          "qualityValue": "✓"
+        }
+      }
+    },
+    "iotDevelopment": {
+      "title": "IoT開発",
+      "description": "カスタムIoTデバイスとアプリケーションの開発"
+    },
+    "dataAnalytics": {
+      "title": "データ分析",
+      "description": "リアルタイムデータ分析とインサイト生成"
+    },
+    "cloudSolutions": {
+      "title": "クラウドソリューション",
+      "description": "スケーラブルなクラウドインフラストラクチャ"
+    },
+    "consulting": {
+      "title": "コンサルティング",
+      "description": "IoT戦略と実装の専門アドバイス"
+    }
+  },
+  "techStack": {
+    "title": "使用技術",
+    "aiDevelopment": {
+      "title": "AI開発",
+      "apis": "各種AI APIを状況に応じて使い分け",
+      "ollama": "ローカルLLMによる高速・セキュアな処理"
+    },
+    "iotDevices": {
+      "title": "IoTデバイス",
+      "smallDevices": "小型IoTデバイス開発",
+      "robotHand": "The Robot Studio製オープンソースロボットハンド",
+      "robotArm": "Seed Studio製ロボットアーム"
+    },
+    "cloudML": {
+      "title": "クラウド・機械学習",
+      "yolo": "リアルタイム物体検出",
+      "cloudAI": "クラウドベースAIサービス"
+    },
+    "aiAgent": {
+      "title": "AIエージェント・フレームワーク",
+      "mastra": "TypeScript/Node.js環境向け",
+      "langgraph": "複雑なワークフロー構築"
+    }
+  },
+  "solutions": {
+    "title": "開発可能なソリューション",
+    "subtitle": "AIとIoTの技術を組み合わせて、あらゆる業界の課題を解決します",
+    "aiSolutions": {
+      "title": "AIソリューション",
+      "hakataPort": {
+        "title": "実装例：博多ポートラジオAI",
+        "subtitle": "海上交通管制のAI音声通信システム",
+        "description": "船舶と管制塔の間のVHF無線通信をAIが支援。リアルタイム音声認識・生成により、安全で効率的な海上交通を実現します。",
+        "techStack": "技術スタック:",
+        "techStackValue": "OpenAI Realtime API + Next.js 15",
+        "pttControl": "PTT制御:",
+        "pttControlValue": "プッシュ・トゥ・トーク機能でノイズレス通信",
+        "functionCalling": "Function Calling:",
+        "functionCallingValue": "自動チャンネル割り当て機能",
+        "imoSmcp": "IMO SMCP準拠:",
+        "imoSmcpValue": "国際海事機関標準プロトコル対応",
+        "effects": "導入効果",
+        "communicationEfficiency": "通信効率",
+        "misinterpretationRisk": "誤解釈リスク",
+        "responseTime": "応答時間",
+        "demoButton": "デモサイトで体験"
+      },
+      "table": {
+        "category": "カテゴリ",
+        "status": "対応状況",
+        "effect": "効果例",
+        "available": "対応可能",
+        "businessAutomation": "業務自動化",
+        "businessAutomationEffect": "作業時間80%削減",
+        "prediction": "予測",
+        "predictionEffect": "故障予測精度95%",
+        "dialogue": "対話",
+        "dialogueEffect": "問い合わせ対応24時間化",
+        "image": "画像",
+        "imageEffect": "検査精度99%向上",
+        "voice": "音声",
+        "voiceEffect": "音声認識精度98%"
+      }
+    },
+    "iotSolutions": {
+      "title": "IoTソリューション",
+      "careCopilot": {
+        "title": "実装例：Care Copilot",
+        "subtitle": "高齢者向けIoTケアモニタリングシステム",
+        "description": "プライバシーを重視しながら高齢者の安全を確保。カメラを使わずにToF距離センサーで転倒検知やベッド離脱を監視し、LINE通知で即座に介護者に知らせます。",
+        "hardware": "ハードウェア:",
+        "hardwareValue": "M5Stack Fire + ToF距離センサー + 環境センサー",
+        "notificationSystem": "通知システム:",
+        "notificationSystemValue": "LINE Messaging API統合",
+        "privacyProtection": "プライバシー保護:",
+        "privacyProtectionValue": "カメラ不使用の動作検知技術",
+        "locationTracking": "位置追跡:",
+        "locationTrackingValue": "GPS機能で外出時の安全確保",
+        "effects": "導入効果",
+        "fallDetectionAccuracy": "転倒検知精度",
+        "emergencyResponseTime": "緊急対応時間",
+        "caregiverBurdenReduction": "介護負担軽減",
+        "articleButton": "詳細記事を見る"
+      },
+      "table": {
+        "category": "カテゴリ",
+        "status": "対応状況",
+        "effect": "効果例",
+        "available": "対応可能",
+        "environmentalMonitoring": "環境監視",
+        "environmentalMonitoringEffect": "リアルタイム環境データ収集",
+        "locationTracking": "位置追跡",
+        "locationTrackingEffect": "配送効率30%向上",
+        "predictiveMaintenance": "予知保全",
+        "predictiveMaintenanceEffect": "ダウンタイム50%削減",
+        "drone": "ドローン",
+        "droneEffect": "危険作業90%削減",
+        "robotics": "ロボティクス",
+        "roboticsEffect": "自動化率85%向上"
+      }
+    }
+  },
+  "differentiation": {
+    "title": "差別化ポイント",
+    "subtitle": "他社にはない圧倒的な競争優位性",
+    "oneStopDevelopment": {
+      "title": "ワンストップ開発比較",
+      "table": {
+        "item": "項目",
+        "generalITCompany": "一般的なIT企業",
+        "corInc": "Cor.inc",
+        "requirementsDefinition": "要件定義",
+        "pocDevelopment": "PoC開発",
+        "mainDevelopment": "本開発",
+        "maintenanceOperation": "保守・運用",
+        "separateCompany": "別会社",
+        "consistentSupport": "一貫対応",
+        "separateCompanyNoCooperation": "別会社・連携なし",
+        "partnerCompanyCooperation": "提携会社＋連携体制"
+      },
+      "collaborationSystem": {
+        "title": "保守・運用の連携体制",
+        "costOptimization": {
+          "title": "コスト最適化",
+          "description": "提携会社委託でコスト削減"
+        },
+        "constantCooperation": {
+          "title": "常時連携",
+          "description": "定期的な状況確認とコミュニケーション"
+        },
+        "rapidResponse": {
+          "title": "迅速対応",
+          "description": "大規模改修時は直接対応"
+        }
+      }
+    },
+    "secureLocalDevelopment": {
+      "title": "セキュリティ性の高いローカル開発",
+      "lllmColosseum": {
+        "title": "実装例：LLLM Colosseum",
+        "subtitle": "ローカルLLM ディベートアリーナ",
+        "systemOverview": "システム概要",
+        "description": "複数のLLMモデルがリアルタイムでディベートを行い、能力を比較するプラットフォーム。完全にローカル環境で動作し、プライバシーとパフォーマンスを両立。",
+        "techStack": "技術スタック:",
+        "techStackValue": "FastAPI + Next.js + Ollama",
+        "eloRating": "ELOレーティング:",
+        "eloRatingValue": "モデル性能の定量評価",
+        "websocket": "WebSocket:",
+        "websocketValue": "リアルタイムトークンストリーミング",
+        "securityEffects": "セキュリティ効果",
+        "dataExternalTransmission": "データ外部送信",
+        "informationLeakageRisk": "情報漏洩リスク",
+        "informationLeakageRiskValue": "ゼロ",
+        "privacyProtection": "プライバシー保護",
+        "regulatoryCompliance": "規制要件準拠",
+        "regulatoryComplianceValue": "完全対応",
+        "githubButton": "GitHubで実装を確認"
+      },
+      "benefits": {
+        "completeLocalExecution": {
+          "title": "完全ローカル実行",
+          "description": "AIを含む全ての処理を社内環境で実行。外部クラウドサービスへの依存を排除"
+        },
+        "dataProtectionEnhancement": {
+          "title": "データ保護強化",
+          "description": "機密データの外部送信を完全に防止。GDPR、個人情報保護法等への完全準拠"
+        },
+        "customizability": {
+          "title": "カスタマイズ性",
+          "description": "お客様の要件に応じた柔軟な設定。ネットワーク制限やセキュリティポリシーに完全対応"
+        }
+      },
+      "applicableIndustries": {
+        "title": "対応可能な業界・用途",
+        "healthcare": {
+          "title": "医療・ヘルスケア",
+          "description": "患者データの完全保護"
+        },
+        "finance": {
+          "title": "金融・保険",
+          "description": "個人情報・取引データ保護"
+        },
+        "government": {
+          "title": "官公庁・自治体",
+          "description": "機密情報の厳格な管理"
+        },
+        "manufacturing": {
+          "title": "製造業",
+          "description": "知的財産・技術情報保護"
+        }
+      }
+    },
+    "expertCollaboration": {
+      "title": "専門家連携",
+      "agriculture": {
+        "title": "農業",
+        "description": "スマート農業の専門家と連携"
+      },
+      "welfare": {
+        "title": "福祉",
+        "description": "介護・福祉分野の専門知識"
+      },
+      "marine": {
+        "title": "海洋",
+        "description": "海洋環境・漁業の専門技術"
+      },
+      "localAI": {
+        "title": "ローカルAI",
+        "description": "エッジAIの最適化技術"
+      }
+    }
+  },
+  "process": {
+    "title": "導入プロセス",
+    "subtitle": "リスクを最小化した段階的なアプローチで、確実に成果を実現します",
+    "flow": {
+      "title": "導入フロー",
+      "steps": {
+        "hearing": {
+          "title": "ヒアリング",
+          "description": "課題・要望の詳細調査"
+        },
+        "pocProposal": {
+          "title": "PoC提案",
+          "description": "最適なソリューション提案"
+        },
+        "pocDevelopment": {
+          "title": "PoC開発",
+          "description": "プロトタイプ実装"
+        },
+        "effectVerification": {
+          "title": "効果検証",
+          "description": "ROI・効果測定"
+        },
+        "mainDevelopment": {
+          "title": "本開発",
+          "description": "本格システム構築"
+        }
+      }
+    }
+  },
+  "industries": {
+    "title": "対応可能な業界・用途",
+    "subtitle": "幅広い業界の課題解決を支援します",
+    "manufacturing": {
+      "title": "製造業",
+      "features": [
+        "品質検査の自動化",
+        "予知保全システム",
+        "生産最適化"
+      ],
+      "effectExample": "効果例",
+      "effect": "ダウンタイム50%削減"
+    },
+    "logistics": {
+      "title": "物流",
+      "features": [
+        "配送最適化",
+        "ドローン配送",
+        "倉庫ロボット"
+      ],
+      "effectExample": "効果例",
+      "effect": "配送効率30%向上"
+    },
+    "agriculture": {
+      "title": "農業",
+      "features": [
+        "スマート農業",
+        "収穫予測",
+        "病害虫検知"
+      ],
+      "effectExample": "効果例",
+      "effect": "収穫量20%向上"
+    },
+    "healthcare": {
+      "title": "医療",
+      "features": [
+        "見守りシステム",
+        "リハビリ支援",
+        "服薬管理"
+      ],
+      "effectExample": "効果例",
+      "effect": "介護負担40%軽減"
+    },
+    "retail": {
+      "title": "小売",
+      "features": [
+        "来店分析",
+        "在庫最適化",
+        "ロボット接客"
+      ],
+      "effectExample": "効果例",
+      "effect": "売上25%向上"
+    },
+    "energy": {
+      "title": "エネルギー",
+      "features": [
+        "風力発電ドローン検査",
+        "太陽光発電最適化",
+        "電力需要予測"
+      ],
+      "effectExample": "効果例",
+      "effect": "検査時間70%短縮"
+    },
+    "others": {
+      "title": "その他",
+      "features": [
+        "教育・研修",
+        "建設・土木"
+      ],
+      "effectExample": "効果例",
+      "effect": "カスタマイズ対応"
+    }
+  },
+  "cases": {
+    "title": "実績・事例",
+    "subtitle": "数字で見る成果",
+    "table": {
+      "headers": {
+        "case": "事例",
+        "industry": "業界",
+        "solution": "ソリューション",
+        "effect": "効果"
+      },
+      "rows": [
+        {
+          "title": "港湾音声転写システム",
+          "description": "作業指示の自動化",
+          "industry": "物流",
+          "solution": "AI音声認識 + 自動転写",
+          "effect": "作業時間90%削減"
+        },
+        {
+          "title": "介護施設見守りシステム",
+          "description": "24時間自動監視",
+          "industry": "医療",
+          "solution": "IoTセンサー + AI分析",
+          "effect": "エラー率80%削減"
+        },
+        {
+          "title": "風力発電ドローン検査",
+          "description": "危険作業の自動化",
+          "industry": "エネルギー",
+          "solution": "ドローン + 画像認識AI",
+          "effect": "検査時間70%短縮"
+        },
+        {
+          "title": "製造業予知保全",
+          "description": "設備故障の事前予測",
+          "industry": "製造業",
+          "solution": "IoTセンサー + 機械学習",
+          "effect": "ダウンタイム50%削減"
+        },
+        {
+          "title": "農業スマートセンサー",
+          "description": "精密農業の実現",
+          "industry": "農業",
+          "solution": "環境センサー + AI分析",
+          "effect": "収穫量20%向上"
+        }
+      ]
+    },
+    "effects": {
+      "workTimeReduction": {
+        "value": "90%",
+        "description": "作業時間削減",
+        "source": "IoTRealm 音声認識"
+      },
+      "annualCostReduction": {
+        "value": "120万円",
+        "description": "年間コスト削減",
+        "source": "BoltSiteペーパーレス"
+      },
+      "errorRateReduction": {
+        "value": "80%",
+        "description": "エラー率低減",
+        "source": "IoTRealm見守りシステム"
+      },
+      "customerSatisfaction": {
+        "value": "30%",
+        "description": "顧客満足度向上",
+        "source": "BoltSite高速表示"
+      },
+      "seoRanking": {
+        "value": "5-10位",
+        "description": "SEO順位改善",
+        "source": "BoltSite SEO対策"
+      },
+      "downtimeReduction": {
+        "value": "50%",
+        "description": "ダウンタイム削減",
+        "source": "予知保全システム"
+      }
+    },
+    "testimonials": {
+      "title": "お客様の声",
+      "tanaka": {
+        "name": "田中太郎",
+        "position": "製造業オーナー",
+        "quote": "「予知保全システムの導入により、設備の故障を事前に察知できるようになり、計画的なメンテナンスが可能になりました。ダウンタイムが大幅に削減され、生産効率が向上しています。」"
+      },
+      "sato": {
+        "name": "佐藤花子",
+        "position": "農業経営者",
+        "quote": "「スマート農業システムで土壌の状態を常時監視できるようになり、最適なタイミングで水やりや肥料散布ができるようになりました。収穫量が20%向上し、農薬の使用量も削減できています。」"
+      }
+    }
+  },
+  "futureDevelopment": {
+    "title": "今後の展開",
+    "subtitle": "最新技術を活用した継続的なイノベーション",
+    "technologies": {
+      "edgeAI": {
+        "title": "Edge AI",
+        "description": "デバイス側でのAI処理により、リアルタイム性とプライバシーを両立"
+      },
+      "5gIntegration": {
+        "title": "5G統合",
+        "description": "超高速通信を活用した、大容量データのリアルタイム処理"
+      },
+      "digitalTwin": {
+        "title": "Digital Twin",
+        "description": "物理空間の完全なデジタル複製による、シミュレーション最適化"
+      },
+      "quantumComputing": {
+        "title": "量子コンピューティング",
+        "description": "複雑な最適化問題の高速解決"
+      },
+      "brainMachineInterface": {
+        "title": "Brain-Machine Interface",
+        "description": "脳信号による直感的なデバイス制御"
+      },
+      "blockchainIntegration": {
+        "title": "ブロックチェーン統合",
+        "description": "データの透明性と信頼性を確保した分散システム"
+      }
+    },
+    "roadmap": {
+      "title": "R&Dロードマップ",
+      "shortTerm": {
+        "year": "2025",
+        "title": "短期計画",
+        "items": [
+          "Edge AI実用化",
+          "5G統合開始",
+          "ローカルLLM最適化"
+        ]
+      },
+      "mediumTerm": {
+        "year": "2026",
+        "title": "中期計画",
+        "items": [
+          "Digital Twin導入",
+          "量子コンピューティング検証",
+          "業界特化型AI開発"
+        ]
+      },
+      "longTerm": {
+        "year": "2027+",
+        "title": "長期計画",
+        "items": [
+          "Brain-Machine Interface",
+          "完全自律システム",
+          "グローバル展開"
+        ]
+      }
+    },
+    "partnership": {
+      "title": "研究開発パートナーシップ",
+      "universities": {
+        "title": "大学・研究機関",
+        "description": "最先端研究との連携により、基礎技術の実用化を加速"
+      },
+      "companies": {
+        "title": "企業・団体",
+        "description": "業界の課題を深く理解した実用的なソリューション開発"
+      }
+    }
+  },
+  "faq": {
+    "title": "よくある質問",
+    "subtitle": "お客様からよくいただくご質問にお答えします",
+    "mainQuestions": {
+      "poc": {
+        "question": "PoC（概念実証）はどのように進められますか？",
+        "answer": {
+          "intro": "PoCは以下の5段階で進められます：",
+          "steps": [
+            "ヒアリング - 課題・要望の詳細調査（1-2週間）",
+            "PoC提案 - 最適なソリューション提案（1週間）",
+            "PoC開発 - プロトタイプ実装（1-3ヶ月）",
+            "効果検証 - ROI・効果測定（2-4週間）",
+            "本開発 - 本格システム構築（3-12ヶ月）"
+          ],
+          "conclusion": "各段階で効果を確認してから次に進むため、リスクを最小化できます。"
+        }
+      },
+      "security": {
+        "question": "セキュリティは大丈夫ですか？",
+        "answer": {
+          "intro": "セキュリティには最大限の注意を払っています：",
+          "dataProtection": {
+            "title": "🔒 データ保護・プライバシー",
+            "items": [
+              "Ollama（ローカルLLM）<br>データは外部に送信されず、社内環境で処理",
+              "情報漏洩リスクゼロ<br>機密データの完全なプライバシー保護",
+              "オンプレミス対応<br>お客様の環境での完全なローカル処理"
+            ]
+          },
+          "compliance": {
+            "title": "🛡️ 規制・コンプライアンス",
+            "items": [
+              "GDPR準拠<br>EU一般データ保護規則への完全対応",
+              "個人情報保護法対応<br>日本の法的要件への適合",
+              "業界標準準拠<br>ISO27001、SOC2などの認証取得済み"
+            ]
+          },
+          "technicalSecurity": {
+            "title": "🔐 技術的セキュリティ対策",
+            "communication": {
+              "title": "通信セキュリティ",
+              "items": ["TLS 1.3暗号化通信", "VPN接続対応"]
+            },
+            "accessControl": {
+              "title": "アクセス制御",
+              "items": ["多要素認証（MFA）", "ロールベースアクセス制御", "厳格な権限管理"]
+            },
+            "monitoring": {
+              "title": "監視・ログ",
+              "items": ["24時間監視体制", "包括的なログ記録", "異常検知システム"]
+            }
+          }
+        }
+      },
+      "pricing": {
+        "question": "なぜ価格が他社より安いのですか？",
+        "answer": {
+          "intro": "破格の価格を実現できる理由は以下の通りです：",
+          "aiDriven": {
+            "title": "🤖 AI駆動開発による効率化",
+            "items": [
+              "開発時間短縮 - 最大55%削減",
+              "エラー発生率 - 最大78%低減",
+              "企画期間 - 10分の1に短縮"
+            ]
+          },
+          "consistentSupport": {
+            "title": "🔄 一貫対応による効果",
+            "items": [
+              "手戻り発生 - 大幅削減",
+              "コミュニケーション効率 - 情報ロス最小化",
+              "品質向上 - 一貫した品質保証"
+            ]
+          },
+          "priceComparison": {
+            "title": "💰 具体的な価格比較",
+            "generalIT": "一般的なIT企業",
+            "corInc": "Cor.inc",
+            "pocPrice": "PoC: 100-500万円",
+            "mainDevPrice": "本開発: 500万円〜"
+          }
+        }
+      }
+    },
+    "otherQuestions": {
+      "title": "その他の質問",
+      "techStack": {
+        "question": "どのような技術スタックを使用していますか？",
+        "answer": {
+          "intro": "最新の技術スタックを状況に応じて使い分けています：",
+          "aiDevelopment": {
+            "title": "🤖 AI開発",
+            "items": [
+              "OpenAI/Anthropic/Google/xAI<br>各種AI APIを状況に応じて使い分け",
+              "Ollama<br>ローカルLLMによる高速・セキュアな処理"
+            ]
+          },
+          "iotDevices": {
+            "title": "📱 IoTデバイス",
+            "items": [
+              "M5Stack/Raspberry Pi<br>小型IoTデバイス開発",
+              "SO-100/SO-101<br>HuggingFaceオープンロボットアーム",
+              "StarAI Robot Arm<br>Seed Studio製ロボットアーム"
+            ]
+          },
+          "cloudML": {
+            "title": "☁️ クラウド・機械学習",
+            "items": [
+              "YOLO<br>リアルタイム物体検出",
+              "Vertex AI/Amazon Bedrock<br>クラウドベースAIサービス"
+            ]
+          },
+          "aiAgent": {
+            "title": "🛠️ AIエージェント・フレームワーク",
+            "items": [
+              "Mastra<br>TypeScript/Node.js環境向け",
+              "LangGraph<br>複雑なワークフロー構築"
+            ]
+          },
+          "note": "※ プロジェクトの要件に応じて最適な技術を選択し、組み合わせて使用します。"
+        }
+      },
+      "roi": {
+        "question": "投資対効果（ROI）はどの程度期待できますか？",
+        "answer": {
+          "intro": "導入事例から見る具体的なROI：",
+          "metrics": [
+            "最大55% - 開発時間削減",
+            "最大78% - エラー発生率低減",
+            "10分の1 - 企画期間短縮"
+          ],
+          "caseStudies": {
+            "title": "💼 実際の導入事例",
+            "manufacturing": {
+              "title": "製造業A社（従業員200名）",
+              "items": [
+                "在庫管理システム導入",
+                "年間コスト削減: 2,000万円",
+                "投資回収期間: 6ヶ月"
+              ]
+            },
+            "logistics": {
+              "title": "物流業B社（従業員50名）",
+              "items": [
+                "配送最適化システム導入",
+                "作業効率向上: 40%",
+                "投資回収期間: 8ヶ月"
+              ]
+            }
+          },
+          "note": "※ 投資回収期間は一般的に6-12ヶ月で実現しています。具体的な効果は業界・規模により異なります。"
+        }
+      },
+      "sme": {
+        "question": "中小企業でも導入可能ですか？",
+        "answer": {
+          "intro": "はい、中小企業様でも導入可能です：",
+          "benefits": [
+            "低初期投資 - PoCから100万円〜で開始可能",
+            "段階的導入 - 効果を確認してから本格導入",
+            "柔軟な価格設定 - 企業規模に応じた料金プラン",
+            "充実のサポート - 導入から運用まで一貫サポート"
+          ],
+          "conclusion": "まずは無料相談（30分）で、お客様の課題と最適なソリューションをご提案いたします。"
+        }
+      },
+      "maintenance": {
+        "question": "保守はしてもらえるのですか？",
+        "answer": {
+          "intro": "はい、保守・運用サポートも提供しています：",
+          "costEffective": {
+            "title": "💰 コスト効率的な保守体制",
+            "items": [
+              "提携会社への委託<br>コスト削減のため基本的に提携会社に委託",
+              "こまめな連絡体制<br>定期的な状況確認とコミュニケーション",
+              "透明性の確保<br>保守内容と費用の明確な報告"
+            ]
+          },
+          "rapidResponse": {
+            "title": "⚡ 迅速対応体制",
+            "items": [
+              "大規模改修の迅速対応<br>必要時は即座に直接対応",
+              "プロアクティブな提案<br>問題を事前に察知し提案",
+              "24時間サポート<br>緊急時は24時間以内に対応"
+            ]
+          },
+          "maintenanceFlow": {
+            "title": "🔄 保守の流れ",
+            "steps": [
+              "定期監視 - システム状況を継続監視",
+              "報告・連絡 - 月次報告と状況共有",
+              "課題発見 - 問題の早期発見・分析",
+              "迅速対応 - 必要に応じて直接対応"
+            ]
+          },
+          "note": "※ 大規模改修が必要と判断した場合は、提携会社を通さず直接対応いたします。"
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": "無料相談申し込み",
+    "subtitle": "お客様のプロジェクトについてお聞かせください",
+    "freeConsultationButton": "無料相談申し込み",
+    "freeTime": "30分無料!",
+    "formTitle": "無料相談申し込み",
+    "formSubtitle": "以下のフォームからお気軽にご相談ください",
+    "inquiryForm": {
+      "title": "お問い合わせフォーム",
+      "description": "詳細なご相談内容をお聞かせください。<br>担当者より1営業日以内にご返信いたします。",
+      "button": "フォームで相談する"
+    },
+    "otherMethods": {
+      "title": "その他のお問い合わせ方法",
+      "email": {
+        "title": "メールでのお問い合わせ",
+        "description": "24時間受付",
+        "address": "company@cor-jo.com"
+      },
+      "form": {
+        "title": "フォームでのご相談",
+        "description": "最短1営業日以内にご返信",
+        "link": "相談フォームはこちら"
+      },
+      "urgentNote": "※お急ぎの場合はフォームに「至急」とご記入ください"
+    },
+    "results": {
+      "title": "導入実績",
+      "companies": "導入企業数",
+      "satisfaction": "顧客満足度",
+      "recoveryPeriod": "平均投資回収期間"
+    }
+  },
+  "footer": {
+    "privacyPolicy": "プライバシーポリシー",
+    "termsOfUse": "利用規約",
+    "contact": "お問い合わせ",
+    "companyInfo": "による共創型AI・IoTソリューション開発"
+  },
+  "about": {
+    "title": "IoTRealmについて",
+    "subtitle": "私たちは、IoT技術を通じて企業の未来を形作ります",
+    "description": "経験豊富なチームが、最新のIoT技術を使用して、お客様のビジネス目標を達成するためのソリューションを提供します。"
+  },
+  "pricing": {
+    "title": "料金プラン",
+    "subtitle": "お客様のニーズに合わせた柔軟な料金プラン",
+    "table": {
+      "service": "サービス",
+      "priceRange": "価格帯（税込）",
+      "duration": "期間",
+      "includedServices": "含まれるサービス",
+      "poc": {
+        "title": "PoC（概念実証）",
+        "description": "プロトタイプ開発・検証",
+        "price": "100万円〜500万円",
+        "priceNote": "※規模により変動",
+        "duration": "1-3ヶ月",
+        "features": [
+          "要件定義・設計",
+          "プロトタイプ開発",
+          "効果検証レポート",
+          "本開発移行サポート"
+        ]
+      },
+      "mainDev": {
+        "title": "本開発",
+        "description": "本格運用システム構築",
+        "price": "500万円〜",
+        "priceNote": "※機能・規模により変動",
+        "duration": "3-12ヶ月",
+        "features": [
+          "本格運用システム構築",
+          "テスト・品質保証",
+          "運用・保守サポート",
+          "長期的パートナーシップ"
+        ]
+      }
+    },
+    "partnership": {
+      "title": "共創パートナー優待制度",
+      "description": "Cor.株式会社の他サービスをご利用中のお客様には、<br>長期的なパートナーシップに基づく特別価格でご提供しています。<br>詳しくはお問い合わせください。",
+      "contactButton": "お問い合わせ"
+    },
+    "starter": {
+      "title": "スタータープラン",
+      "price": "¥50,000",
+      "period": "/月",
+      "features": [
+        "基本的なIoTデバイス管理",
+        "月10GBのデータ処理",
+        "メールサポート",
+        "基本的な分析レポート"
+      ]
+    },
+    "professional": {
+      "title": "プロフェッショナルプラン",
+      "price": "¥150,000",
+      "period": "/月",
+      "features": [
+        "高度なIoTデバイス管理",
+        "月100GBのデータ処理",
+        "24/7サポート",
+        "詳細な分析レポート",
+        "カスタムダッシュボード"
+      ]
+    },
+    "enterprise": {
+      "title": "エンタープライズプラン",
+      "price": "カスタム",
+      "period": "",
+      "features": [
+        "無制限のIoTデバイス管理",
+        "無制限のデータ処理",
+        "専任サポート",
+        "カスタムソリューション",
+        "オンプレミス展開オプション"
+      ]
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "プロジェクトについてお聞かせください",
+    "name": "お名前",
+    "email": "メールアドレス",
+    "message": "メッセージ",
+    "submit": "送信する"
+  },
+  "footer": {
+    "description": "IoTソリューションでビジネスを革新",
+    "links": {
+      "privacy": "プライバシーポリシー",
+      "terms": "利用規約"
+    },
+    "copyright": "© 2024 IoTRealm. All rights reserved."
+  }
+}

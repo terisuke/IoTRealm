@@ -3,15 +3,19 @@ import Footer from "@/components/ui/Footer.astro";
 import Navbar from "@/components/ui/Navbar.astro";
 import MainHead from "@/layouts/MainHead.astro";
 import "@/styles/global.css";
+import type { Language } from '../i18n/config';
 
 interface Props {
   title: string;
   description?: string;
   image?: string;
   robots?: string;
+  currentLanguage?: Language;
+  currentPath?: string;
 }
 
 const props = Astro.props as Props;
+const { currentLanguage = 'ja', currentPath = '/' } = props;
 ---
 
 <html lang="ja">
@@ -33,9 +37,9 @@ const props = Astro.props as Props;
   <script src="@/utils/lenis"></script>
   <body class="bg-white font-grotesk">
     <main>
-      <Navbar />
+      <Navbar currentLanguage={currentLanguage} currentPath={currentPath} />
       <slot />
-      <Footer />
+      <Footer currentLanguage={currentLanguage} />
     </main>
   </body>
 </html>

@@ -1,15 +1,23 @@
 ---
-import Section from "./Section.astro";
+import Section from './Section.astro';
+import { loadTranslations, type Language } from '../../i18n/utils';
+
+export interface Props {
+  currentLanguage?: Language;
+}
+
+const { currentLanguage = 'ja' } = Astro.props;
+const translations = await loadTranslations(currentLanguage);
 ---
 
 <Section id="cases">
 <div class="container mx-auto px-4 py-16">
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            実績・事例
+            {translations.cases.title}
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            数字で見る成果
+            {translations.cases.subtitle}
         </p>
     </div>
     
@@ -19,105 +27,105 @@ import Section from "./Section.astro";
             <table class="w-full bg-white rounded-2xl shadow-lg overflow-hidden">
                 <thead class="bg-blue-50">
                     <tr>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">事例</th>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">業界</th>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">ソリューション</th>
-                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">効果</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">{translations.cases.table.headers.case}</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">{translations.cases.table.headers.industry}</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">{translations.cases.table.headers.solution}</th>
+                        <th class="px-6 py-4 text-left text-sm font-semibold text-gray-900">{translations.cases.table.headers.effect}</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200">
                     <tr class="hover:bg-gray-50">
                         <td class="px-6 py-4">
-                            <div class="font-semibold text-gray-900">港湾音声転写システム</div>
-                            <div class="text-sm text-gray-600">作業指示の自動化</div>
+                            <div class="font-semibold text-gray-900">{translations.cases.table.rows[0].title}</div>
+                            <div class="text-sm text-gray-600">{translations.cases.table.rows[0].description}</div>
                         </td>
                         <td class="px-6 py-4">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-orange-100 text-orange-800">
-                                物流
+                                {translations.cases.table.rows[0].industry}
                             </span>
                         </td>
                         <td class="px-6 py-4 text-gray-700">
-                            AI音声認識 + 自動転写
+                            {translations.cases.table.rows[0].solution}
                         </td>
                         <td class="px-6 py-4">
                             <div class="text-lg font-bold text-green-600">
-                                <strong>作業時間90%削減</strong>
+                                <strong>{translations.cases.table.rows[0].effect}</strong>
                             </div>
                         </td>
                     </tr>
                     <tr class="hover:bg-gray-50">
                         <td class="px-6 py-4">
-                            <div class="font-semibold text-gray-900">介護施設見守りシステム</div>
-                            <div class="text-sm text-gray-600">24時間自動監視</div>
+                            <div class="font-semibold text-gray-900">{translations.cases.table.rows[1].title}</div>
+                            <div class="text-sm text-gray-600">{translations.cases.table.rows[1].description}</div>
                         </td>
                         <td class="px-6 py-4">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-red-100 text-red-800">
-                                医療
+                                {translations.cases.table.rows[1].industry}
                             </span>
                         </td>
                         <td class="px-6 py-4 text-gray-700">
-                            IoTセンサー + AI分析
+                            {translations.cases.table.rows[1].solution}
                         </td>
                         <td class="px-6 py-4">
                             <div class="text-lg font-bold text-green-600">
-                                <strong>エラー率80%削減</strong>
+                                <strong>{translations.cases.table.rows[1].effect}</strong>
                             </div>
                         </td>
                     </tr>
                     <tr class="hover:bg-gray-50">
                         <td class="px-6 py-4">
-                            <div class="font-semibold text-gray-900">風力発電ドローン検査</div>
-                            <div class="text-sm text-gray-600">危険作業の自動化</div>
+                            <div class="font-semibold text-gray-900">{translations.cases.table.rows[2].title}</div>
+                            <div class="text-sm text-gray-600">{translations.cases.table.rows[2].description}</div>
                         </td>
                         <td class="px-6 py-4">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800" style="background-color: #dcfce7 !important; color: #166534 !important;">
-                                エネルギー
+                                {translations.cases.table.rows[2].industry}
                             </span>
                         </td>
                         <td class="px-6 py-4 text-gray-700">
-                            ドローン + 画像認識AI
+                            {translations.cases.table.rows[2].solution}
                         </td>
                         <td class="px-6 py-4">
                             <div class="text-lg font-bold text-green-600">
-                                <strong>検査時間70%短縮</strong>
+                                <strong>{translations.cases.table.rows[2].effect}</strong>
                             </div>
                         </td>
                     </tr>
                     <tr class="hover:bg-gray-50">
                         <td class="px-6 py-4">
-                            <div class="font-semibold text-gray-900">製造業予知保全</div>
-                            <div class="text-sm text-gray-600">設備故障の事前予測</div>
+                            <div class="font-semibold text-gray-900">{translations.cases.table.rows[3].title}</div>
+                            <div class="text-sm text-gray-600">{translations.cases.table.rows[3].description}</div>
                         </td>
                         <td class="px-6 py-4">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-                                製造業
+                                {translations.cases.table.rows[3].industry}
                             </span>
                         </td>
                         <td class="px-6 py-4 text-gray-700">
-                            IoTセンサー + 機械学習
+                            {translations.cases.table.rows[3].solution}
                         </td>
                         <td class="px-6 py-4">
                             <div class="text-lg font-bold text-green-600">
-                                <strong>ダウンタイム50%削減</strong>
+                                <strong>{translations.cases.table.rows[3].effect}</strong>
                             </div>
                         </td>
                     </tr>
                     <tr class="hover:bg-gray-50">
                         <td class="px-6 py-4">
-                            <div class="font-semibold text-gray-900">農業スマートセンサー</div>
-                            <div class="text-sm text-gray-600">精密農業の実現</div>
+                            <div class="font-semibold text-gray-900">{translations.cases.table.rows[4].title}</div>
+                            <div class="text-sm text-gray-600">{translations.cases.table.rows[4].description}</div>
                         </td>
                         <td class="px-6 py-4">
                             <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                                農業
+                                {translations.cases.table.rows[4].industry}
                             </span>
                         </td>
                         <td class="px-6 py-4 text-gray-700">
-                            環境センサー + AI分析
+                            {translations.cases.table.rows[4].solution}
                         </td>
                         <td class="px-6 py-4">
                             <div class="text-lg font-bold text-green-600">
-                                <strong>収穫量20%向上</strong>
+                                <strong>{translations.cases.table.rows[4].effect}</strong>
                             </div>
                         </td>
                     </tr>
@@ -128,68 +136,68 @@ import Section from "./Section.astro";
         <!-- 効果の詳細 -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <div class="bg-blue-50 p-6 rounded-lg shadow-lg text-center">
-                <div class="text-3xl font-bold text-blue-600 mb-2">90%</div>
-                <div class="text-sm text-gray-600 mb-2">作業時間削減</div>
-                <div class="text-xs text-gray-500">IoTRealm 音声認識</div>
+                <div class="text-3xl font-bold text-blue-600 mb-2">{translations.cases.effects.workTimeReduction.value}</div>
+                <div class="text-sm text-gray-600 mb-2">{translations.cases.effects.workTimeReduction.description}</div>
+                <div class="text-xs text-gray-500">{translations.cases.effects.workTimeReduction.source}</div>
             </div>
             <div class="p-6 rounded-lg shadow-lg text-center" style="background-color: #f0fdf4 !important;">
-                <div class="text-3xl font-bold mb-2" style="color: #15803d !important;">120万円</div>
-                <div class="text-sm text-gray-600 mb-2">年間コスト削減</div>
-                <div class="text-xs text-gray-500">BoltSiteペーパーレス</div>
+                <div class="text-3xl font-bold mb-2" style="color: #15803d !important;">{translations.cases.effects.annualCostReduction.value}</div>
+                <div class="text-sm text-gray-600 mb-2">{translations.cases.effects.annualCostReduction.description}</div>
+                <div class="text-xs text-gray-500">{translations.cases.effects.annualCostReduction.source}</div>
             </div>
             <div class="bg-purple-50 p-6 rounded-lg shadow-lg text-center">
-                <div class="text-3xl font-bold text-purple-600 mb-2">80%</div>
-                <div class="text-sm text-gray-600 mb-2">エラー率低減</div>
-                <div class="text-xs text-gray-500">IoTRealm見守りシステム</div>
+                <div class="text-3xl font-bold text-purple-600 mb-2">{translations.cases.effects.errorRateReduction.value}</div>
+                <div class="text-sm text-gray-600 mb-2">{translations.cases.effects.errorRateReduction.description}</div>
+                <div class="text-xs text-gray-500">{translations.cases.effects.errorRateReduction.source}</div>
             </div>
             <div class="bg-orange-50 p-6 rounded-lg shadow-lg text-center">
-                <div class="text-3xl font-bold text-orange-600 mb-2">30%</div>
-                <div class="text-sm text-gray-600 mb-2">顧客満足度向上</div>
-                <div class="text-xs text-gray-500">BoltSite高速表示</div>
+                <div class="text-3xl font-bold text-orange-600 mb-2">{translations.cases.effects.customerSatisfaction.value}</div>
+                <div class="text-sm text-gray-600 mb-2">{translations.cases.effects.customerSatisfaction.description}</div>
+                <div class="text-xs text-gray-500">{translations.cases.effects.customerSatisfaction.source}</div>
             </div>
             <div class="bg-red-50 p-6 rounded-lg shadow-lg text-center">
-                <div class="text-3xl font-bold text-red-600 mb-2">5-10位</div>
-                <div class="text-sm text-gray-600 mb-2">SEO順位改善</div>
-                <div class="text-xs text-gray-500">BoltSite SEO対策</div>
+                <div class="text-3xl font-bold text-red-600 mb-2">{translations.cases.effects.seoRanking.value}</div>
+                <div class="text-sm text-gray-600 mb-2">{translations.cases.effects.seoRanking.description}</div>
+                <div class="text-xs text-gray-500">{translations.cases.effects.seoRanking.source}</div>
             </div>
             <div class="bg-indigo-50 p-6 rounded-lg shadow-lg text-center">
-                <div class="text-3xl font-bold text-indigo-600 mb-2">50%</div>
-                <div class="text-sm text-gray-600 mb-2">ダウンタイム削減</div>
-                <div class="text-xs text-gray-500">予知保全システム</div>
+                <div class="text-3xl font-bold text-indigo-600 mb-2">{translations.cases.effects.downtimeReduction.value}</div>
+                <div class="text-sm text-gray-600 mb-2">{translations.cases.effects.downtimeReduction.description}</div>
+                <div class="text-xs text-gray-500">{translations.cases.effects.downtimeReduction.source}</div>
             </div>
         </div>
         
         <!-- 顧客の声 -->
         <div class="bg-blue-50 rounded-2xl p-8">
             <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
-                お客様の声
+                {translations.cases.testimonials.title}
             </h3>
             <div class="grid md:grid-cols-2 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=50&h=50&fit=crop&crop=face" 
-                             alt="田中太郎" class="w-12 h-12 rounded-full mr-4">
+                             alt={translations.cases.testimonials.tanaka.name} class="w-12 h-12 rounded-full mr-4">
                         <div>
-                            <div class="font-semibold text-gray-900">田中太郎</div>
-                            <div class="text-sm text-gray-600">製造業オーナー</div>
+                            <div class="font-semibold text-gray-900">{translations.cases.testimonials.tanaka.name}</div>
+                            <div class="text-sm text-gray-600">{translations.cases.testimonials.tanaka.position}</div>
                         </div>
                     </div>
                     <p class="text-gray-700 italic">
-                        「予知保全システムの導入により、設備の故障を事前に察知できるようになり、計画的なメンテナンスが可能になりました。ダウンタイムが大幅に削減され、生産効率が向上しています。」
+                        {translations.cases.testimonials.tanaka.quote}
                     </p>
                 </div>
                 
                 <div class="bg-white p-6 rounded-lg shadow">
                     <div class="flex items-center mb-4">
                         <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=50&h=50&fit=crop&crop=face" 
-                             alt="佐藤花子" class="w-12 h-12 rounded-full mr-4">
+                             alt={translations.cases.testimonials.sato.name} class="w-12 h-12 rounded-full mr-4">
                         <div>
-                            <div class="font-semibold text-gray-900">佐藤花子</div>
-                            <div class="text-sm text-gray-600">農業経営者</div>
+                            <div class="font-semibold text-gray-900">{translations.cases.testimonials.sato.name}</div>
+                            <div class="text-sm text-gray-600">{translations.cases.testimonials.sato.position}</div>
                         </div>
                     </div>
                     <p class="text-gray-700 italic">
-                        「スマート農業システムで土壌の状態を常時監視できるようになり、最適なタイミングで水やりや肥料散布ができるようになりました。収穫量が20%向上し、農薬の使用量も削減できています。」
+                        {translations.cases.testimonials.sato.quote}
                     </p>
                 </div>
             </div>

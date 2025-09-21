@@ -1,25 +1,39 @@
 ---
 import Section from "./Section.astro";
+import { loadTranslations, type Language } from '../../i18n/utils';
+
+export interface Props {
+  currentLanguage?: Language;
+}
+
+const { currentLanguage = 'ja' } = Astro.props;
+const translations = await loadTranslations(currentLanguage);
+
+// デバッグ用：翻訳データの確認
+console.log('Current language:', currentLanguage);
+console.log('Translations contact:', translations.contact);
+console.log('Translations contact inquiryForm:', translations.contact?.inquiryForm);
 ---
 
 <Section id="contact">
 <div class="container mx-auto px-4 py-16">
     <div class="max-w-4xl mx-auto">
         <!-- メインCTA -->
-        <div class="bg-blue-600 rounded-3xl p-8 md:p-12 text-center text-white mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                今すぐ相談！
+        <div class="bg-blue-800 rounded-3xl p-8 md:p-12 text-center text-white mb-12 shadow-2xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white drop-shadow-lg">
+                {translations.contact.title}
             </h2>
-            <p class="text-xl mb-8 opacity-90">
-                アイデアを現実に変える第一歩を踏み出しましょう
+            <p class="text-xl mb-8 text-white drop-shadow-md">
+                {translations.contact.subtitle}
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a href="#contact-form" 
-                   class="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-2xl text-lg font-semibold transition-colors duration-300 min-w-[200px]">
-                    無料相談申し込み
+                   class="bg-white text-black hover:bg-gray-100 hover:text-gray-800 px-8 py-4 rounded-2xl text-lg font-bold transition-colors duration-300 min-w-[200px] shadow-lg border-2 border-gray-300"
+                   style="color: #000000 !important; font-weight: bold !important;">
+                    Contáctanos
                 </a>
                 <div class="text-white">
-                    <span class="text-2xl font-bold text-red-200">30分無料!</span>
+                    <span class="text-2xl font-bold text-red-200">{translations.contact.freeTime}</span>
                 </div>
             </div>
         </div>
@@ -27,10 +41,10 @@ import Section from "./Section.astro";
         <!-- 相談フォーム -->
         <div id="contact-form" class="bg-white rounded-2xl shadow-lg p-8 mb-12">
             <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
-                無料相談申し込み
+                {translations.contact.formTitle}
             </h3>
             <p class="text-center text-gray-600 mb-8">
-                以下のフォームからお気軽にご相談ください
+                {translations.contact.formSubtitle}
             </p>
 
             <!-- お問い合わせフォームへのリンク -->
@@ -41,11 +55,9 @@ import Section from "./Section.astro";
                     </svg>
                 </div>
                 <h4 class="text-xl font-bold text-gray-900 mb-4">
-                    お問い合わせフォーム
+                    {translations.contact?.inquiryForm?.title || (currentLanguage === 'ja' ? 'お問い合わせフォーム' : 'Inquiry Form')}
                 </h4>
-                <p class="text-gray-600 mb-6">
-                    詳細なご相談内容をお聞かせください。<br>
-                    担当者より1営業日以内にご返信いたします。
+                <p class="text-gray-600 mb-6" set:html={translations.contact?.inquiryForm?.description || (currentLanguage === 'ja' ? '詳細なご相談内容をお聞かせください。<br>担当者より1営業日以内にご返信いたします。' : 'Please tell us the details of your consultation.<br>A representative will reply within 1 business day.')}>
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="https://cor-jp.com/contact/"
@@ -55,7 +67,7 @@ import Section from "./Section.astro";
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                             </svg>
-                            フォームで相談する
+                            {translations.contact?.inquiryForm?.button || (currentLanguage === 'ja' ? 'フォームで相談する' : 'Consult with the form')}
                         </span>
                     </a>
                 </div>
@@ -64,27 +76,27 @@ import Section from "./Section.astro";
             <!-- 連絡方法 -->
             <div class="mt-8">
                 <div class="bg-gray-50 rounded-lg p-6">
-                    <h4 class="font-semibold text-gray-900 mb-4 text-center">その他のお問い合わせ方法</h4>
+                    <h4 class="font-semibold text-gray-900 mb-4 text-center">{translations.contact?.otherMethods?.title || (currentLanguage === 'ja' ? 'その他のお問い合わせ方法' : 'Other Inquiry Methods')}</h4>
                     <div class="grid md:grid-cols-2 gap-4">
                         <div class="text-center p-4 bg-white rounded-lg">
                             <div class="text-2xl mb-2">📧</div>
-                            <h5 class="font-medium text-gray-800 mb-1">メールでのお問い合わせ</h5>
-                            <p class="text-sm text-gray-600 mb-2">24時間受付</p>
+                            <h5 class="font-medium text-gray-800 mb-1">{translations.contact?.otherMethods?.email?.title || (currentLanguage === 'ja' ? 'メールでのお問い合わせ' : 'Inquiries by email')}</h5>
+                            <p class="text-sm text-gray-600 mb-2">{translations.contact?.otherMethods?.email?.description || (currentLanguage === 'ja' ? '24時間受付' : '24-hour reception')}</p>
                             <a href="mailto:company@cor-jo.com" class="text-green-600 font-semibold hover:text-green-700">
-                                company@cor-jo.com
+                                {translations.contact?.otherMethods?.email?.address || 'company@cor-jo.com'}
                             </a>
                         </div>
                         <div class="text-center p-4 bg-white rounded-lg">
                             <div class="text-2xl mb-2">💬</div>
-                            <h5 class="font-medium text-gray-800 mb-1">フォームでのご相談</h5>
-                            <p class="text-sm text-gray-600 mb-2">最短1営業日以内にご返信</p>
+                            <h5 class="font-medium text-gray-800 mb-1">{translations.contact?.otherMethods?.form?.title || (currentLanguage === 'ja' ? 'フォームでのご相談' : 'Consultation via form')}</h5>
+                            <p class="text-sm text-gray-600 mb-2">{translations.contact?.otherMethods?.form?.description || (currentLanguage === 'ja' ? '最短1営業日以内にご返信' : 'Reply within 1 business day at the shortest')}</p>
                             <a href="https://cor-jp.com/contact/" target="_blank" class="text-blue-600 font-semibold hover:text-blue-700">
-                                相談フォームはこちら
+                                {translations.contact?.otherMethods?.form?.link || (currentLanguage === 'ja' ? '相談フォームはこちら' : 'Consultation form is here')}
                             </a>
                         </div>
                     </div>
                     <p class="text-center text-sm text-gray-500 mt-4">
-                        ※お急ぎの場合はフォームに「至急」とご記入ください
+                        {translations.contact?.otherMethods?.urgentNote || (currentLanguage === 'ja' ? '※お急ぎの場合はフォームに「至急」とご記入ください' : '※If urgent, please write "Urgent" in the form')}
                     </p>
                 </div>
             </div>
@@ -93,20 +105,20 @@ import Section from "./Section.astro";
         <!-- ソーシャル証明 -->
         <div class="mt-12 bg-blue-50 rounded-2xl shadow-lg p-8">
             <h3 class="text-2xl font-bold text-center mb-8 text-gray-900">
-                導入実績
+                {translations.contact?.results?.title || (currentLanguage === 'ja' ? '導入実績' : 'Implementation Results')}
             </h3>
             <div class="grid md:grid-cols-3 gap-8 text-center">
                 <div>
                     <div class="text-3xl font-bold text-blue-600 mb-2">50+</div>
-                    <div class="text-gray-600">導入企業数</div>
+                    <div class="text-gray-600">{translations.contact?.results?.companies || (currentLanguage === 'ja' ? '導入企業数' : 'Number of companies introduced')}</div>
                 </div>
                 <div>
                     <div class="text-3xl font-bold text-green-600 mb-2">95%</div>
-                    <div class="text-gray-600">顧客満足度</div>
+                    <div class="text-gray-600">{translations.contact?.results?.satisfaction || (currentLanguage === 'ja' ? '顧客満足度' : 'Customer satisfaction')}</div>
                 </div>
                 <div>
-                    <div class="text-3xl font-bold text-purple-600 mb-2">1年</div>
-                    <div class="text-gray-600">平均投資回収期間</div>
+                    <div class="text-3xl font-bold text-purple-600 mb-2">{currentLanguage === 'ja' ? '1年' : '1 year'}</div>
+                    <div class="text-gray-600">{translations.contact?.results?.recoveryPeriod || (currentLanguage === 'ja' ? '平均投資回収期間' : 'Average investment recovery period')}</div>
                 </div>
             </div>
         </div>

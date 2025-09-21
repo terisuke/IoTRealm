@@ -1,15 +1,23 @@
 ---
 import Section from "./Section.astro";
+import { loadTranslations, type Language } from '../../i18n/utils';
+
+export interface Props {
+  currentLanguage?: Language;
+}
+
+const { currentLanguage = 'ja' } = Astro.props;
+const translations = await loadTranslations(currentLanguage);
 ---
 
 <Section id="solutions">
 <div class="container mx-auto px-4 py-16">
     <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            開発可能なソリューション
+            {translations.solutions.title}
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-            AIとIoTの技術を組み合わせて、あらゆる業界の課題を解決します
+            {translations.solutions.subtitle}
         </p>
     </div>
     
@@ -18,7 +26,7 @@ import Section from "./Section.astro";
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
             <button class="w-full p-6 text-left bg-blue-50 hover:bg-blue-100 transition-colors duration-300" onclick="toggleAccordion('ai-solutions')">
                 <div class="flex justify-between items-center">
-                    <h3 class="text-2xl font-bold text-blue-800">AIソリューション</h3>
+                    <h3 class="text-2xl font-bold text-blue-800">{translations.solutions.aiSolutions.title}</h3>
                     <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" id="ai-solutions-arrow" style="transform: rotate(180deg);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
@@ -28,47 +36,47 @@ import Section from "./Section.astro";
                 <div class="p-6">
                     <!-- 実装例セクション -->
                     <div class="mb-8">
-                        <h4 class="text-xl font-semibold text-gray-900 mb-4">🚢 実装例：博多ポートラジオAI</h4>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-4">🚢 {translations.solutions.aiSolutions.hakataPort.title}</h4>
                         <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 border border-blue-200">
                             <div class="flex flex-col lg:flex-row gap-6">
                                 <div class="flex-1">
-                                    <h5 class="font-semibold text-blue-800 mb-3">海上交通管制のAI音声通信システム</h5>
+                                    <h5 class="font-semibold text-blue-800 mb-3">{translations.solutions.aiSolutions.hakataPort.subtitle}</h5>
                                     <p class="text-gray-700 mb-4">
-                                        船舶と管制塔の間のVHF無線通信をAIが支援。リアルタイム音声認識・生成により、安全で効率的な海上交通を実現します。
+                                        {translations.solutions.aiSolutions.hakataPort.description}
                                     </p>
                                     <div class="space-y-2 text-sm text-gray-600">
                                         <div class="flex items-center">
                                             <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                                            <strong>技術スタック:</strong> OpenAI Realtime API + Next.js 15
+                                            <strong>{translations.solutions.aiSolutions.hakataPort.techStack}</strong> {translations.solutions.aiSolutions.hakataPort.techStackValue}
                                         </div>
                                         <div class="flex items-center">
                                             <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                                            <strong>PTT制御:</strong> プッシュ・トゥ・トーク機能でノイズレス通信
+                                            <strong>{translations.solutions.aiSolutions.hakataPort.pttControl}</strong> {translations.solutions.aiSolutions.hakataPort.pttControlValue}
                                         </div>
                                         <div class="flex items-center">
                                             <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                                            <strong>Function Calling:</strong> 自動チャンネル割り当て機能
+                                            <strong>{translations.solutions.aiSolutions.hakataPort.functionCalling}</strong> {translations.solutions.aiSolutions.hakataPort.functionCallingValue}
                                         </div>
                                         <div class="flex items-center">
                                             <span class="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                                            <strong>IMO SMCP準拠:</strong> 国際海事機関標準プロトコル対応
+                                            <strong>{translations.solutions.aiSolutions.hakataPort.imoSmcp}</strong> {translations.solutions.aiSolutions.hakataPort.imoSmcpValue}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="lg:w-80">
                                     <div class="bg-white rounded-lg p-4 border border-blue-200">
-                                        <h6 class="font-semibold text-gray-900 mb-3">📊 導入効果</h6>
+                                        <h6 class="font-semibold text-gray-900 mb-3">📊 {translations.solutions.aiSolutions.hakataPort.effects}</h6>
                                         <div class="space-y-2 text-sm">
                                             <div class="flex justify-between">
-                                                <span>通信効率</span>
+                                                <span>{translations.solutions.aiSolutions.hakataPort.communicationEfficiency}</span>
                                                 <span class="font-semibold text-green-600">+200%</span>
                                             </div>
                                             <div class="flex justify-between">
-                                                <span>誤解釈リスク</span>
+                                                <span>{translations.solutions.aiSolutions.hakataPort.misinterpretationRisk}</span>
                                                 <span class="font-semibold text-green-600">-90%</span>
                                             </div>
                                             <div class="flex justify-between">
-                                                <span>応答時間</span>
+                                                <span>{translations.solutions.aiSolutions.hakataPort.responseTime}</span>
                                                 <span class="font-semibold text-green-600">-80%</span>
                                             </div>
                                         </div>
@@ -77,7 +85,7 @@ import Section from "./Section.astro";
                                                 <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                                 </svg>
-                                                デモサイトで体験
+                                                {translations.solutions.aiSolutions.hakataPort.demoButton}
                                             </a>
                                         </div>
                                     </div>
@@ -90,65 +98,65 @@ import Section from "./Section.astro";
                         <table class="w-full">
                             <thead>
                                 <tr class="border-b border-gray-200">
-                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">カテゴリ</th>
-                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">対応状況</th>
-                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">効果例</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">{translations.solutions.aiSolutions.table.category}</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">{translations.solutions.aiSolutions.table.status}</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">{translations.solutions.aiSolutions.table.effect}</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200">
                                 <tr>
-                                    <td class="px-4 py-3 font-medium text-gray-900">業務自動化</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900">{translations.solutions.aiSolutions.table.businessAutomation}</td>
                                     <td class="px-4 py-3">
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            ✅ 対応可能
+                                            ✅ {translations.solutions.aiSolutions.table.available}
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-600">
-                                        <strong>作業時間80%削減</strong>
+                                        <strong>{translations.solutions.aiSolutions.table.businessAutomationEffect}</strong>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="px-4 py-3 font-medium text-gray-900">予測</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900">{translations.solutions.aiSolutions.table.prediction}</td>
                                     <td class="px-4 py-3">
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            ✅ 対応可能
+                                            ✅ {translations.solutions.aiSolutions.table.available}
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-600">
-                                        <strong>故障予測精度95%</strong>
+                                        <strong>{translations.solutions.aiSolutions.table.predictionEffect}</strong>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="px-4 py-3 font-medium text-gray-900">対話</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900">{translations.solutions.aiSolutions.table.dialogue}</td>
                                     <td class="px-4 py-3">
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            ✅ 対応可能
+                                            ✅ {translations.solutions.aiSolutions.table.available}
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-600">
-                                        <strong>問い合わせ対応24時間化</strong>
+                                        <strong>{translations.solutions.aiSolutions.table.dialogueEffect}</strong>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="px-4 py-3 font-medium text-gray-900">画像</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900">{translations.solutions.aiSolutions.table.image}</td>
                                     <td class="px-4 py-3">
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            ✅ 対応可能
+                                            ✅ {translations.solutions.aiSolutions.table.available}
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-600">
-                                        <strong>検査精度99%向上</strong>
+                                        <strong>{translations.solutions.aiSolutions.table.imageEffect}</strong>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="px-4 py-3 font-medium text-gray-900">音声</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900">{translations.solutions.aiSolutions.table.voice}</td>
                                     <td class="px-4 py-3">
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            ✅ 対応可能
+                                            ✅ {translations.solutions.aiSolutions.table.available}
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-600">
-                                        <strong>音声認識精度98%</strong>
+                                        <strong>{translations.solutions.aiSolutions.table.voiceEffect}</strong>
                                     </td>
                                 </tr>
                             </tbody>
@@ -162,7 +170,7 @@ import Section from "./Section.astro";
         <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
             <button class="w-full p-6 text-left bg-pink-50 hover:bg-pink-100 transition-colors duration-300" onclick="toggleAccordion('iot-solutions')">
                 <div class="flex justify-between items-center">
-                    <h3 class="text-2xl font-bold text-pink-800">IoTソリューション</h3>
+                    <h3 class="text-2xl font-bold text-pink-800">{translations.solutions.iotSolutions.title}</h3>
                     <svg class="w-6 h-6 text-pink-600 transition-transform duration-300" id="iot-solutions-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                     </svg>
@@ -172,47 +180,47 @@ import Section from "./Section.astro";
                 <div class="p-6">
                     <!-- 実装例セクション -->
                     <div class="mb-8">
-                        <h4 class="text-xl font-semibold text-gray-900 mb-4">🏥 実装例：Care Copilot</h4>
+                        <h4 class="text-xl font-semibold text-gray-900 mb-4">🏥 {translations.solutions.iotSolutions.careCopilot.title}</h4>
                         <div class="bg-gradient-to-r from-pink-50 to-rose-50 rounded-lg p-6 border border-pink-200">
                             <div class="flex flex-col lg:flex-row gap-6">
                                 <div class="flex-1">
-                                    <h5 class="font-semibold text-pink-800 mb-3">高齢者向けIoTケアモニタリングシステム</h5>
+                                    <h5 class="font-semibold text-pink-800 mb-3">{translations.solutions.iotSolutions.careCopilot.subtitle}</h5>
                                     <p class="text-gray-700 mb-4">
-                                        プライバシーを重視しながら高齢者の安全を確保。カメラを使わずにToF距離センサーで転倒検知やベッド離脱を監視し、LINE通知で即座に介護者に知らせます。
+                                        {translations.solutions.iotSolutions.careCopilot.description}
                                     </p>
                                     <div class="space-y-2 text-sm text-gray-600">
                                         <div class="flex items-center">
                                             <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
-                                            <strong>ハードウェア:</strong> M5Stack Fire + ToF距離センサー + 環境センサー
+                                            <strong>{translations.solutions.iotSolutions.careCopilot.hardware}</strong> {translations.solutions.iotSolutions.careCopilot.hardwareValue}
                                         </div>
                                         <div class="flex items-center">
                                             <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
-                                            <strong>通知システム:</strong> LINE Messaging API統合
+                                            <strong>{translations.solutions.iotSolutions.careCopilot.notificationSystem}</strong> {translations.solutions.iotSolutions.careCopilot.notificationSystemValue}
                                         </div>
                                         <div class="flex items-center">
                                             <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
-                                            <strong>プライバシー保護:</strong> カメラ不使用の動作検知技術
+                                            <strong>{translations.solutions.iotSolutions.careCopilot.privacyProtection}</strong> {translations.solutions.iotSolutions.careCopilot.privacyProtectionValue}
                                         </div>
                                         <div class="flex items-center">
                                             <span class="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
-                                            <strong>位置追跡:</strong> GPS機能で外出時の安全確保
+                                            <strong>{translations.solutions.iotSolutions.careCopilot.locationTracking}</strong> {translations.solutions.iotSolutions.careCopilot.locationTrackingValue}
                                         </div>
                                     </div>
                                 </div>
                                 <div class="lg:w-80">
                                     <div class="bg-white rounded-lg p-4 border border-pink-200">
-                                        <h6 class="font-semibold text-gray-900 mb-3">📊 導入効果</h6>
+                                        <h6 class="font-semibold text-gray-900 mb-3">📊 {translations.solutions.iotSolutions.careCopilot.effects}</h6>
                                         <div class="space-y-2 text-sm">
                                             <div class="flex justify-between">
-                                                <span>転倒検知精度</span>
+                                                <span>{translations.solutions.iotSolutions.careCopilot.fallDetectionAccuracy}</span>
                                                 <span class="font-semibold text-green-600">95%</span>
                                             </div>
                                             <div class="flex justify-between">
-                                                <span>緊急対応時間</span>
+                                                <span>{translations.solutions.iotSolutions.careCopilot.emergencyResponseTime}</span>
                                                 <span class="font-semibold text-green-600">-70%</span>
                                             </div>
                                             <div class="flex justify-between">
-                                                <span>介護負担軽減</span>
+                                                <span>{translations.solutions.iotSolutions.careCopilot.caregiverBurdenReduction}</span>
                                                 <span class="font-semibold text-green-600">+60%</span>
                                             </div>
                                         </div>
@@ -221,7 +229,7 @@ import Section from "./Section.astro";
                                                 <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
                                                 </svg>
-                                                詳細記事を見る
+                                                {translations.solutions.iotSolutions.careCopilot.articleButton}
                                             </a>
                                         </div>
                                     </div>
@@ -234,65 +242,65 @@ import Section from "./Section.astro";
                         <table class="w-full">
                             <thead>
                                 <tr class="border-b border-gray-200">
-                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">カテゴリ</th>
-                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">対応状況</th>
-                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">効果例</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">{translations.solutions.iotSolutions.table.category}</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">{translations.solutions.iotSolutions.table.status}</th>
+                                    <th class="px-4 py-3 text-left text-sm font-semibold text-gray-900">{translations.solutions.iotSolutions.table.effect}</th>
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-gray-200">
                                 <tr>
-                                    <td class="px-4 py-3 font-medium text-gray-900">環境監視</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900">{translations.solutions.iotSolutions.table.environmentalMonitoring}</td>
                                     <td class="px-4 py-3">
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            ✅ 対応可能
+                                            ✅ {translations.solutions.iotSolutions.table.available}
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-600">
-                                        <strong>リアルタイム環境データ収集</strong>
+                                        <strong>{translations.solutions.iotSolutions.table.environmentalMonitoringEffect}</strong>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="px-4 py-3 font-medium text-gray-900">位置追跡</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900">{translations.solutions.iotSolutions.table.locationTracking}</td>
                                     <td class="px-4 py-3">
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            ✅ 対応可能
+                                            ✅ {translations.solutions.iotSolutions.table.available}
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-600">
-                                        <strong>配送効率30%向上</strong>
+                                        <strong>{translations.solutions.iotSolutions.table.locationTrackingEffect}</strong>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="px-4 py-3 font-medium text-gray-900">予知保全</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900">{translations.solutions.iotSolutions.table.predictiveMaintenance}</td>
                                     <td class="px-4 py-3">
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            ✅ 対応可能
+                                            ✅ {translations.solutions.iotSolutions.table.available}
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-600">
-                                        <strong>ダウンタイム50%削減</strong>
+                                        <strong>{translations.solutions.iotSolutions.table.predictiveMaintenanceEffect}</strong>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="px-4 py-3 font-medium text-gray-900">ドローン</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900">{translations.solutions.iotSolutions.table.drone}</td>
                                     <td class="px-4 py-3">
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            ✅ 対応可能
+                                            ✅ {translations.solutions.iotSolutions.table.available}
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-600">
-                                        <strong>危険作業90%削減</strong>
+                                        <strong>{translations.solutions.iotSolutions.table.droneEffect}</strong>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="px-4 py-3 font-medium text-gray-900">ロボティクス</td>
+                                    <td class="px-4 py-3 font-medium text-gray-900">{translations.solutions.iotSolutions.table.robotics}</td>
                                     <td class="px-4 py-3">
                                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
-                                            ✅ 対応可能
+                                            ✅ {translations.solutions.iotSolutions.table.available}
                                         </span>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-600">
-                                        <strong>自動化率85%向上</strong>
+                                        <strong>{translations.solutions.iotSolutions.table.roboticsEffect}</strong>
                                     </td>
                                 </tr>
                             </tbody>

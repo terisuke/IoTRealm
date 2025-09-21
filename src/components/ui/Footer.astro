@@ -4,6 +4,18 @@ import Logo from "../../../public/iotrealm.png";
 import Facebook from "../../assets/facebook.svg";
 import Linkedin from "../../assets/linkedin.svg";
 import Twitter from "../../assets/twitter.svg";
+import { loadTranslations, type Language } from '../../i18n/utils';
+
+export interface Props {
+  currentLanguage?: Language;
+}
+
+const { currentLanguage = 'ja' } = Astro.props;
+const translations = await loadTranslations(currentLanguage);
+
+// デバッグ用：翻訳データの確認
+console.log('Footer - Current language:', currentLanguage);
+console.log('Footer - Translations footer:', translations.footer);
 
 const logos = [
   { name: "Facebook", src: Facebook, link: "https://facebook.com" },
@@ -12,12 +24,12 @@ const logos = [
 ];
 
 const links = [
-  { name: "サービス概要", href: "/#service-overview" },
-  { name: "料金体系", href: "/#pricing" },
-  { name: "ソリューション", href: "/#solutions" },
-  { name: "対応業界", href: "/#industries" },
-  { name: "実績・事例", href: "/#cases" },
-  { name: "FAQ", href: "/#faq" },
+  { name: translations.nav.services, href: "/#service-overview" },
+  { name: translations.nav.pricing, href: "/#pricing" },
+  { name: translations.nav.solutions, href: "/#solutions" },
+  { name: translations.nav.industries, href: "/#industries" },
+  { name: translations.nav.cases, href: "/#cases" },
+  { name: translations.nav.faq, href: "/#faq" },
 ];
 ---
 
@@ -71,15 +83,15 @@ const links = [
             <!-- Legal Links -->
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm text-center">
               <a href="/privacy" class="text-gray-400 hover:text-white transition-colors">
-                プライバシーポリシー
+                {translations.footer?.privacyPolicy || (currentLanguage === 'ja' ? 'プライバシーポリシー' : currentLanguage === 'en' ? 'Privacy Policy' : currentLanguage === 'es' ? 'Política de Privacidad' : '隐私政策')}
               </a>
               <span class="text-gray-600 hidden sm:inline">|</span>
               <a href="/terms" class="text-gray-400 hover:text-white transition-colors">
-                利用規約
+                {translations.footer?.termsOfUse || (currentLanguage === 'ja' ? '利用規約' : currentLanguage === 'en' ? 'Terms of Use' : currentLanguage === 'es' ? 'Términos de Uso' : '使用条款')}
               </a>
               <span class="text-gray-600 hidden sm:inline">|</span>
               <a href="https://cor-jp.com/contact/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                お問い合わせ
+                {translations.footer?.contact || (currentLanguage === 'ja' ? 'お問い合わせ' : currentLanguage === 'en' ? 'Contact Us' : currentLanguage === 'es' ? 'Contáctanos' : '联系我们')}
               </a>
             </div>
           </div>
@@ -88,15 +100,14 @@ const links = [
 
       <div class="h-[1px] bg-gray mb-5"></div>
       <div
-        class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center md:justify-between md:mt-0"
+        class="flex flex-col lg:flex-row h-20 justify-center mt-4 text-center"
       >
-        <span>
+        <span class="text-center">
           <a
             class="underline"
             href="https://cor-jp.com"
             target="_blank">@
-          Cor.inc</a
-          > による共創型AI・IoTソリューション開発
+          Cor.inc</a> {translations.footer?.companyInfo || (currentLanguage === 'ja' ? 'による共創型AI・IoTソリューション開発' : currentLanguage === 'en' ? 'Co-creation AI/IoT solution development by' : currentLanguage === 'es' ? 'Desarrollo de soluciones AI/IoT de co-creación por' : '共创型AI/IoT解决方案开发')}
         </span>
       </div>
     </div>

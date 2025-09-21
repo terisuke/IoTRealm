@@ -10,5 +10,5 @@ export default defineConfig({
   site: "https://iotrealm.vercel.app",
   integrations: [tailwind()],
   output: 'server',
-  adapter: vercel(),
+  adapter: vercel()
 });
