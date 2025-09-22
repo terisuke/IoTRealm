@@ -2,13 +2,14 @@ import { defineConfig } from 'astro/config';
 
 import tailwind from "@astrojs/tailwind";
 
-// Import the Vercel adapter
-import vercel from '@astrojs/vercel';
-
 // https://astro.build/config
 export default defineConfig({
-  site: "https://iotrealm.vercel.app",
+  site: "https://iotrealm-by-cor-inc.pages.dev",
   integrations: [tailwind()],
-  output: 'server',
-  adapter: vercel()
+  output: 'static',
+  i18n: {
+    defaultLocale: "ja",
+    locales: ["ja", "en", "zh", "es"],
+    routing: { prefixDefaultLocale: false }
+  }
 });

@@ -5,6 +5,21 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from "astro:content";
 import { capitalize } from "../../../utils";
 
+export const prerender = true;
+
+export async function getStaticPaths() {
+  const allBlogArticles = await getCollection('blog');
+  const allTags = new Set<string>();
+
+  allBlogArticles.forEach(article => {
+    article.data.tags.forEach(tag => allTags.add(tag));
+  });
+
+  return Array.from(allTags).map(tag => ({
+    params: { tag },
+  }));
+}
+
 const { tag } = Astro.params;
 
 if(tag === undefined) {
