@@ -39,7 +39,7 @@ const translations = await loadTranslations(currentLanguage);
                         {translations.faq.mainQuestions.poc.answer.intro}
                     </p>
                     <ol class="list-decimal list-inside space-y-2 text-gray-700">
-                        {translations.faq.mainQuestions.poc.answer.steps.map((step) => (
+                        {translations.faq.mainQuestions.poc.answer.steps.map((step: string) => (
                             <li set:html={step.replace(' - ', ' - ')}></li>
                         ))}
                     </ol>
@@ -66,7 +66,7 @@ const translations = await loadTranslations(currentLanguage);
                         <div class="bg-blue-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.mainQuestions.security.answer.dataProtection.title}</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-                                {translations.faq.mainQuestions.security.answer.dataProtection.items.map((item) => (
+                                {translations.faq.mainQuestions.security.answer.dataProtection.items.map((item: string) => (
                                     <li set:html={item}></li>
                                 ))}
                             </ul>
@@ -74,7 +74,7 @@ const translations = await loadTranslations(currentLanguage);
                         <div class="bg-green-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.mainQuestions.security.answer.compliance.title}</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-                                {translations.faq.mainQuestions.security.answer.compliance.items.map((item) => (
+                                {translations.faq.mainQuestions.security.answer.compliance.items.map((item: string) => (
                                     <li set:html={item}></li>
                                 ))}
                             </ul>
@@ -86,7 +86,7 @@ const translations = await loadTranslations(currentLanguage);
                             <div>
                                 <div class="font-semibold text-gray-800 mb-1">{translations.faq.mainQuestions.security.answer.technicalSecurity.communication.title}</div>
                                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                                    {translations.faq.mainQuestions.security.answer.technicalSecurity.communication.items.map((item) => (
+                                    {translations.faq.mainQuestions.security.answer.technicalSecurity.communication.items.map((item: string) => (
                                         <li>{item}</li>
                                     ))}
                                 </ul>
@@ -94,7 +94,7 @@ const translations = await loadTranslations(currentLanguage);
                             <div>
                                 <div class="font-semibold text-gray-800 mb-1">{translations.faq.mainQuestions.security.answer.technicalSecurity.accessControl.title}</div>
                                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                                    {translations.faq.mainQuestions.security.answer.technicalSecurity.accessControl.items.map((item) => (
+                                    {translations.faq.mainQuestions.security.answer.technicalSecurity.accessControl.items.map((item: string) => (
                                         <li>{item}</li>
                                     ))}
                                 </ul>
@@ -102,7 +102,7 @@ const translations = await loadTranslations(currentLanguage);
                             <div>
                                 <div class="font-semibold text-gray-800 mb-1">{translations.faq.mainQuestions.security.answer.technicalSecurity.monitoring.title}</div>
                                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                                    {translations.faq.mainQuestions.security.answer.technicalSecurity.monitoring.items.map((item) => (
+                                    {translations.faq.mainQuestions.security.answer.technicalSecurity.monitoring.items.map((item: string) => (
                                         <li>{item}</li>
                                     ))}
                                 </ul>
@@ -129,7 +129,7 @@ const translations = await loadTranslations(currentLanguage);
                         <div class="bg-blue-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.mainQuestions.pricing.answer.aiDriven.title}</h4>
                             <div class="space-y-2 text-sm text-gray-700">
-                                {translations.faq.mainQuestions.pricing.answer.aiDriven.items.map((item) => {
+                                {translations.faq.mainQuestions.pricing.answer.aiDriven.items.map((item: string) => {
                                     const [label, value] = item.split(' - ');
                                     return (
                                         <div class="flex justify-between">
@@ -143,7 +143,7 @@ const translations = await loadTranslations(currentLanguage);
                         <div class="bg-green-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.mainQuestions.pricing.answer.consistentSupport.title}</h4>
                             <div class="space-y-2 text-sm text-gray-700">
-                                {translations.faq.mainQuestions.pricing.answer.consistentSupport.items.map((item) => {
+                                {translations.faq.mainQuestions.pricing.answer.consistentSupport.items.map((item: string) => {
                                     const [label, value] = item.split(' - ');
                                     return (
                                         <div class="flex justify-between">
@@ -201,7 +201,7 @@ const translations = await loadTranslations(currentLanguage);
                         <div class="bg-blue-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-900 mb-2">{translations.faq.otherQuestions.techStack.answer.aiDevelopment.title}</h4>
                             <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
-                                {translations.faq.otherQuestions.techStack.answer.aiDevelopment.items.map((item) => (
+                                {translations.faq.otherQuestions.techStack.answer.aiDevelopment.items.map((item: string) => (
                                     <li set:html={item}></li>
                                 ))}
                             </ul>
@@ -209,7 +209,7 @@ const translations = await loadTranslations(currentLanguage);
                         <div class="bg-green-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-900 mb-2">{translations.faq.otherQuestions.techStack.answer.iotDevices.title}</h4>
                             <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
-                                {translations.faq.otherQuestions.techStack.answer.iotDevices.items.map((item) => (
+                                {translations.faq.otherQuestions.techStack.answer.iotDevices.items.map((item: string) => (
                                     <li set:html={item}></li>
                                 ))}
                             </ul>
@@ -217,7 +217,7 @@ const translations = await loadTranslations(currentLanguage);
                         <div class="bg-purple-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-900 mb-2">{translations.faq.otherQuestions.techStack.answer.cloudML.title}</h4>
                             <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
-                                {translations.faq.otherQuestions.techStack.answer.cloudML.items.map((item) => (
+                                {translations.faq.otherQuestions.techStack.answer.cloudML.items.map((item: string) => (
                                     <li set:html={item}></li>
                                 ))}
                             </ul>
@@ -225,7 +225,7 @@ const translations = await loadTranslations(currentLanguage);
                         <div class="bg-orange-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-900 mb-2">{translations.faq.otherQuestions.techStack.answer.aiAgent.title}</h4>
                             <ul class="list-disc list-inside space-y-1 text-gray-700 text-sm">
-                                {translations.faq.otherQuestions.techStack.answer.aiAgent.items.map((item) => (
+                                {translations.faq.otherQuestions.techStack.answer.aiAgent.items.map((item: string) => (
                                     <li set:html={item}></li>
                                 ))}
                             </ul>
@@ -251,7 +251,7 @@ const translations = await loadTranslations(currentLanguage);
                         {translations.faq.otherQuestions.roi.answer.intro}
                     </p>
                     <div class="grid md:grid-cols-3 gap-4 mb-6">
-                        {translations.faq.otherQuestions.roi.answer.metrics.map((metric, index) => {
+                        {translations.faq.otherQuestions.roi.answer.metrics.map((metric: string, index: number) => {
                             const [value, description] = metric.split(' - ');
                             const colors = ['text-blue-600', 'text-green-600', 'text-purple-600'];
                             const bgColors = ['bg-blue-50', 'bg-green-50', 'bg-purple-50'];
@@ -269,7 +269,7 @@ const translations = await loadTranslations(currentLanguage);
                             <div>
                                 <div class="font-semibold text-gray-800 mb-2">{translations.faq.otherQuestions.roi.answer.caseStudies.manufacturing.title}</div>
                                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                                    {translations.faq.otherQuestions.roi.answer.caseStudies.manufacturing.items.map((item) => (
+                                    {translations.faq.otherQuestions.roi.answer.caseStudies.manufacturing.items.map((item: string) => (
                                         <li>{item}</li>
                                     ))}
                                 </ul>
@@ -277,7 +277,7 @@ const translations = await loadTranslations(currentLanguage);
                             <div>
                                 <div class="font-semibold text-gray-800 mb-2">{translations.faq.otherQuestions.roi.answer.caseStudies.logistics.title}</div>
                                 <ul class="list-disc list-inside space-y-1 text-gray-700">
-                                    {translations.faq.otherQuestions.roi.answer.caseStudies.logistics.items.map((item) => (
+                                    {translations.faq.otherQuestions.roi.answer.caseStudies.logistics.items.map((item: string) => (
                                         <li>{item}</li>
                                     ))}
                                 </ul>
@@ -304,7 +304,7 @@ const translations = await loadTranslations(currentLanguage);
                         {translations.faq.otherQuestions.sme.answer.intro}
                     </p>
                     <ul class="list-disc list-inside space-y-2 text-gray-700">
-                        {translations.faq.otherQuestions.sme.answer.benefits.map((benefit) => (
+                        {translations.faq.otherQuestions.sme.answer.benefits.map((benefit: string) => (
                             <li set:html={benefit.replace(' - ', ' - ')}></li>
                         ))}
                     </ul>
@@ -331,7 +331,7 @@ const translations = await loadTranslations(currentLanguage);
                         <div class="bg-blue-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.otherQuestions.maintenance.answer.costEffective.title}</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-                                {translations.faq.otherQuestions.maintenance.answer.costEffective.items.map((item) => (
+                                {translations.faq.otherQuestions.maintenance.answer.costEffective.items.map((item: string) => (
                                     <li set:html={item}></li>
                                 ))}
                             </ul>
@@ -339,7 +339,7 @@ const translations = await loadTranslations(currentLanguage);
                         <div class="bg-green-50 p-4 rounded-lg">
                             <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.otherQuestions.maintenance.answer.rapidResponse.title}</h4>
                             <ul class="list-disc list-inside space-y-2 text-gray-700 text-sm">
-                                {translations.faq.otherQuestions.maintenance.answer.rapidResponse.items.map((item) => (
+                                {translations.faq.otherQuestions.maintenance.answer.rapidResponse.items.map((item: string) => (
                                     <li set:html={item}></li>
                                 ))}
                             </ul>
@@ -348,7 +348,7 @@ const translations = await loadTranslations(currentLanguage);
                     <div class="bg-gray-50 p-4 rounded-lg">
                         <h4 class="font-semibold text-gray-900 mb-3">{translations.faq.otherQuestions.maintenance.answer.maintenanceFlow.title}</h4>
                         <div class="grid md:grid-cols-4 gap-3 text-sm">
-                            {translations.faq.otherQuestions.maintenance.answer.maintenanceFlow.steps.map((step, index) => {
+                            {translations.faq.otherQuestions.maintenance.answer.maintenanceFlow.steps.map((step: string, index: number) => {
                                 const [title, description] = step.split(' - ');
                                 return (
                                     <div class="text-center">

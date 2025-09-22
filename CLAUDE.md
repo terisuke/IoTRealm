@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-IoTRealm is a digital marketing agency landing page built with Astro and Tailwind CSS. It's a server-rendered website deployed on Vercel, featuring SEO-friendly architecture and mobile-responsive design.
+IoTRealm is a multi-language AI/IoT solutions company website built with Astro and Tailwind CSS. It's a server-rendered website deployed on Vercel, featuring full internationalization support (Japanese, English, Spanish, Chinese), SEO-friendly architecture, and mobile-responsive design.
 
 ## Essential Commands
 
@@ -29,8 +29,17 @@ IoTRealm is a digital marketing agency landing page built with Astro and Tailwin
 ```
 src/
 ├── pages/           # Routes (file-based routing)
+│   ├── [lang]/      # Dynamic language routes (ja/en/es/zh)
 │   ├── articles/    # Blog articles
 │   └── services/    # Service pages
+├── i18n/            # Internationalization
+│   ├── locales/     # Translation JSON files
+│   │   ├── ja.json  # Japanese translations
+│   │   ├── en.json  # English translations
+│   │   ├── es.json  # Spanish translations
+│   │   └── zh.json  # Chinese translations
+│   ├── utils.ts     # i18n utilities
+│   └── translations.ts # Static translation imports
 ├── components/      # Reusable components
 │   ├── ui/          # UI components
 │   ├── sections/    # Page sections
@@ -44,9 +53,12 @@ src/
 
 ### Key Conventions
 - **Import Alias**: Use `@/*` for imports from src directory (e.g., `@/components/ui/Button`)
-- **Routing**: Add `.astro` or `.md` files to `src/pages/` for new routes
+- **Routing**: Dynamic language routes under `src/pages/[lang]/`
+- **i18n**: All text content should come from translation JSON files
+- **Language Codes**: ja (Japanese), en (English), es (Spanish), zh (Chinese)
 - **Static Assets**: Place in `public/` directory
 - **Environment Variables**: Use `.env` files (already in .gitignore)
+- **Type Safety**: All map functions require explicit type annotations
 
 ### Tailwind Configuration
 - Custom colors: `green`, `black`, `dark`, `gray`, `white` (CSS variables)

@@ -11,15 +11,27 @@ import FutureDevelopment from "@/components/sections/FutureDevelopment.astro";
 import FAQ from "@/components/sections/FAQ.astro";
 import CTA from "@/components/sections/CTA.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
-import { getLanguageFromPath } from '../../i18n/utils';
+import { loadTranslations, type Language } from '../../i18n/utils';
 
-const currentLanguage = getLanguageFromPath(Astro.url?.pathname || '/en');
-const currentPath = Astro.url?.pathname || '/en';
+export const prerender = true;
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'en' } },
+    { params: { lang: 'es' } },
+    { params: { lang: 'zh' } },
+  ];
+}
+
+const { lang } = Astro.params;
+const currentLanguage = lang as Language;
+const translations = await loadTranslations(currentLanguage);
+const currentPath = `/${lang}`;
 ---
 
 <MainLayout
-  title="IoTRealm - AI & IoT Solutions Development"
-  description="IoTRealm: Transform reality with AI & IoT. Solve challenges starting from ¥1M for PoC. Turn ideas from screen to reality. Supporting DX advancement in manufacturing, logistics, agriculture, healthcare, and retail industries."
+  title={`IoTRealm - ${translations.hero.title}`}
+  description={translations.hero.subtitle}
   currentLanguage={currentLanguage}
   currentPath={currentPath}
 >

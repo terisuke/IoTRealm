@@ -1,5 +1,8 @@
 import type { Language } from './config';
 import { defaultLanguage } from './config';
+import { getTranslations } from './translations';
+
+export type { Language };
 
 // Translation data type
 export type TranslationData = Record<string, any>;
@@ -14,13 +17,13 @@ export async function loadTranslations(language: Language): Promise<TranslationD
   }
 
   try {
-    const translations = await import(`./locales/${language}.json`);
-    translationCache.set(language, translations.default);
-    return translations.default;
+    const translations = getTranslations(language);
+    translationCache.set(language, translations);
+    return translations;
   } catch (error) {
     console.warn(`Failed to load translations for ${language}, falling back to ${defaultLanguage}`);
-    const fallbackTranslations = await import(`./locales/${defaultLanguage}.json`);
-    return fallbackTranslations.default;
+    const fallbackTranslations = getTranslations(defaultLanguage);
+    return fallbackTranslations;
   }
 }
 

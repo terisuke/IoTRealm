@@ -86,7 +86,7 @@ const translations = await loadTranslations(currentLanguage);
                     </div>
                     <h4 class="font-semibold text-gray-900 mb-2">{translations.futureDevelopment.roadmap.shortTerm.title}</h4>
                     <ul class="text-sm text-gray-600 space-y-1">
-                        {translations.futureDevelopment.roadmap.shortTerm.items.map((item) => (
+                        {translations.futureDevelopment.roadmap.shortTerm.items.map((item: string) => (
                             <li>• {item}</li>
                         ))}
                     </ul>
@@ -98,7 +98,7 @@ const translations = await loadTranslations(currentLanguage);
                     </div>
                     <h4 class="font-semibold text-gray-900 mb-2">{translations.futureDevelopment.roadmap.mediumTerm.title}</h4>
                     <ul class="text-sm text-gray-600 space-y-1">
-                        {translations.futureDevelopment.roadmap.mediumTerm.items.map((item) => (
+                        {translations.futureDevelopment.roadmap.mediumTerm.items.map((item: string) => (
                             <li>• {item}</li>
                         ))}
                     </ul>
@@ -110,7 +110,7 @@ const translations = await loadTranslations(currentLanguage);
                     </div>
                     <h4 class="font-semibold text-gray-900 mb-2">{translations.futureDevelopment.roadmap.longTerm.title}</h4>
                     <ul class="text-sm text-gray-600 space-y-1">
-                        {translations.futureDevelopment.roadmap.longTerm.items.map((item) => (
+                        {translations.futureDevelopment.roadmap.longTerm.items.map((item: string) => (
                             <li>• {item}</li>
                         ))}
                     </ul>

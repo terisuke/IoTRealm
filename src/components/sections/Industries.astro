@@ -30,7 +30,7 @@ const translations = await loadTranslations(currentLanguage);
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    {translations.industries.manufacturing.features.map((feature) => (
+                    {translations.industries.manufacturing.features.map((feature: string) => (
                         <li class="flex items-start">
                             <span class="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
                             <span>{feature}</span>
@@ -52,7 +52,7 @@ const translations = await loadTranslations(currentLanguage);
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    {translations.industries.logistics.features.map((feature) => (
+                    {translations.industries.logistics.features.map((feature: string) => (
                         <li class="flex items-start">
                             <span class="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></span>
                             <span>{feature}</span>
@@ -74,7 +74,7 @@ const translations = await loadTranslations(currentLanguage);
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    {translations.industries.agriculture.features.map((feature) => (
+                    {translations.industries.agriculture.features.map((feature: string) => (
                         <li class="flex items-start">
                             <span class="w-2 h-2 bg-yellow-500 rounded-full mr-3 mt-2"></span>
                             <span>{feature}</span>
@@ -96,7 +96,7 @@ const translations = await loadTranslations(currentLanguage);
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    {translations.industries.healthcare.features.map((feature) => (
+                    {translations.industries.healthcare.features.map((feature: string) => (
                         <li class="flex items-start">
                             <span class="w-2 h-2 bg-red-500 rounded-full mr-3 mt-2"></span>
                             <span>{feature}</span>
@@ -118,7 +118,7 @@ const translations = await loadTranslations(currentLanguage);
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    {translations.industries.retail.features.map((feature) => (
+                    {translations.industries.retail.features.map((feature: string) => (
                         <li class="flex items-start">
                             <span class="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></span>
                             <span>{feature}</span>
@@ -140,7 +140,7 @@ const translations = await loadTranslations(currentLanguage);
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    {translations.industries.energy.features.map((feature) => (
+                    {translations.industries.energy.features.map((feature: string) => (
                         <li class="flex items-start">
                             <span class="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
                             <span>{feature}</span>
@@ -162,7 +162,7 @@ const translations = await loadTranslations(currentLanguage);
             </div>
             <div class="p-6">
                 <ul class="space-y-3 text-gray-700 mb-6">
-                    {translations.industries.others.features.map((feature) => (
+                    {translations.industries.others.features.map((feature: string) => (
                         <li class="flex items-start">
                             <span class="w-2 h-2 bg-black rounded-full mr-3 mt-2" style="background-color: #000000 !important;"></span>
                             <span>{feature}</span>
