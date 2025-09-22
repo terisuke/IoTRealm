@@ -2,7 +2,7 @@
 import { Astronav } from "astro-navbar";
 import LanguageSwitcher from "./LanguageSwitcher.astro";
 import { loadTranslations, type Language } from '../../i18n/utils';
-import { getLanguageFromPath } from '../../i18n/utils';
+import { getLanguageFromPath, createLocalizedPath } from '../../i18n/utils';
 
 export interface Props {
   currentLanguage?: Language;
@@ -13,12 +13,12 @@ const { currentLanguage = 'ja', currentPath = '/' } = Astro.props;
 const translations = await loadTranslations(currentLanguage);
 
 const menuitems = [
-  { href: '/#service-overview', label: translations.nav.services },
-  { href: '/#pricing', label: translations.nav.pricing },
-  { href: '/#solutions', label: translations.nav.solutions },
-  { href: '/#industries', label: translations.nav.industries },
-  { href: '/#cases', label: translations.nav.cases },
-  { href: '/#faq', label: translations.nav.faq },
+  { href: createLocalizedPath('/#service-overview', currentLanguage), label: translations.nav.services },
+  { href: createLocalizedPath('/#pricing', currentLanguage), label: translations.nav.pricing },
+  { href: createLocalizedPath('/#solutions', currentLanguage), label: translations.nav.solutions },
+  { href: createLocalizedPath('/#industries', currentLanguage), label: translations.nav.industries },
+  { href: createLocalizedPath('/#cases', currentLanguage), label: translations.nav.cases },
+  { href: createLocalizedPath('/#faq', currentLanguage), label: translations.nav.faq },
 ];
 
 ---
@@ -28,7 +28,7 @@ const menuitems = [
     <header class="flex flex-col lg:flex-row justify-between items-center my-6 px-6 md:px-32 py-4">
       <Astronav>
         <div class="flex w-full lg:w-auto items-center justify-between">
-          <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <a href={createLocalizedPath("/", currentLanguage)} class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="/iotrealm.png" class="h-20" alt="Logo" />
             <span class="text-3xl font-bold text-green-600 tracking-tight font-sans">IoTRealm</span>
           </a>

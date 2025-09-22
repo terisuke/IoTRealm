@@ -1,11 +1,28 @@
 import type { Language } from './config';
 import { defaultLanguage } from './config';
 
+// Re-export Language type for use in components
+export type { Language };
+
 // Translation data type
 export type TranslationData = Record<string, any>;
 
 // Cache for loaded translations
 const translationCache = new Map<string, TranslationData>();
+
+// Import all translation files statically
+import jaTranslations from './locales/ja.json';
+import enTranslations from './locales/en.json';
+import zhTranslations from './locales/zh.json';
+import esTranslations from './locales/es.json';
+
+// Translation data mapping
+const translationData: Record<Language, TranslationData> = {
+  ja: jaTranslations,
+  en: enTranslations,
+  zh: zhTranslations,
+  es: esTranslations
+};
 
 // Load translation data for a specific language
 export async function loadTranslations(language: Language): Promise<TranslationData> {
@@ -14,13 +31,17 @@ export async function loadTranslations(language: Language): Promise<TranslationD
   }
 
   try {
-    const translations = await import(`./locales/${language}.json`);
-    translationCache.set(language, translations.default);
-    return translations.default;
+    const translations = translationData[language];
+    if (!translations) {
+      throw new Error(`No translations found for language: ${language}`);
+    }
+    translationCache.set(language, translations);
+    return translations;
   } catch (error) {
-    console.warn(`Failed to load translations for ${language}, falling back to ${defaultLanguage}`);
-    const fallbackTranslations = await import(`./locales/${defaultLanguage}.json`);
-    return fallbackTranslations.default;
+    console.warn(`Failed to load translations for ${language}, falling back to ${defaultLanguage}:`, error);
+    const fallbackTranslations = translationData[defaultLanguage];
+    translationCache.set(language, fallbackTranslations);
+    return fallbackTranslations;
   }
 }
 
