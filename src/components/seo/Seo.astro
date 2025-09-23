@@ -35,9 +35,17 @@ const jsonLD = jsonLDGenerator({
 
 <!-- SEO -->
 <link rel="canonical" href={url} />
+<meta name="keywords" content={siteData.keywords} />
+<meta name="author" content="IoTRealm" />
+<meta name="publisher" content="IoTRealm" />
+<meta name="classification" content="Technology, IoT, AI, Consulting" />
+<meta name="category" content="IoT Solutions" />
+<meta name="coverage" content="Worldwide" />
+<meta name="distribution" content="Global" />
+<meta name="rating" content="General" />
 
 <!-- Open Graph -->
-<meta property="og:site_name" content="IoTRealm" />
+<meta property="og:site_name" content="IoTRealm - Advanced IoT Solutions & AI Technology" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={url} />
@@ -53,6 +61,8 @@ const jsonLD = jsonLDGenerator({
 <meta property="og:image:alt" content={image?.alt || siteData.image.alt} />
 <meta property="og:type" content="website" />
 <meta property="og:locale" content="ja_JP" />
+<meta property="article:publisher" content="IoTRealm" />
+<meta property="article:author" content="IoTRealm" />
 
 <!-- Twitter -->
 <meta name="twitter:title" content={title} />
@@ -60,9 +70,17 @@ const jsonLD = jsonLDGenerator({
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content={image?.src || siteData.image.src} />
 <meta name="twitter:image:alt" content={title} />
+<meta name="twitter:site" content="@IoTRealm" />
+<meta name="twitter:creator" content="@IoTRealm" />
 
 <!-- Using environment domain -->
 <meta name="twitter:domain" content={import.meta.env.SITE} />
+
+<!-- Additional SEO meta tags -->
+<meta name="application-name" content="IoTRealm" />
+<meta name="msapplication-TileColor" content="#0066cc" />
+<meta name="msapplication-config" content="/browserconfig.xml" />
+<link rel="alternate" type="application/rss+xml" title="IoTRealm RSS Feed" href="/rss.xml" />
 
 {robots && <meta name="robots" content="noindex, nofollow" />}
 

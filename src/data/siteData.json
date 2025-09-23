@@ -1,8 +1,9 @@
 {
-  "title": "IoTRealm",
-  "description": "IoTRealm is a simple and minimalistic blog theme for Ghost. It is designed to be a perfect starting point for your blog project.",
+  "title": "IoTRealm - Advanced IoT Solutions & AI Technology",
+  "description": "IoTRealm delivers cutting-edge IoT solutions, AI technology, and digital transformation services. Leading IoT consulting, smart device integration, and innovative technology solutions for businesses worldwide.",
+  "keywords": "IoTRealm, IoT solutions, AI technology, smart devices, digital transformation, IoT consulting, connected devices, automation, intelligent systems",
   "image": {
     "src": "https://github.com/manulthanura/IoTRealm/raw/main/public/cover.png",
-    "alt": "IoTRealm"
+    "alt": "IoTRealm - IoT Solutions and AI Technology Services"
   }
 }
