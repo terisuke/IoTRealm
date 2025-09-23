@@ -1128,5 +1128,229 @@
       }
     },
     "conclusion": "End"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "description": "Terms of Service for IoTRealm. Please review the terms and conditions for using the service.",
+    "intro": "These Terms of Service (hereinafter referred to as \"these Terms\") define the terms of use for the AI/IoT solution \"IoTRealm\" (hereinafter referred to as \"this Service\") provided by Cor Co., Ltd. (hereinafter referred to as \"the Company\"). Customers are requested to use this Service after agreeing to these Terms.",
+    "establishmentDate": "Established: September 20, 2025",
+    "article1": {
+      "title": "Article 1 (Application)",
+      "content": "These Terms shall apply to all relationships between the customer and the Company regarding the use of this Service. In addition to these Terms, the Company may establish various rules and regulations (hereinafter referred to as \"Individual Regulations\") regarding the use of this Service. These Individual Regulations, regardless of their name, shall constitute a part of these Terms."
+    },
+    "article2": {
+      "title": "Article 2 (Definitions)",
+      "intro": "The definitions of terms used in these Terms are as follows.",
+      "ai": "\"AI\": Refers to general artificial intelligence technology, including machine learning, deep learning, natural language processing, etc.",
+      "iot": "\"IoT\": Abbreviation for Internet of Things, refers to a mechanism where various sensors and devices are connected to the internet",
+      "poc": "\"PoC\": Abbreviation for Proof of Concept, refers to concept validation",
+      "edgeDevice": "\"Edge Device\": Refers to IoT terminal devices that perform data processing",
+      "cloudService": "\"Cloud Service\": Refers to various services provided via the internet"
+    },
+    "article3": {
+      "title": "Article 3 (Service Content)",
+      "intro": "The Company shall provide the following services to customers.",
+      "services": [
+        "Planning, design, and development of AI/IoT solutions",
+        "PoC implementation support",
+        "Installation, configuration, and maintenance of IoT devices",
+        "Development, training, and tuning of AI models",
+        "Data collection, analysis, and visualization",
+        "System integration and API development",
+        "Operation and maintenance support",
+        "Consulting services"
+      ]
+    },
+    "article4": {
+      "title": "Article 4 (Service Registration)",
+      "content": "Those who wish to use this Service may register for use of this Service by applying for registration in the manner prescribed by the Company and upon approval by the Company. The Company may not approve applications for registration if it determines that the applicant has any of the following reasons.",
+      "reasons": [
+        "When false information is reported when applying for registration",
+        "When the application is from someone who has violated these Terms",
+        "Other cases where the Company determines that registration is inappropriate"
+      ]
+    },
+    "article5": {
+      "title": "Article 5 (Fees and Payment Methods)",
+      "intro": "Customers shall pay the fees separately determined by the Company in the manner specified by the Company for the use of this Service.",
+      "fees": [
+        "Initial introduction costs (including PoC costs)",
+        "Monthly usage fees",
+        "Additional development costs",
+        "Maintenance support costs",
+        "IoT device costs (purchase or rental)",
+        "Data communication costs",
+        "Cloud usage fees"
+      ],
+      "latePayment": "If the customer delays payment of usage fees, the customer shall pay delay damages at the rate of 14.6% per year."
+    },
+    "article6": {
+      "title": "Article 6 (Intellectual Property Rights)",
+      "content": "Copyrights, patent rights, trademark rights, and other intellectual property rights related to software, AI models, algorithms, documents, and other works provided by the Company in this Service shall belong to the Company or those who have licensed to the Company. However, customer-specific data and deliverables customized based on information provided by customers shall belong to customers, unless otherwise specified in separate contracts."
+    },
+    "article7": {
+      "title": "Article 7 (Data Handling)",
+      "intro": "The Company shall use data collected in providing this Service for the following purposes.",
+      "purposes": [
+        "Provision and improvement of this Service",
+        "Improvement of AI model accuracy (when customer consent is obtained)",
+        "System maintenance and operation",
+        "Creation of statistical data (in a form that cannot identify individuals or companies)"
+      ],
+      "privacy": "Customer data shall be managed with appropriate security measures and shall not be provided to third parties without customer consent."
+    },
+    "article8": {
+      "title": "Article 8 (Prohibited Activities)",
+      "intro": "Customers shall not engage in the following activities when using this Service.",
+      "prohibited": [
+        "Activities that violate laws or public order and morals",
+        "Activities related to criminal acts",
+        "Activities that infringe on intellectual property rights, portrait rights, privacy, honor, or other rights or interests of the Company, other users of this Service, or other third parties",
+        "Commercial use of information obtained through this Service (except with written consent from the Company)",
+        "Activities that may interfere with the operation of the Company's services",
+        "Unauthorized access or attempts to do so",
+        "Collection or accumulation of personal information about other users",
+        "Unauthorized modification or alteration of IoT devices",
+        "Reverse engineering of AI models",
+        "Other activities that the Company deems inappropriate"
+      ]
+    },
+    "article9": {
+      "title": "Article 9 (Suspension of Service Provision)",
+      "content": "The Company may suspend or discontinue all or part of the provision of this Service without prior notice to customers if it determines that any of the following reasons exist.",
+      "reasons": [
+        "When performing maintenance, inspection, or updates of computer systems related to this Service",
+        "When provision of this Service becomes difficult due to force majeure such as earthquakes, lightning, fire, power outages, or natural disasters",
+        "When computers or communication lines are stopped due to accidents",
+        "When IoT device failures or malfunctions occur",
+        "Other cases where the Company determines that provision of this Service is difficult"
+      ]
+    },
+    "article10": {
+      "title": "Article 10 (Disclaimer and Limitation of Liability)",
+      "content1": "The Company does not warrant, either expressly or implicitly, that this Service is free from factual or legal defects (including defects, errors, bugs, or infringements related to safety, reliability, accuracy, completeness, validity, fitness for a particular purpose, security, etc.).",
+      "content2": "The Company shall not be liable for any damages incurred by customers due to this Service, except in cases of intentional misconduct or gross negligence by the Company. However, this limitation of liability shall not apply when the contract between the Company and the customer regarding this Service (including these Terms) constitutes a consumer contract as defined in the Consumer Contract Act.",
+      "content3": "Predictions and judgments made by AI are for reference only, and their accuracy or completeness is not guaranteed. Final decisions should be made at the customer's own responsibility."
+    },
+    "article11": {
+      "title": "Article 11 (Changes to Service Content)",
+      "content": "The Company may change, add, or discontinue the content of this Service without prior notice to customers, and customers shall consent to this."
+    },
+    "article12": {
+      "title": "Article 12 (Changes to Terms of Service)",
+      "content": "The Company may change these Terms without individual consent from customers in the following cases.",
+      "conditions": [
+        "When the changes to these Terms are in the general interest of customers",
+        "When the changes to these Terms do not contradict the purpose of the contract and are reasonable considering the necessity of the changes, the appropriateness of the content after changes, and other circumstances related to the changes"
+      ]
+    },
+    "article13": {
+      "title": "Article 13 (Personal Information Handling)",
+      "content": "The Company shall handle personal information obtained through the use of this Service appropriately in accordance with the Company's \"Privacy Policy\"."
+    },
+    "article14": {
+      "title": "Article 14 (Confidentiality)",
+      "content": "Customers shall treat as confidential any non-public information disclosed by the Company in connection with this Service that the Company requests to be kept confidential, except with prior written consent from the Company."
+    },
+    "article15": {
+      "title": "Article 15 (Usage Restrictions and Account Deletion)",
+      "content": "The Company may restrict all or part of the use of this Service or delete customer registration without prior notice if the customer falls under any of the following.",
+      "conditions": [
+        "When any provision of these Terms is violated",
+        "When it is discovered that false information is included in the registration details",
+        "When there is a default in payment of fees, etc.",
+        "When there is no response to communications from the Company for a certain period",
+        "When this Service has not been used for a certain period from the last use",
+        "Other cases where the Company determines that use of this Service is inappropriate"
+      ]
+    },
+    "article16": {
+      "title": "Article 16 (Measures After Service Use Termination)",
+      "content": "When customers terminate their use of this Service, they shall return or dispose of IoT devices, software, documents, etc. provided by the Company in accordance with the Company's instructions. Regarding data handling, data shall be promptly deleted after service termination, unless otherwise specified."
+    },
+    "article17": {
+      "title": "Article 17 (Governing Law and Jurisdiction)",
+      "content": "Japanese law shall be the governing law for the interpretation of these Terms. In case of disputes related to this Service, the court with jurisdiction over the location of the Company's headquarters shall have exclusive jurisdiction."
+    },
+    "article18": {
+      "title": "Article 18 (Contact)",
+      "intro": "For inquiries regarding these Terms, please contact the following window.",
+      "contact": "Cor Co., Ltd.<br>IoTRealm Support Window<br>Email: company@cor-jo.com<br>Inquiry Form: https://cor-jp.com/contact/"
+    },
+    "end": "End"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "description": "IoTRealm's Privacy Policy. We explain how we handle your personal information.",
+    "intro": "Cor Co., Ltd. (hereinafter referred to as \"the Company\") recognizes the protection of customer personal information as an important responsibility in providing the AI/IoT solution \"IoTRealm\" and will handle it appropriately according to the following privacy policy.",
+    "establishmentDate": "Established: September 20, 2025",
+    "section1": {
+      "title": "1. Definition of Personal Information",
+      "content": "In this privacy policy, \"personal information\" refers to personal information as defined by the Personal Information Protection Law, meaning information about a living individual that can identify a specific individual, such as name, date of birth, address, telephone number, email address, etc."
+    },
+    "section2": {
+      "title": "2. Collection of Personal Information",
+      "intro": "The Company may collect personal information in the following cases.",
+      "cases": [
+        "When contacting us via inquiry form",
+        "When applying for services",
+        "When making a reservation for a free consultation",
+        "When requesting a PoC (Proof of Concept)",
+        "When installing/operating IoT devices",
+        "When learning/operating AI models",
+        "When applying for seminars/events"
+      ]
+    },
+    "section3": {
+      "title": "3. Data Collection by IoT Devices",
+      "intro": "In our IoT solutions, we may collect the following types of data.",
+      "dataTypes": [
+        "Sensor data (temperature, humidity, vibration, acoustic, etc.)",
+        "Location data (GPS coordinates, movement history, etc.)",
+        "Image data (surveillance cameras, inspection cameras, etc.)",
+        "Audio data (voice recognition, acoustic analysis, etc.)",
+        "Device operation log data",
+        "User operation history data"
+      ]
+    },
+    "section4": {
+      "title": "4. Purpose of Personal Information Use",
+      "intro": "The Company uses collected personal information for the following purposes.",
+      "purposes": [
+        "Service provision and operation",
+        "Customer support and response",
+        "Service improvement and new feature development",
+        "IoT device maintenance and operation",
+        "AI model accuracy improvement",
+        "Marketing and promotion (with consent)",
+        "Legal obligation fulfillment"
+      ]
+    },
+    "section5": {
+      "title": "5. Third-Party Provision of Personal Information",
+      "content": "The Company will not provide personal information to third parties without customer consent, except as required by law. However, this does not apply in the following cases.\n\n1. When required by law\n2. When necessary to protect human life, body, or property\n3. When particularly necessary for improving public health or promoting healthy child development\n4. When cooperation is necessary for national institutions, local governments, or their commissioned parties to perform duties prescribed by law"
+    },
+    "section6": {
+      "title": "6. Personal Information Security Management",
+      "content": "The Company takes appropriate security management measures to prevent loss, destruction, falsification, and leakage of personal information. Specifically, we implement access control, encryption, regular security audits, etc., and strive to protect personal information."
+    },
+    "section7": {
+      "title": "7. Rights Regarding Personal Information",
+      "intro": "Customers have the following rights regarding their own personal information held by the Company.",
+      "rights": [
+        "Request for disclosure of personal information",
+        "Request for correction, addition, or deletion of personal information",
+        "Request for suspension or deletion of personal information use",
+        "Request for suspension of third-party provision of personal information"
+      ]
+    },
+    "section8": {
+      "title": "8. Contact Information",
+      "content": "For inquiries regarding personal information handling, please contact us at the following.\n\nCor Co., Ltd.\nIoTRealm Privacy Officer\nEmail: privacy@cor-jo.com\nContact Form: https://cor-jp.com/contact/"
+    },
+    "section9": {
+      "title": "9. Privacy Policy Changes",
+      "content": "The Company may change this privacy policy due to changes in laws or business content. When changes are made, we will announce them on our website."
+    }
   }
 }

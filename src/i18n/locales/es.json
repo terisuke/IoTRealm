@@ -762,7 +762,7 @@
     "title": "Solicitud de Consulta Gratuita",
     "subtitle": "Cuéntanos sobre tu proyecto",
     "freeConsultationButton": "Solicitud de Consulta Gratuita",
-    "freeTime": "¡Primera consulta gratis!",
+    "freeTime": "¡30 minutos gratis!",
     "formTitle": "Solicitud de Consulta Gratuita",
     "formSubtitle": "Por favor, siéntete libre de consultarnos usando el formulario a continuación",
     "inquiryForm": {
@@ -775,7 +775,7 @@
       "email": {
         "title": "Consultas por correo electrónico",
         "description": "Recepción 24 horas",
-        "address": "company@cor-jp.com"
+        "address": "company@cor-jo.com"
       },
       "form": {
         "title": "Consulta a través de formulario",
@@ -894,247 +894,228 @@
     },
     "copyright": "© 2024 IoTRealm. Todos los derechos reservados."
   },
-  "privacyPolicy": {
+  "terms": {
+    "title": "Términos de Servicio",
+    "description": "Términos de Servicio de IoTRealm. Por favor, revise los términos y condiciones para usar el servicio.",
+    "intro": "Estos Términos de Servicio (en adelante, \"estos Términos\") definen las condiciones de uso de la solución AI/IoT \"IoTRealm\" (en adelante, \"este Servicio\") proporcionada por Cor Co., Ltd. (en adelante, \"la Empresa\"). Se solicita a los clientes que usen este Servicio después de aceptar estos Términos.",
+    "establishmentDate": "Establecido: 20 de septiembre de 2025",
+    "article1": {
+      "title": "Artículo 1 (Aplicación)",
+      "content": "Estos Términos se aplicarán a todas las relaciones entre el cliente y la Empresa con respecto al uso de este Servicio. Además de estos Términos, la Empresa puede establecer varias reglas y regulaciones (en adelante, \"Regulaciones Individuales\") con respecto al uso de este Servicio. Estas Regulaciones Individuales, independientemente de su nombre, constituirán parte de estos Términos."
+    },
+    "article2": {
+      "title": "Artículo 2 (Definiciones)",
+      "intro": "Las definiciones de términos utilizados en estos Términos son las siguientes.",
+      "ai": "\"AI\": Se refiere a la tecnología general de inteligencia artificial, incluyendo aprendizaje automático, aprendizaje profundo, procesamiento de lenguaje natural, etc.",
+      "iot": "\"IoT\": Abreviatura de Internet of Things, se refiere a un mecanismo donde varios sensores y dispositivos están conectados a internet",
+      "poc": "\"PoC\": Abreviatura de Proof of Concept, se refiere a la validación de conceptos",
+      "edgeDevice": "\"Dispositivo Edge\": Se refiere a dispositivos terminales IoT que realizan procesamiento de datos",
+      "cloudService": "\"Servicio en la Nube\": Se refiere a varios servicios proporcionados a través de internet"
+    },
+    "article3": {
+      "title": "Artículo 3 (Contenido del Servicio)",
+      "intro": "La Empresa proporcionará los siguientes servicios a los clientes.",
+      "services": [
+        "Planificación, diseño y desarrollo de soluciones AI/IoT",
+        "Soporte de implementación PoC",
+        "Instalación, configuración y mantenimiento de dispositivos IoT",
+        "Desarrollo, entrenamiento y ajuste de modelos AI",
+        "Recopilación, análisis y visualización de datos",
+        "Integración de sistemas y desarrollo de API",
+        "Soporte de operación y mantenimiento",
+        "Servicios de consultoría"
+      ]
+    },
+    "article4": {
+      "title": "Artículo 4 (Registro del Servicio)",
+      "content": "Aquellos que deseen usar este Servicio pueden registrarse para el uso de este Servicio solicitando registro de la manera prescrita por la Empresa y con la aprobación de la Empresa. La Empresa puede no aprobar solicitudes de registro si determina que el solicitante tiene cualquiera de las siguientes razones.",
+      "reasons": [
+        "Cuando se reporta información falsa al solicitar registro",
+        "Cuando la solicitud es de alguien que ha violado estos Términos",
+        "Otros casos donde la Empresa determina que el registro es inapropiado"
+      ]
+    },
+    "article5": {
+      "title": "Artículo 5 (Tarifas y Métodos de Pago)",
+      "intro": "Los clientes pagarán las tarifas determinadas por separado por la Empresa de la manera especificada por la Empresa para el uso de este Servicio.",
+      "fees": [
+        "Costos de introducción inicial (incluyendo costos PoC)",
+        "Tarifas de uso mensual",
+        "Costos de desarrollo adicionales",
+        "Costos de soporte de mantenimiento",
+        "Costos de dispositivos IoT (compra o alquiler)",
+        "Costos de comunicación de datos",
+        "Tarifas de uso en la nube"
+      ],
+      "latePayment": "Si el cliente retrasa el pago de las tarifas de uso, el cliente pagará daños por retraso a una tasa del 14.6% por año."
+    },
+    "article6": {
+      "title": "Artículo 6 (Derechos de Propiedad Intelectual)",
+      "content": "Los derechos de autor, patentes, marcas registradas y otros derechos de propiedad intelectual relacionados con software, modelos AI, algoritmos, documentos y otras obras proporcionadas por la Empresa en este Servicio pertenecerán a la Empresa o a aquellos que han licenciado a la Empresa. Sin embargo, los datos específicos del cliente y los entregables personalizados basados en información proporcionada por los clientes pertenecerán a los clientes, a menos que se especifique lo contrario en contratos separados."
+    },
+    "article7": {
+      "title": "Artículo 7 (Manejo de Datos)",
+      "intro": "La Empresa utilizará los datos recopilados al proporcionar este Servicio para los siguientes propósitos.",
+      "purposes": [
+        "Provisión y mejora de este Servicio",
+        "Mejora de la precisión del modelo AI (cuando se obtiene el consentimiento del cliente)",
+        "Mantenimiento y operación del sistema",
+        "Creación de datos estadísticos (en una forma que no puede identificar individuos o empresas)"
+      ],
+      "privacy": "Los datos del cliente serán gestionados con medidas de seguridad apropiadas y no serán proporcionados a terceros sin el consentimiento del cliente."
+    },
+    "article8": {
+      "title": "Artículo 8 (Actividades Prohibidas)",
+      "intro": "Los clientes no participarán en las siguientes actividades al usar este Servicio.",
+      "prohibited": [
+        "Actividades que violen las leyes o el orden público y la moral",
+        "Actividades relacionadas con actos criminales",
+        "Actividades que infrinjan derechos de propiedad intelectual, derechos de retrato, privacidad, honor u otros derechos o intereses de la Empresa, otros usuarios de este Servicio u otros terceros",
+        "Uso comercial de información obtenida a través de este Servicio (excepto con consentimiento escrito de la Empresa)",
+        "Actividades que puedan interferir con la operación de los servicios de la Empresa",
+        "Acceso no autorizado o intentos de hacerlo",
+        "Recopilación o acumulación de información personal sobre otros usuarios",
+        "Modificación o alteración no autorizada de dispositivos IoT",
+        "Ingeniería inversa de modelos AI",
+        "Otras actividades que la Empresa considere inapropiadas"
+      ]
+    },
+    "article9": {
+      "title": "Artículo 9 (Suspensión del Servicio)",
+      "content": "La Empresa puede suspender o discontinuar todo o parte de la provisión de este Servicio sin previo aviso a los clientes si determina que existe cualquiera de las siguientes razones.",
+      "reasons": [
+        "Al realizar mantenimiento, inspección o actualizaciones de sistemas informáticos relacionados con este Servicio",
+        "Cuando la provisión de este Servicio se vuelve difícil debido a fuerza mayor como terremotos, rayos, fuego, cortes de energía o desastres naturales",
+        "Cuando las computadoras o líneas de comunicación se detienen debido a accidentes",
+        "Cuando ocurren fallas o mal funcionamiento de dispositivos IoT",
+        "Otros casos donde la Empresa determina que la provisión de este Servicio es difícil"
+      ]
+    },
+    "article10": {
+      "title": "Artículo 10 (Descargo de Responsabilidad y Limitación de Responsabilidad)",
+      "content1": "La Empresa no garantiza, explícita o implícitamente, que este Servicio esté libre de defectos fácticos o legales (incluyendo defectos, errores, bugs o infracciones relacionados con seguridad, confiabilidad, precisión, integridad, validez, idoneidad para un propósito particular, seguridad, etc.).",
+      "content2": "La Empresa no será responsable por ningún daño incurrido por los clientes debido a este Servicio, excepto en casos de mala conducta intencional o negligencia grave por parte de la Empresa. Sin embargo, esta limitación de responsabilidad no se aplicará cuando el contrato entre la Empresa y el cliente con respecto a este Servicio (incluyendo estos Términos) constituya un contrato de consumidor según lo definido en la Ley de Contratos de Consumidor.",
+      "content3": "Las predicciones y juicios hechos por AI son solo para referencia, y su precisión o integridad no está garantizada. Las decisiones finales deben tomarse bajo la propia responsabilidad del cliente."
+    },
+    "article11": {
+      "title": "Artículo 11 (Cambios en el Contenido del Servicio)",
+      "content": "La Empresa puede cambiar, agregar o discontinuar el contenido de este Servicio sin previo aviso a los clientes, y los clientes consentirán a esto."
+    },
+    "article12": {
+      "title": "Artículo 12 (Cambios en los Términos de Servicio)",
+      "content": "La Empresa puede cambiar estos Términos sin consentimiento individual de los clientes en los siguientes casos.",
+      "conditions": [
+        "Cuando los cambios a estos Términos son en el interés general de los clientes",
+        "Cuando los cambios a estos Términos no contradicen el propósito del contrato y son razonables considerando la necesidad de los cambios, la idoneidad del contenido después de los cambios y otras circunstancias relacionadas con los cambios"
+      ]
+    },
+    "article13": {
+      "title": "Artículo 13 (Manejo de Información Personal)",
+      "content": "La Empresa manejará la información personal obtenida a través del uso de este Servicio apropiadamente de acuerdo con la \"Política de Privacidad\" de la Empresa."
+    },
+    "article14": {
+      "title": "Artículo 14 (Confidencialidad)",
+      "content": "Los clientes tratarán como confidencial cualquier información no pública divulgada por la Empresa en conexión con este Servicio que la Empresa solicite que se mantenga confidencial, excepto con consentimiento escrito previo de la Empresa."
+    },
+    "article15": {
+      "title": "Artículo 15 (Restricciones de Uso y Eliminación de Cuenta)",
+      "content": "La Empresa puede restringir todo o parte del uso de este Servicio o eliminar el registro del cliente sin previo aviso si el cliente cae bajo cualquiera de los siguientes.",
+      "conditions": [
+        "Cuando se viola cualquier disposición de estos Términos",
+        "Cuando se descubre que hay información falsa incluida en los detalles de registro",
+        "Cuando hay un incumplimiento en el pago de tarifas, etc.",
+        "Cuando no hay respuesta a las comunicaciones de la Empresa por un cierto período",
+        "Cuando este Servicio no ha sido usado por un cierto período desde el último uso",
+        "Otros casos donde la Empresa determina que el uso de este Servicio es inapropiado"
+      ]
+    },
+    "article16": {
+      "title": "Artículo 16 (Medidas Después de la Terminación del Uso del Servicio)",
+      "content": "Cuando los clientes terminen su uso de este Servicio, devolverán o desecharán dispositivos IoT, software, documentos, etc. proporcionados por la Empresa de acuerdo con las instrucciones de la Empresa. Con respecto al manejo de datos, los datos serán eliminados rápidamente después de la terminación del servicio, a menos que se especifique lo contrario."
+    },
+    "article17": {
+      "title": "Artículo 17 (Ley Aplicable y Jurisdicción)",
+      "content": "La ley japonesa será la ley aplicable para la interpretación de estos Términos. En caso de disputas relacionadas con este Servicio, el tribunal con jurisdicción sobre la ubicación de la sede de la Empresa tendrá jurisdicción exclusiva."
+    },
+    "article18": {
+      "title": "Artículo 18 (Contacto)",
+      "intro": "Para consultas sobre estos Términos, póngase en contacto con la siguiente ventanilla.",
+      "contact": "Cor Co., Ltd.<br>Ventanilla de Soporte IoTRealm<br>Correo: company@cor-jo.com<br>Formulario de Consulta: https://cor-jp.com/contact/"
+    },
+    "end": "Fin"
+  },
+  "privacy": {
     "title": "Política de Privacidad",
     "description": "Política de Privacidad de IoTRealm. Explicamos cómo manejamos su información personal.",
-    "intro": "Cor Corporation (en adelante, \"la Empresa\") reconoce la protección de la información personal de los clientes como una responsabilidad importante al proporcionar la solución AI/IoT \"IoTRealm\" y la manejará apropiadamente de acuerdo con la siguiente política de privacidad.",
-    "effectiveDate": "Fecha de vigencia: 20 de septiembre de 2025",
-    "sections": {
-      "definition": {
-        "title": "1. Definición de Información Personal",
-        "content": "En esta política de privacidad, \"información personal\" se refiere a la información personal definida por la Ley de Protección de Información Personal, es decir, información sobre individuos vivos que puede identificar a individuos específicos, como nombres, fechas de nacimiento, direcciones, números de teléfono, direcciones de correo electrónico, etc."
-      },
-      "collection": {
-        "title": "2. Recopilación de Información Personal",
-        "content": "La Empresa recopila información personal para los siguientes propósitos:",
-        "purposes": [
-          "Provisión y operación de nuestros servicios",
-          "Respuesta a consultas de clientes",
-          "Análisis para mejora del servicio",
-          "Desarrollo y provisión de nuevos servicios",
-          "Cumplimiento de requisitos legales"
-        ]
-      },
-      "usage": {
-        "title": "3. Propósito de Uso de la Información Personal",
-        "content": "La Empresa utiliza la información personal recopilada para los siguientes propósitos:",
-        "purposes": [
-          "Instalación, configuración y mantenimiento de dispositivos IoT",
-          "Desarrollo, entrenamiento y ajuste de modelos de IA",
-          "Análisis de datos y creación de informes",
-          "Operación y mantenimiento del sistema",
-          "Soporte al cliente y asistencia técnica"
-        ]
-      },
-      "sharing": {
-        "title": "4. Provisión de Información Personal a Terceros",
-        "content": "La Empresa no proporcionará la información personal de los clientes a terceros excepto en los siguientes casos:",
-        "exceptions": [
-          "Cuando se obtenga el consentimiento del cliente",
-          "Cuando sea requerido por ley",
-          "Cuando sea necesario para proteger la vida, cuerpo o propiedad humana",
-          "Cuando sea particularmente necesario para mejorar la salud pública o promover el desarrollo saludable de los niños"
-        ]
-      },
-      "security": {
-        "title": "5. Gestión de Seguridad de la Información Personal",
-        "content": "La Empresa tomará medidas técnicas y organizacionales de gestión de seguridad necesarias y apropiadas para prevenir la filtración, pérdida o daño de la información personal y asegurar otra gestión de seguridad de la información personal."
-      },
-      "retention": {
-        "title": "6. Período de Retención de Datos",
-        "content": "La Empresa retendrá la información personal solo por el período necesario para lograr el propósito de uso y la eliminará rápidamente después de que expire el período de retención. Sin embargo, esto no se aplica cuando la retención sea requerida por ley.",
-        "periods": [
-          "Información del contrato: 5 años después de la terminación del contrato",
-          "Información de consulta: 3 años después de la finalización de la respuesta",
-          "Datos de sensores IoT: Período especificado en el contrato",
-          "Datos de entrenamiento del modelo de IA: 1 año después de la finalización del proyecto (con consentimiento del cliente)"
-        ]
-      },
-      "cookies": {
-        "title": "7. Uso de Cookies",
-        "content": "Nuestro sitio web utiliza cookies para mejorar la conveniencia del cliente. La información recopilada a través del uso de cookies no incluye información de identificación personal. Los clientes pueden rechazar el uso de cookies a través de la configuración del navegador."
-      },
-      "rights": {
-        "title": "8. Divulgación, Corrección y Eliminación de Información Personal",
-        "content": "Los clientes tienen el derecho de solicitar la divulgación, corrección, suspensión del uso y eliminación de la información personal en posesión de la Empresa. Si desea hacer una solicitud, por favor contacte la oficina de consulta al final de esta política."
-      },
-      "minors": {
-        "title": "9. Información Personal de Menores",
-        "content": "Al recopilar información personal de menores, obtendremos el consentimiento de los padres."
-      },
-      "changes": {
-        "title": "10. Cambios en la Política de Privacidad",
-        "content": "La Empresa puede cambiar esta política de privacidad en respuesta a enmiendas legales o cambios en el contenido del servicio. La política de privacidad revisada entrará en vigor cuando se publique en el sitio web de la Empresa."
-      },
-      "contact": {
-        "title": "11. Información de Contacto",
-        "content": "Para consultas sobre esta política de privacidad, por favor contacte lo siguiente:",
-        "company": "Cor Corporation",
-        "department": "Departamento de Protección de Privacidad IoTRealm",
-        "email": "company@cor-jp.com",
-        "emailLabel": "Correo electrónico: ",
-        "form": "https://cor-jp.com/contact/",
-        "formLabel": "Formulario de contacto: "
-      }
-    }
-  },
-  "termsOfService": {
-    "title": "Términos de Servicio",
-    "description": "Términos de Servicio de IoTRealm. Por favor revise los términos y condiciones para usar nuestros servicios.",
-    "intro": "Estos Términos de Servicio (en adelante, \"estos Términos\") definen las condiciones para usar la solución AI/IoT \"IoTRealm\" (en adelante, \"este Servicio\") proporcionada por Cor Corporation (en adelante, \"la Empresa\"). Se requiere que los clientes acepten estos Términos antes de usar este Servicio.",
-    "effectiveDate": "Fecha de vigencia: 20 de septiembre de 2025",
-    "sections": {
-      "application": {
-        "title": "Artículo 1 (Aplicación)",
-        "content": "Estos Términos se aplican a todas las relaciones entre clientes y la Empresa con respecto al uso de este Servicio. La Empresa puede establecer varias reglas y regulaciones (en adelante, \"Disposiciones Individuales\") con respecto a este Servicio además de estos Términos. Estas Disposiciones Individuales constituirán parte de estos Términos independientemente de su nombre."
-      },
-      "definitions": {
-        "title": "Artículo 2 (Definiciones)",
-        "content": "Las definiciones de términos utilizados en estos Términos son las siguientes:",
-        "terms": [
-          "\"IA\": Se refiere a todas las tecnologías de inteligencia artificial, incluyendo aprendizaje automático, aprendizaje profundo, procesamiento de lenguaje natural, etc.",
-          "\"IoT\": Abreviación de Internet de las Cosas, refiriéndose a sistemas donde varios sensores y dispositivos están conectados a internet",
-          "\"PoC\": Abreviación de Prueba de Concepto, refiriéndose a verificación de concepto",
-          "\"Dispositivo Edge\": Se refiere a dispositivos terminales IoT que realizan procesamiento de datos",
-          "\"Servicio en la Nube\": Se refiere a varios servicios proporcionados a través de internet"
-        ]
-      },
-      "services": {
-        "title": "Artículo 3 (Contenido del Servicio)",
-        "content": "La Empresa proporciona los siguientes servicios a los clientes:",
-        "list": [
-          "Planificación, diseño y desarrollo de soluciones AI/IoT",
-          "Soporte de implementación de PoC",
-          "Instalación, configuración y mantenimiento de dispositivos IoT",
-          "Desarrollo, entrenamiento y ajuste de modelos de IA",
-          "Recopilación, análisis y visualización de datos",
-          "Integración de sistemas y desarrollo de API",
-          "Soporte de operación y mantenimiento",
-          "Servicios de consultoría"
-        ]
-      },
-      "registration": {
-        "title": "Artículo 4 (Registro del Servicio)",
-        "content": "Aquellos que deseen usar este Servicio pueden solicitar el registro del servicio por el método especificado por la Empresa, y el registro del servicio puede completarse con la aprobación de la Empresa. La Empresa puede no aprobar solicitudes de registro del servicio si el solicitante cae bajo cualquiera de las siguientes circunstancias:",
-        "reasons": [
-          "Cuando se reporta información falsa en la solicitud de registro del servicio",
-          "Cuando la solicitud es de alguien que previamente ha violado estos Términos",
-          "Cuando la Empresa de otra manera considere el registro del servicio inapropiado"
-        ]
-      },
-      "payment": {
-        "title": "Artículo 5 (Tarifas y Métodos de Pago)",
-        "content": "Los clientes pagarán las tarifas separadamente determinadas por la Empresa por el uso de este Servicio por el método especificado por la Empresa.",
-        "fees": [
-          "Costos de implementación inicial (incluyendo costos de PoC)",
-          "Tarifas de uso mensual",
-          "Costos de desarrollo adicional",
-          "Costos de soporte de mantenimiento",
-          "Costos de dispositivos IoT (compra o alquiler)",
-          "Costos de comunicación de datos",
-          "Tarifas de uso en la nube"
-        ],
-        "lateFee": "Si los clientes retrasan el pago de las tarifas de uso, pagarán daños por retraso a una tasa anual del 14.6%."
-      },
-      "intellectualProperty": {
-        "title": "Artículo 6 (Derechos de Propiedad Intelectual)",
-        "content": "Los derechos de autor, derechos de patente, derechos de marca registrada y otros derechos de propiedad intelectual relacionados con software, modelos de IA, algoritmos, documentos y otras obras proporcionadas por la Empresa en este Servicio pertenecen a la Empresa o a aquellos que los han licenciado a la Empresa. Sin embargo, los datos específicos del cliente y los entregables personalizados basados en información proporcionada por el cliente pertenecen al cliente a menos que se especifique lo contrario en contratos separados."
-      },
-      "dataHandling": {
-        "title": "Artículo 7 (Manejo de Datos)",
-        "content": "La Empresa utiliza los datos recopilados al proporcionar este Servicio para los siguientes propósitos:",
-        "purposes": [
-          "Provisión y mejora de este Servicio",
-          "Mejora de la precisión del modelo de IA (con consentimiento del cliente)",
-          "Mantenimiento y operación del sistema",
-          "Creación de datos estadísticos (en un formato que no puede identificar individuos o empresas)"
-        ],
-        "security": "Los datos del cliente se gestionan con medidas de seguridad apropiadas y no se proporcionarán a terceros sin el consentimiento del cliente."
-      },
-      "prohibited": {
-        "title": "Artículo 8 (Actividades Prohibidas)",
-        "content": "Los clientes no realizarán las siguientes actividades al usar este Servicio:",
-        "list": [
-          "Actividades que violen las leyes o el orden público y las buenas costumbres",
-          "Actividades relacionadas con actos criminales",
-          "Actividades que infrinjan los derechos de propiedad intelectual, derechos de imagen, privacidad, reputación u otros derechos o intereses de la Empresa, otros usuarios de este Servicio, u otros terceros",
-          "Uso comercial de información obtenida a través de este Servicio (excepto con consentimiento escrito de la Empresa)",
-          "Actividades que puedan interferir con la operación de los servicios de la Empresa",
-          "Acceso no autorizado o intentos del mismo",
-          "Recopilación o acumulación de información personal sobre otros usuarios",
-          "Modificación o alteración no autorizada de dispositivos IoT",
-          "Ingeniería inversa de modelos de IA",
-          "Otras actividades consideradas inapropiadas por la Empresa"
-        ]
-      },
-      "serviceSuspension": {
-        "title": "Artículo 9 (Suspensión del Servicio)",
-        "content": "La Empresa puede suspender o discontinuar todo o parte de este Servicio sin previo aviso a los clientes si ocurre cualquiera de las siguientes circunstancias:",
-        "reasons": [
-          "Cuando se realice mantenimiento o actualizaciones de sistemas informáticos relacionados con este Servicio",
-          "Cuando la provisión del servicio se vuelva difícil debido a fuerza mayor como terremotos, rayos, incendios, cortes de energía o desastres naturales",
-          "Cuando las computadoras o líneas de comunicación se detengan debido a accidentes",
-          "Cuando ocurran fallas o mal funcionamiento de dispositivos IoT",
-          "Cuando la Empresa de otra manera considere difícil la provisión del servicio"
-        ]
-      },
-      "disclaimer": {
-        "title": "Artículo 10 (Renuncia de Garantía y Limitación de Responsabilidad)",
-        "content": "La Empresa no hace garantía expresa o implícita de que este Servicio esté libre de defectos fácticos o legales (incluyendo defectos, errores, bugs o violaciones de derechos relacionados con seguridad, confiabilidad, precisión, integridad, validez, idoneidad para un propósito particular, seguridad, etc.).",
-        "liability": "La Empresa no será responsable por ningún daño incurrido por los clientes debido a este Servicio, excepto en casos de negligencia intencional o grave por parte de la Empresa. Sin embargo, esta limitación de responsabilidad no se aplica cuando el contrato entre la Empresa y los clientes con respecto a este Servicio (incluyendo estos Términos) constituya un contrato de consumidor bajo la Ley de Contratos de Consumidor.",
-        "aiDisclaimer": "Las predicciones y juicios de IA son solo para referencia, y su precisión o integridad no está garantizada. Las decisiones finales deben tomarse bajo la responsabilidad del cliente."
-      },
-      "serviceChanges": {
-        "title": "Artículo 11 (Cambios en el Contenido del Servicio)",
-        "content": "La Empresa puede cambiar, agregar o discontinuar el contenido de este Servicio sin previo aviso a los clientes, y los clientes aceptarán esto."
-      },
-      "termsChanges": {
-        "title": "Artículo 12 (Cambios en los Términos de Servicio)",
-        "content": "La Empresa puede cambiar estos Términos sin el consentimiento individual del cliente en los siguientes casos:",
-        "conditions": [
-          "Cuando los cambios a estos Términos sean adecuados para los intereses generales de los clientes",
-          "Cuando los cambios a estos Términos no contradigan el propósito del contrato y sean razonables considerando la necesidad de los cambios, la idoneidad del contenido después de los cambios, y otras circunstancias relacionadas con los cambios"
-        ]
-      },
-      "privacy": {
-        "title": "Artículo 13 (Manejo de Información Personal)",
-        "content": "La Empresa manejará la información personal obtenida a través del uso de este Servicio apropiadamente de acuerdo con la \"Política de Privacidad\" de la Empresa."
-      },
-      "confidentiality": {
-        "title": "Artículo 14 (Confidencialidad)",
-        "content": "Los clientes tratarán la información no pública divulgada por la Empresa como confidencial cuando la Empresa solicite tratamiento confidencial de dicha información relacionada con este Servicio, excepto con el consentimiento previo por escrito de la Empresa."
-      },
-      "restrictions": {
-        "title": "Artículo 15 (Restricciones de Uso y Eliminación de Cuenta)",
-        "content": "La Empresa puede restringir todo o parte del uso de este Servicio o eliminar el registro del cliente sin previo aviso si el cliente cae bajo cualquiera de las siguientes circunstancias:",
-        "reasons": [
-          "Cuando se viole cualquier disposición de estos Términos",
-          "Cuando se encuentre información falsa en los detalles de registro",
-          "Cuando haya incumplimiento de pago de tarifas",
-          "Cuando no haya respuesta a las comunicaciones de la Empresa por un cierto período",
-          "Cuando este Servicio no haya sido usado por un cierto período desde el último uso",
-          "Cuando la Empresa de otra manera considere el uso de este Servicio inapropiado"
-        ]
-      },
-      "termination": {
-        "title": "Artículo 16 (Medidas Después de la Terminación del Servicio)",
-        "content": "Cuando los clientes terminen el uso de este Servicio, devolverán o desecharán dispositivos IoT, software, documentos, etc. proporcionados por la Empresa según las instrucciones de la Empresa. Con respecto al manejo de datos, los datos se eliminarán rápidamente después de la terminación del servicio a menos que se especifique lo contrario."
-      },
-      "governingLaw": {
-        "title": "Artículo 17 (Ley Aplicable y Jurisdicción)",
-        "content": "Estos Términos se regirán por la ley japonesa. En caso de disputas relacionadas con este Servicio, el tribunal con jurisdicción sobre la sede de la Empresa será la jurisdicción acordada exclusiva."
-      },
-      "contact": {
-        "title": "Artículo 18 (Información de Contacto)",
-        "content": "Para consultas sobre estos Términos, por favor contacte lo siguiente:",
-        "company": "Cor Corporation",
-        "department": "Mesa de Soporte IoTRealm",
-        "email": "company@cor-jp.com",
-        "emailLabel": "Correo electrónico: ",
-        "form": "https://cor-jp.com/contact/",
-        "formLabel": "Formulario de contacto: "
-      }
+    "intro": "Cor Co., Ltd. (en adelante, \"la Empresa\") reconoce la protección de la información personal de los clientes como una responsabilidad importante al proporcionar la solución AI/IoT \"IoTRealm\" y la manejará apropiadamente de acuerdo con la siguiente política de privacidad.",
+    "establishmentDate": "Establecido: 20 de septiembre de 2025",
+    "section1": {
+      "title": "1. Definición de Información Personal",
+      "content": "En esta política de privacidad, \"información personal\" se refiere a la información personal definida por la Ley de Protección de Información Personal, es decir, información sobre un individuo vivo que puede identificar a un individuo específico, como nombre, fecha de nacimiento, dirección, número de teléfono, dirección de correo electrónico, etc."
     },
-    "conclusion": "Fin"
+    "section2": {
+      "title": "2. Recolección de Información Personal",
+      "intro": "La Empresa puede recopilar información personal en los siguientes casos.",
+      "cases": [
+        "Al contactarnos a través del formulario de consulta",
+        "Al solicitar servicios",
+        "Al hacer una reserva para consulta gratuita",
+        "Al solicitar un PoC (Prueba de Concepto)",
+        "Al instalar/operar dispositivos IoT",
+        "Al aprender/operar modelos de IA",
+        "Al solicitar seminarios/eventos"
+      ]
+    },
+    "section3": {
+      "title": "3. Recolección de Datos por Dispositivos IoT",
+      "intro": "En nuestras soluciones IoT, podemos recopilar los siguientes tipos de datos.",
+      "dataTypes": [
+        "Datos de sensores (temperatura, humedad, vibración, acústica, etc.)",
+        "Datos de ubicación (coordenadas GPS, historial de movimiento, etc.)",
+        "Datos de imagen (cámaras de vigilancia, cámaras de inspección, etc.)",
+        "Datos de audio (reconocimiento de voz, análisis acústico, etc.)",
+        "Datos de registro de operación del dispositivo",
+        "Datos de historial de operación del usuario"
+      ]
+    },
+    "section4": {
+      "title": "4. Propósito del Uso de Información Personal",
+      "intro": "La Empresa utiliza la información personal recopilada para los siguientes propósitos.",
+      "purposes": [
+        "Provisión y operación de servicios",
+        "Soporte y respuesta al cliente",
+        "Mejora del servicio y desarrollo de nuevas funciones",
+        "Mantenimiento y operación de dispositivos IoT",
+        "Mejora de la precisión del modelo de IA",
+        "Marketing y promoción (con consentimiento)",
+        "Cumplimiento de obligaciones legales"
+      ]
+    },
+    "section5": {
+      "title": "5. Provisión de Información Personal a Terceros",
+      "content": "La Empresa no proporcionará información personal a terceros sin el consentimiento del cliente, excepto cuando sea requerido por ley. Sin embargo, esto no se aplica en los siguientes casos.\n\n1. Cuando sea requerido por ley\n2. Cuando sea necesario proteger la vida, el cuerpo o la propiedad humana\n3. Cuando sea particularmente necesario mejorar la salud pública o promover el desarrollo saludable de los niños\n4. Cuando la cooperación sea necesaria para que instituciones nacionales, gobiernos locales o sus partes comisionadas realicen deberes prescritos por ley"
+    },
+    "section6": {
+      "title": "6. Gestión de Seguridad de Información Personal",
+      "content": "La Empresa toma medidas apropiadas de gestión de seguridad para prevenir la pérdida, destrucción, falsificación y fuga de información personal. Específicamente, implementamos control de acceso, encriptación, auditorías de seguridad regulares, etc., y nos esforzamos por proteger la información personal."
+    },
+    "section7": {
+      "title": "7. Derechos Relacionados con la Información Personal",
+      "intro": "Los clientes tienen los siguientes derechos con respecto a su propia información personal en posesión de la Empresa.",
+      "rights": [
+        "Solicitud de divulgación de información personal",
+        "Solicitud de corrección, adición o eliminación de información personal",
+        "Solicitud de suspensión o eliminación del uso de información personal",
+        "Solicitud de suspensión de la provisión de información personal a terceros"
+      ]
+    },
+    "section8": {
+      "title": "8. Información de Contacto",
+      "content": "Para consultas sobre el manejo de información personal, contáctenos en lo siguiente.\n\nCor Co., Ltd.\nOficial de Privacidad de IoTRealm\nEmail: privacy@cor-jo.com\nFormulario de Contacto: https://cor-jp.com/contact/"
+    },
+    "section9": {
+      "title": "9. Cambios en la Política de Privacidad",
+      "content": "La Empresa puede cambiar esta política de privacidad debido a cambios en las leyes o el contenido del negocio. Cuando se realicen cambios, los anunciaremos en nuestro sitio web."
+    }
   }
 }
