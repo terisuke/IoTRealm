@@ -84,15 +84,15 @@ const links = [
             <!-- Legal Links -->
             <div class="flex flex-col sm:flex-row gap-3 sm:gap-6 text-sm text-center">
               <a href={createLocalizedPath("/privacy", currentLanguage)} class="text-gray-400 hover:text-white transition-colors">
-                {translations.footer?.privacyPolicy || (currentLanguage === 'ja' ? 'プライバシーポリシー' : currentLanguage === 'en' ? 'Privacy Policy' : currentLanguage === 'es' ? 'Política de Privacidad' : '隐私政策')}
+                {translations.footer?.privacyPolicy || (currentLanguage === 'ja' ? 'プライバシーポリシー' : currentLanguage === 'en' ? 'Privacy Policy' : currentLanguage === 'es' ? 'Política de Privacidad' : currentLanguage === 'ko' ? '개인정보처리방침' : '隐私政策')}
               </a>
               <span class="text-gray-600 hidden sm:inline">|</span>
               <a href={createLocalizedPath("/terms", currentLanguage)} class="text-gray-400 hover:text-white transition-colors">
-                {translations.footer?.termsOfUse || (currentLanguage === 'ja' ? '利用規約' : currentLanguage === 'en' ? 'Terms of Use' : currentLanguage === 'es' ? 'Términos de Uso' : '使用条款')}
+                {translations.footer?.termsOfUse || (currentLanguage === 'ja' ? '利用規約' : currentLanguage === 'en' ? 'Terms of Use' : currentLanguage === 'es' ? 'Términos de Uso' : currentLanguage === 'ko' ? '이용약관' : '使用条款')}
               </a>
               <span class="text-gray-600 hidden sm:inline">|</span>
               <a href="https://cor-jp.com/contact/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                {translations.footer?.contact || (currentLanguage === 'ja' ? 'お問い合わせ' : currentLanguage === 'en' ? 'Contact Us' : currentLanguage === 'es' ? 'Contáctanos' : '联系我们')}
+                {translations.footer?.contact || (currentLanguage === 'ja' ? 'お問い合わせ' : currentLanguage === 'en' ? 'Contact Us' : currentLanguage === 'es' ? 'Contáctanos' : currentLanguage === 'ko' ? '문의하기' : '联系我们')}
               </a>
             </div>
           </div>
@@ -108,7 +108,7 @@ const links = [
             class="underline"
             href="https://cor-jp.com"
             target="_blank">@
-          Cor.inc</a> {translations.footer?.companyInfo || (currentLanguage === 'ja' ? 'による共創型AI・IoTソリューション開発' : currentLanguage === 'en' ? 'Co-creation AI/IoT solution development by' : currentLanguage === 'es' ? 'Desarrollo de soluciones AI/IoT de co-creación por' : '共创型AI/IoT解决方案开发')}
+          Cor.inc</a> {translations.footer?.companyInfo || (currentLanguage === 'ja' ? 'による共創型AI・IoTソリューション開発' : currentLanguage === 'en' ? 'Co-creation AI/IoT solution development by' : currentLanguage === 'es' ? 'Desarrollo de soluciones AI/IoT de co-creación por' : currentLanguage === 'ko' ? 'AI/IoT 솔루션 공동 개발' : '共创型AI/IoT解决方案开发')}
         </span>
       </div>
     </div>

@@ -2,7 +2,8 @@ export const languages = {
   ja: '日本語',
   en: 'English',
   zh: '中文',
-  es: 'Español'
+  es: 'Español',
+  ko: '한국어'
 } as const;
 
 export const defaultLanguage = 'ja' as const;
