@@ -15,13 +15,15 @@ import jaTranslations from './locales/ja.json';
 import enTranslations from './locales/en.json';
 import zhTranslations from './locales/zh.json';
 import esTranslations from './locales/es.json';
+import koTranslations from './locales/ko.json';
 
 // Translation data mapping
 const translationData: Record<Language, TranslationData> = {
   ja: jaTranslations,
   en: enTranslations,
   zh: zhTranslations,
-  es: esTranslations
+  es: esTranslations,
+  ko: koTranslations
 };
 
 // Load translation data for a specific language
@@ -78,7 +80,7 @@ export function getLanguageFromPath(pathname: string): Language {
   const segments = pathname.split('/').filter(Boolean);
   const firstSegment = segments[0];
   
-  if (firstSegment && ['ja', 'en', 'zh', 'es'].includes(firstSegment)) {
+  if (firstSegment && ['ja', 'en', 'zh', 'es', 'ko'].includes(firstSegment)) {
     return firstSegment as Language;
   }
   
@@ -112,7 +114,7 @@ export function removeLanguagePrefix(path: string): string {
   const segments = path.split('/').filter(Boolean);
   const firstSegment = segments[0];
   
-  if (firstSegment && ['ja', 'en', 'zh', 'es'].includes(firstSegment)) {
+  if (firstSegment && ['ja', 'en', 'zh', 'es', 'ko'].includes(firstSegment)) {
     const remainingPath = segments.slice(1).join('/');
     return remainingPath ? `/${remainingPath}` : '/';
   }
